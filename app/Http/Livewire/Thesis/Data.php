@@ -18,7 +18,10 @@ class Data extends Component
         $student_id = session()->get('user_id');
         $this->thesis = Thesis::where("student_id", $student_id)->first();
     }
-
+    public function resetInput()
+    {
+        
+    }
     
     public function render()
     {
