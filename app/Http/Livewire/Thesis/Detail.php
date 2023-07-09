@@ -43,6 +43,7 @@ class Detail extends Component
             ]);
             Thesis::create([
                 'title' => $this->title,
+                "student_id" => session()->get('user_id')
             ]);
         }
 
