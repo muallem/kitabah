@@ -13,7 +13,7 @@ class Data extends Component
 
     public $thesis;
 
-    protected $listeners = ["refreshData"];
+    protected $listeners = ['refreshComponent' => '$refresh'];
 
     public function mount()
     {
@@ -26,7 +26,7 @@ class Data extends Component
     }
     public function refreshData()
     {
-        $this->refresh();
+        $this->emitSelf('refreshComponent');
     }
     
     public function render()
