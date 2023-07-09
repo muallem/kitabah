@@ -43,7 +43,7 @@ class AuthHelper
     }
     public static function isSessionToken()
     {
-        return true;
+        return false;
         try{
             if (Session::has('token')) {
                 $token = session('token');
