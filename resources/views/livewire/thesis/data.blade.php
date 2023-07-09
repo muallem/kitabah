@@ -7,7 +7,7 @@
     <div class="alert alert-info" role="alert">
         {{$thesis->title}}
     </div>
-    @if(!$thesis->group)
+    @if($thesis->group === null)
         <div class="alert alert-warning" role="alert">
             Tunggu balasan dari admin!
         </div>
