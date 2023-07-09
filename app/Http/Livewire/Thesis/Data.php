@@ -13,6 +13,8 @@ class Data extends Component
 
     public $thesis;
 
+    protected $listeners = ["refreshData"];
+
     public function mount()
     {
         $student_id = session()->get('user_id');
@@ -21,6 +23,10 @@ class Data extends Component
     public function resetInput()
     {
         
+    }
+    public function refreshData()
+    {
+        $this->refresh();
     }
     
     public function render()

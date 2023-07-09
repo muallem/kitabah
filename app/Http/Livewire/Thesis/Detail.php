@@ -49,7 +49,7 @@ class Detail extends Component
 
         $this->emit('SwalSuccess', "Berhasil", 'Berhasil membuat data');
         $this->emit('onSuccessStore');
-        $this->emit('refreshDatatable');
+        $this->emit('refreshData');
     }
     public function resetInput()
     {
