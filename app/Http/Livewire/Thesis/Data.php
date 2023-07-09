@@ -8,7 +8,7 @@ use Livewire\Component;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
-class Datatable extends Component
+class Data extends Component
 {
 
     public $thesis;
