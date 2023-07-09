@@ -14,18 +14,14 @@ class Data extends Component
     public $thesis;
 
     protected $listeners = ['refreshData' => '$refresh'];
-
-    public function mount()
-    {
-        $student_id = session()->get('user_id');
-        $this->thesis = Thesis::where("student_id", $student_id)->first();
-    }
     public function resetInput()
     {
     }
     
     public function render()
     {
+        $student_id = session()->get('user_id');
+        $this->thesis = Thesis::where("student_id", $student_id)->first();
         return view('livewire.thesis.data');
     }
 }
