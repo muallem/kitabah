@@ -12,16 +12,14 @@ class Detail extends Component
     public $detailId;
     public $title;
 
-    public function render()
-    {
-        return view('livewire.thesis.detail');
-    }
-
     protected $listeners = [
         'editDetailDiscussion',
-        'refreshCode',
-        'refreshSecretKey',
     ];
+
+    public function render()
+    {
+        return view('livewire.discussion.detail');
+    }
 
     public function store()
     {

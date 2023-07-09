@@ -4,7 +4,7 @@
         Buat Judul Skripsi
     </button>
 @else
-    <div class="alert alert-info" role="alert">
+    <div class="alert alert-success" role="alert">
         {{$thesis->title}}
     </div>
     @if($thesis->group === null)
@@ -12,7 +12,7 @@
             Tunggu balasan dari admin!
         </div>
     @else
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-info" role="alert">
             {{$thesis->group}}
         </div>
     @endif
