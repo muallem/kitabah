@@ -20,7 +20,8 @@ class Data extends Component
 
     public function onMount()
     {
-        $this->thesis = Thesis::where("student_id", session()->get('user_id'))->first();
+        $student_id = session()->get('user_id');
+        $this->thesis = Thesis::where("student_id", $student_id)->first();
     }
 
     
