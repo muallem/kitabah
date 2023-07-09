@@ -8,19 +8,11 @@
 
 @section('content')
 <div class="container">
-    {{session()->get('user_id')}}
-    <button type="button" class="btn btn-success btn-icon-split mb-4" data-bs-toggle="modal" data-bs-target="#detailModal"
-        wire:click="resetInput">
-        Tambah Baru
-    </button>
 
+    @livewire('thesis.data')
+    
     @livewire('thesis.detail')
 
-    <div class="card">
-        <div class="card-body">
-            @livewire('thesis.data')
-        </div>
-    </div>
     @livewire('discussion.detail')
 </div>
 @endsection
