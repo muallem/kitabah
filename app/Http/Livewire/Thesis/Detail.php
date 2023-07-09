@@ -47,9 +47,9 @@ class Detail extends Component
             ]);
         }
 
+        $this->emit('refreshData');
         $this->emit('SwalSuccess', "Berhasil", 'Berhasil membuat data');
         $this->emit('onSuccessStore');
-        $this->emit('refreshData');
     }
     public function resetInput()
     {
