@@ -52,9 +52,6 @@
 </head>
 <body>
     <div id="app">
-        @guest
-
-        @else
         <div class="sidebar">
             <h3>Menu</h3>
             <ul class="nav flex-column">
@@ -96,7 +93,6 @@
                 </div>
             </div>
         </nav>
-        @endguest
       
         <main class="py-4 content">
             
