@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\AuthHelper;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -24,7 +25,7 @@ class HomeController extends Controller
         return view('home');
     }
     public function coba(){
-        return view('home');
+        return AuthHelper::checkSessionToken();
     }
     public function get_session(){
         $allData = Session::all();
