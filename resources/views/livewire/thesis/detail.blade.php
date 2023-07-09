@@ -26,12 +26,3 @@
         </div>
     </div>
 </div>
-
-@push('js')
-
-    <script>
-        $("#detailModal").on('hide.bs.modal', function() {
-            @this.call('resetInput');
-        });
-    </script>
-@endpush
