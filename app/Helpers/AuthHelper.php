@@ -34,9 +34,9 @@ class AuthHelper
             $token = Encoder::encode($user->user_email.';'.$expired_time, env('APP_SECRET_KEY'));
 
             Session::put('token', $token);
-            Session::put('user_id', $user->id);
+            Session::put('user_id', $user->ID);
             Session::put('user_role', $user->role);
-            return response()->json(['message' => 'Not permitted', 'ok' => true], 200);
+            return response()->json(['message' => 'Success', 'ok' => true], 200);
         } catch (Exception $e) {
             return $e;
         }

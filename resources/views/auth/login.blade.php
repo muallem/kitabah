@@ -69,8 +69,7 @@
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                    console.log(response)
-                    if(response.ok){
+                    if(!response.ok){
                             Swal.fire({
                             type: 'error',
                             title: 'Login failed!',
