@@ -58,12 +58,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/home">Home</a>
                 </li>
+                @if(session()->get('user_role') == "student")
                 <li class="nav-item">
                     <a class="nav-link" href="/thesis">Skripsi</a>
                 </li>
+                @else
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin_thesis">Admin Skripsi</a>
+                    <a class="nav-link" href="/admin_thesis">Skripsi</a>
                 </li>
+                @endif
             </ul>
         </div>
 

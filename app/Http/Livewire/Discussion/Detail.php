@@ -2,12 +2,68 @@
 
 namespace App\Http\Livewire\Discussion;
 
+use App\Models\Discussion;
 use Livewire\Component;
+use Illuminate\Support\Str;
 
 class Detail extends Component
 {
+
+    public $detailId;
+    public $title;
+
     public function render()
     {
-        return view('livewire.discussion.detail');
+        return view('livewire.thesis.detail');
+    }
+
+    protected $listeners = [
+        'editDetailDiscussion',
+        'refreshCode',
+        'refreshSecretKey',
+    ];
+
+    public function store()
+    {
+
+
+        if ($this->detailId) {
+            $validatedData = $this->validate([
+                'title' => ['required'],
+            ]);
+            $thesisDetail = Discussion::find($this->detailId);
+            $thesisDetail->title = $this->title;
+            $thesisDetail->student_id = session()->get('user_id');
+            $thesisDetail->save();
+
+        } else {
+
+            $validatedData = $this->validate([
+                'title' => ['required'],
+            ]);
+            Discussion::create([
+                'title' => $this->title,
+                "student_id" => session()->get('user_id'),
+            ]);
+        }
+
+        $this->emit('SwalSuccess', "Berhasil", 'Berhasil membuat data');
+        $this->emit('onSuccessStore');
+        $this->emit('refreshDatatable');
+    }
+    public function resetInput()
+    {
+        $this->detailId = '';
+        $this->title = '';
+    }
+    public function editDetailDiscussion($id)
+    {
+        $detail = Discussion::find($id);
+        if ($detail) {
+            $this->detailId = $detail->id;
+            $this->title = $detail->title;
+        }
+
+        $this->emit('onEditing');
     }
 }
