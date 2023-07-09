@@ -11,9 +11,9 @@ use Illuminate\Support\Str;
 class Data extends Component
 {
 
-    public $thesis = "coba";
+    public $thesis;
 
-    public function onMount()
+    public function mount()
     {
         $student_id = session()->get('user_id');
         $this->thesis = Thesis::where("student_id", $student_id)->first();
