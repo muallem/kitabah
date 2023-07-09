@@ -20,7 +20,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::get('coba', [HomeController::class, 'coba']);
 });
-Route::group(['middleware' => ['my.auth']], function () {
+Route::group(['middleware' => ['rsmh.auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/thesis', [App\Http\Controllers\ThesisController::class, 'index'])->name('thesis.index');
     Route::get('/admin_thesis', [App\Http\Controllers\ThesisController::class, 'admin_thesis'])->name('thesis.admin_thesis');
