@@ -82,13 +82,10 @@ class AuthHelper
                 $expirationDate = Carbon::createFromFormat('Y-m-d H:i:s', $token[1]);
                 $currentDate = Carbon::now();
     
-                return $expirationDate;
                 if ($currentDate > $expirationDate) {
-                    Session::flush();
-                    Session::forget('token');
-                    return false;
+                    return "expired";
                 } 
-
+                return "active";
             }
         }catch(Exception $e){
             Session::flush();
