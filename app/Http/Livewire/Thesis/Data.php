@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 class Data extends Component
 {
 
-    public $thesis;
+    public $thesis = "coba";
     protected $listeners = [
         'addFilter',
         'getColumns',
