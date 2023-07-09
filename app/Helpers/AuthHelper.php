@@ -43,7 +43,6 @@ class AuthHelper
     }
     public static function isSessionToken()
     {
-
         try{
             if (Session::has('token')) {
                 $token = session('token');
@@ -53,19 +52,13 @@ class AuthHelper
                 $currentDate = Carbon::now();
     
                 if ($currentDate > $expirationDate) {
-                    Session::flush();
-                    Session::forget('token');
                     return false;
                 } 
                 return true;
 
             }
-            Session::flush();
-            Session::forget('token');
             return false;
         }catch(Exception $e){
-            Session::flush();
-            Session::forget('token');
             return false;
         }
 
@@ -75,7 +68,9 @@ class AuthHelper
     {
         
         try{
-            if (Session::has('token')) {
+            if (!Session::has('token')) {
+                return false;
+            }
                 $token = session('token');
                 $token = Encoder::decode($token, env('APP_SECRET_KEY'));
                 $token = explode(';', $token);
@@ -83,13 +78,11 @@ class AuthHelper
                 $currentDate = Carbon::now();
     
                 if ($currentDate > $expirationDate) {
-                    return "expired";
+                    return false;
                 } 
-                return "active";
-            }
+                return true;
+            
         }catch(Exception $e){
-            Session::flush();
-            Session::forget('token');
             return false;
         }
 
