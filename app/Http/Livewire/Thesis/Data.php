@@ -12,11 +12,6 @@ class Data extends Component
 {
 
     public $thesis = "coba";
-    protected $listeners = [
-        'addFilter',
-        'getColumns',
-        'refreshDatatable' => '$refresh',
-    ];
 
     public function onMount()
     {

@@ -1,1 +1,1 @@
-{{$thesis}}
+<div>{{$thesis}}</div>
