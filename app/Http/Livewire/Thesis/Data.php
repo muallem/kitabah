@@ -24,9 +24,8 @@ class Data extends Component
     }
 
     
-
-    public function getView(): String
+    public function render()
     {
-        return 'livewire.thesis.data';
+        return view('livewire.thesis.data');
     }
 }
