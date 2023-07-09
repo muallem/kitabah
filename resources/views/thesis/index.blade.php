@@ -10,9 +10,8 @@
 <div class="container">
 
     @livewire('thesis.data')
-    
+
     @livewire('thesis.detail')
 
-    @livewire('discussion.detail')
 </div>
 @endsection

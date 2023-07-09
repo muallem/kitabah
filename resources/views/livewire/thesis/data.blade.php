@@ -15,5 +15,7 @@
         <div class="alert alert-info" role="alert">
             {{$thesis->group}}
         </div>
+        
+        @livewire('discussion.detail')
     @endif
 @endif
