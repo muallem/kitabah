@@ -258,9 +258,6 @@
 
 @push('js')
     <script>
-        $("#detailModal").on('hide.bs.modal', function() {
-            @this.call('resetInput');
-        });
         // JavaScript code to scroll to the last message
         var chatMessages = document.getElementById('chatMessages');
         chatMessages.scrollTop = chatMessages.scrollHeight;
