@@ -18,7 +18,7 @@
 
     <div class="card">
         <div class="card-body">
-            @livewire('thesis.datatable')
+            @livewire('thesis.data')
         </div>
     </div>
     @livewire('discussion.detail')
