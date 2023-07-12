@@ -13,7 +13,7 @@ class Data extends Component
 
     public $thesis;
 
-    protected $listeners = ['refreshData' => '$refresh'];
+    protected $listeners = ['refreshDataThesis' => '$refresh'];
     public function resetInput()
     {
     }

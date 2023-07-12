@@ -15,3 +15,17 @@
 
 </div>
 @endsection
+
+@section('js')
+<script>
+    // Define the interval time in milliseconds (5 seconds = 5000 milliseconds)
+    const intervalTime = 2000;
+
+    // Start the interval
+    const interval = setInterval(() => {
+    // Call the emit function here
+    Livewire.emit('refreshDataThesis'); // Replace 'functionName' with the actual function name you want to emit
+    }, intervalTime);
+
+</script>
+@endsection
