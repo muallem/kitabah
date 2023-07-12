@@ -4,7 +4,7 @@
       position: relative;
       border: 1px solid #ccc;
       padding: 10px;
-      height: 50vh;
+      height: 60vh;
       overflow-y: scroll;
     }
   

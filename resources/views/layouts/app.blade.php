@@ -16,61 +16,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.min.css">
 
-    <style>
-        /* Sidebar styling */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-
-        /* Content styling */
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-
-        /* Responsive media query for small screens */
-        @media (max-width: 767px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                padding: 15px;
-            }
-
-            .content {
-                margin-left: 0;
-            }
-        }
-    </style>
     @livewireStyles
 
 @stack('css')
 </head>
 <body>
     <div id="app">
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="/home">Home</a>
-                </li>
-                @if(session()->get('user_role') == "student")
-                <li class="nav-item">
-                    <a class="nav-link" href="/thesis">Skripsi</a>
-                </li>
-                @else
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin_thesis">Skripsi</a>
-                </li>
-                @endif
-            </ul>
-        </div>
 
 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
