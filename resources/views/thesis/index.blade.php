@@ -30,5 +30,15 @@
     Livewire.emit('refreshDataThesis'); // Replace 'functionName' with the actual function name you want to emit
     }, intervalTime);
 
+    var chatMessages = document.getElementById('chatMessages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        const intervalDiscussion = setInterval(() => {
+        // Call the emit function here
+        Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 10000);
+
 </script>
 @endsection

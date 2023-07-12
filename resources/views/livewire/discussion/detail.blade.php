@@ -119,14 +119,14 @@
 @push('js')
     <script>
         // JavaScript code to scroll to the last message
-        var chatMessages = document.getElementById('chatMessages');
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        // var chatMessages = document.getElementById('chatMessages');
+        // chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        const intervalDiscussion = setInterval(() => {
-        // Call the emit function here
-        Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
+        // const intervalDiscussion = setInterval(() => {
+        // // Call the emit function here
+        // Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
 
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        }, 10000);
+        // chatMessages.scrollTop = chatMessages.scrollHeight;
+        // }, 10000);
   </script>
 @endpush
