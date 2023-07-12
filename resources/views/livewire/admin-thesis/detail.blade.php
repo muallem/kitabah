@@ -19,9 +19,9 @@
                         <div class="col-md">
                             <label>Jenis Skripsi :</label>
                             <select class="form-select" id="group" wire:model.lazy='group' placeholder="Jenis Skripsi">
-                                <option value="kuantitatif">Kuantitatif</option>
-                                <option value="kualitatif">Kualitatif</option>
-                                <option value="rnd">RND</option>
+                                <option value="kualitas">Kualitas</option>
+                                <option value="kuantitas">Kuantitas</option>
+                                <option value="r&d">R&D</option>
                             </select>
 
                             @error('group')

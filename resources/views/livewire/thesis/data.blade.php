@@ -14,7 +14,13 @@
             </div>
         @else
             <div class="alert alert-info" role="alert">
-                {{$thesis->group}}
+                @if($thesis->group == 'r&d')
+                R&D (Research and Development)
+                @elseif($thesis->group == "kuantitas")
+                Kuantitas (kuan)
+                @elseif($thesis->group == "kualitas")
+                Kualitas (kual)
+                @endif
             </div>
             
             @livewire('discussion.detail')
