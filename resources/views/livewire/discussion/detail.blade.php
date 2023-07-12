@@ -49,7 +49,11 @@
                 <!-- Friend's chat messages -->
                 <div class="message friend">
                 <div class="message-content">
-                    Friend: Hello!
+                    Admin: Kualitas (kual): Kualitas mengacu pada tingkat keunggulan atau kecemerlangan suatu produk, layanan, atau proses. Ini mencakup atribut-atribut yang mempengaruhi kemampuan suatu produk atau layanan untuk memenuhi harapan atau kebutuhan pengguna. Kualitas dapat dilihat dari segi fungsionalitas, keandalan, kinerja, keamanan, kepuasan pengguna, dan aspek lainnya. Peningkatan kualitas bertujuan untuk memberikan nilai tambah dan meningkatkan kepuasan pengguna.
+
+                    Kuantitas (kuan): Kuantitas merujuk pada jumlah atau volume suatu barang atau layanan. Ini melibatkan pengukuran atau perhitungan secara numerik tentang seberapa banyak atau seberapa sering sesuatu terjadi. Kuantitas dapat diukur dalam satuan fisik seperti unit, kilogram, liter, atau dalam bentuk lainnya yang relevan tergantung pada konteksnya. Pengelolaan kuantitas melibatkan pengaturan dan pengawasan terhadap jumlah yang dihasilkan atau dikonsumsi.
+                    
+                    R&D (Research and Development): R&D atau penelitian dan pengembangan merujuk pada kegiatan sistematis yang dilakukan untuk meningkatkan pengetahuan, memperoleh pemahaman baru, dan mengembangkan teknologi, produk, atau proses baru. R&D melibatkan eksperimen, penelitian, dan kegiatan inovatif lainnya dengan tujuan untuk menciptakan nilai tambah atau memperbaiki produk atau layanan yang ada. R&D seringkali dilakukan oleh perusahaan atau lembaga dengan tujuan menciptakan keunggulan kompetitif, inovasi, dan pertumbuhan jangka panjang.
                 </div>
                 </div>
 
@@ -75,7 +79,7 @@
                 <!-- Friend's chat messages -->
                 <div class="message friend">
                 <div class="message-content">
-                    Friend: Hello!
+                    Admin: Hello!
                 </div>
                 </div>
 
@@ -85,10 +89,10 @@
                     Me: Hi there!
                 </div>
                 </div>
-                <!-- Friend's chat messages -->
+                <!-- Admin's chat messages -->
                 <div class="message friend">
                 <div class="message-content">
-                    Friend: Hello!
+                    Admin: Hello!
                 </div>
                 </div>
 
@@ -98,10 +102,10 @@
                     Me: Hi there!
                 </div>
                 </div>
-                <!-- Friend's chat messages -->
+                <!-- Admin's chat messages -->
                 <div class="message friend">
                 <div class="message-content">
-                    Friend: Hello!
+                    Admin: Hello!
                 </div>
                 </div>
 
@@ -111,10 +115,10 @@
                     Me: Hi there!
                 </div>
                 </div>
-                <!-- Friend's chat messages -->
+                <!-- Admin's chat messages -->
                 <div class="message friend">
                 <div class="message-content">
-                    Friend: Hello!
+                    Admin: Hello!
                 </div>
                 </div>
 
