@@ -39,6 +39,7 @@ class Detail extends Component
             'theses_id' => $this->theses_id,
             "is_admin" => false,
         ]);
+        $this->chat = "";
     }
     public function resetInput()
     {
