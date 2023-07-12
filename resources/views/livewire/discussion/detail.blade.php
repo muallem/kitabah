@@ -106,7 +106,7 @@
             <!-- Chat input form -->
             <form class="chat-input px-3" wire:submit.prevent='store'>
                 <div class="input-group">
-                  <input type=hidden wire.model.lazy="theses_id">
+                  <input type=text wire.model.lazy="theses_id">
                 <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                 <button type="submit" class="btn btn-primary">Send</button>
                 </div>
@@ -121,5 +121,12 @@
         // JavaScript code to scroll to the last message
         var chatMessages = document.getElementById('chatMessages');
         chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        const intervalDiscussion = setInterval(() => {
+        // Call the emit function here
+        Livewire.emit('$refresh'); // Replace 'functionName' with the actual function name you want to emit
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 10000);
   </script>
 @endpush
