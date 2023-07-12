@@ -95,8 +95,8 @@ class Datatable extends Component
                 'key' => 'user.user_login',
                 'name' => 'Nama Siswa',
                 'render' => function ($item) {
-
-                    $html = "<div class='text-nowrap'>$item->user</div>";
+                    $name = $item->user->user_login;
+                    $html = "<div class='text-nowrap'>$name</div>";
 
                     return $html;
                 },
