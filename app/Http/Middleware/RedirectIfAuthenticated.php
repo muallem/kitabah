@@ -22,7 +22,10 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (AuthHelper::isSessionToken()) {
-                return redirect(RouteServiceProvider::HOME);
+                if(AuthHelper::isAdmin()){
+                    return redirect('admin_thesis');
+                }
+                return redirect('thesis');
             }
         }
 

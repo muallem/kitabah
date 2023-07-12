@@ -6,11 +6,11 @@ use App\Helpers\AuthHelper;
 use Closure;
 use Illuminate\Http\Request;
 
-class RsmhAuth
+class Student
 {
     public function handle(Request $request, Closure $next)
     { 
-        if (!AuthHelper::isSessionToken()) {
+        if (AuthHelper::isAdmin()) {
             return redirect()->route('login');
         }
 

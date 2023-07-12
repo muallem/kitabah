@@ -64,6 +64,14 @@ class AuthHelper
 
     }
 
+    public static function isAdmin()
+    {
+        if(Session::get('user_role') == 'admin'){
+            return true;
+        }
+        return false;
+    }
+
     public static function checkSessionToken()
     {
         
