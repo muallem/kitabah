@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('group')->nullable()->default(null);
             $table->string('student_id');
             $table->string('teacher_id')->nullable()->default(null);
-            $table->dateTime('last_seen');
+            $table->dateTime('last_seen')->nullable()->default(null);
             $table->timestamps();
         });
     }
