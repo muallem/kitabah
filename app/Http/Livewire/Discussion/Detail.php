@@ -35,7 +35,6 @@ class Detail extends Component
         ]);
         Discussion::create([
             'chat' => $this->chat,
-            "student_id" => session()->get('user_id'),
             "is_admin" => false,
         ]);
     }
