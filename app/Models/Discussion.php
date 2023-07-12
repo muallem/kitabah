@@ -11,7 +11,7 @@ class Discussion extends Model
 
     protected $fillable = [
         'chat',
-        'student_id',
+        'theses_id',
         'is_admin'
     ];
 
