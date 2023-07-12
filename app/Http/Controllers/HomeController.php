@@ -26,7 +26,7 @@ class HomeController extends Controller
         return view('home');
     }
     public function coba(){
-        return Thesis::select('id', 'title', 'group')->with('user')->get();
+        return Thesis::select('id', 'title', 'group', 'studen_id')->with('user')->get();
     }
     public function get_session(){
         $allData = Session::all();
