@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\AuthHelper;
 use App\Models\User;
+use App\Models\Thesis;
+use App\Helpers\AuthHelper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -25,7 +26,7 @@ class HomeController extends Controller
         return view('home');
     }
     public function coba(){
-        return AuthHelper::checkSessionToken();
+        return Thesis::select('id', 'title', 'group')->with('user')->get();
     }
     public function get_session(){
         $allData = Session::all();

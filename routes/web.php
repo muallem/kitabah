@@ -28,3 +28,4 @@ Route::group(['middleware' => ['rsmh.auth']], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 Route::get('get_session', [HomeController::class, 'get_session']);
+Route::get('coba', [HomeController::class, 'coba']);
