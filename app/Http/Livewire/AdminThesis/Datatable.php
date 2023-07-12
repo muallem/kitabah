@@ -91,12 +91,22 @@ class Datatable extends Component
                     return $html;
                 },
             ],
+            [
+                'key' => 'user.user_login',
+                'name' => 'Nama Siswa',
+                'render' => function ($item) {
+
+                    $html = "<div class='text-nowrap'>$item->user_login</div>";
+
+                    return $html;
+                },
+            ],
         ];
     }
 
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group');
+        return Thesis::select('id', 'title', 'group')->with('user');
     }
 
     public function getView(): String
