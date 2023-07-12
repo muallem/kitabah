@@ -124,7 +124,7 @@
 
         const intervalDiscussion = setInterval(() => {
         // Call the emit function here
-        Livewire.emit('$refresh'); // Replace 'functionName' with the actual function name you want to emit
+        Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
 
         chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 10000);
