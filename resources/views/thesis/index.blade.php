@@ -12,6 +12,7 @@
     @livewire('thesis.data')
 
     @livewire('thesis.detail')
+    
 
 </div>
 @endsection
@@ -21,10 +22,15 @@
     // Define the interval time in milliseconds (5 seconds = 5000 milliseconds)
     const intervalTime = 2000;
 
+    var chatMessages = document.getElementById('chatMessages');
+
     // Start the interval
     const interval = setInterval(() => {
     // Call the emit function here
     Livewire.emit('refreshDataThesis'); // Replace 'functionName' with the actual function name you want to emit
+    Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
     }, intervalTime);
 
 </script>

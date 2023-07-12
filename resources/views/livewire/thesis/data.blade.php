@@ -22,8 +22,7 @@
                 Kualitas (kual)
                 @endif
             </div>
-            
-            @livewire('discussion.detail')
+            @livewire('discussion.detail', ['id' => $thesis->id])
         @endif
     @endif
 </div>

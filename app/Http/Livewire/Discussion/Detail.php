@@ -10,11 +10,18 @@ class Detail extends Component
 {
 
     public $detailId;
-    public $title;
-
+    public $theses_id;
+    public $chat;
+    public $discussions;
     protected $listeners = [
         'editDetailDiscussion',
+        'refreshDataDiscussion' => '$refresh'
     ];
+    public function mount($id)
+    {
+        $this->theses_id = $id;
+        $this->discussions = Discussion::where('theses_id', $id)->get();
+    }
 
     public function render()
     {
@@ -23,43 +30,25 @@ class Detail extends Component
 
     public function store()
     {
-
-
-        if ($this->detailId) {
-            $validatedData = $this->validate([
-                'title' => ['required'],
-            ]);
-            $thesisDetail = Discussion::find($this->detailId);
-            $thesisDetail->title = $this->title;
-            $thesisDetail->student_id = session()->get('user_id');
-            $thesisDetail->save();
-
-        } else {
-
-            $validatedData = $this->validate([
-                'title' => ['required'],
-            ]);
-            Discussion::create([
-                'title' => $this->title,
-                "student_id" => session()->get('user_id'),
-            ]);
-        }
-
-        $this->emit('SwalSuccess', "Berhasil", 'Berhasil membuat data');
-        $this->emit('onSuccessStore');
-        $this->emit('refreshDatatable');
+        $validatedData = $this->validate([
+            'chat' => ['required'],
+        ]);
+        Discussion::create([
+            'chat' => $this->chat,
+            "student_id" => session()->get('user_id'),
+        ]);
     }
     public function resetInput()
     {
         $this->detailId = '';
-        $this->title = '';
+        $this->chat = '';
     }
     public function editDetailDiscussion($id)
     {
         $detail = Discussion::find($id);
         if ($detail) {
             $this->detailId = $detail->id;
-            $this->title = $detail->title;
+            $this->chat = $detail->chat;
         }
 
         $this->emit('onEditing');
