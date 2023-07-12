@@ -28,10 +28,13 @@
     const interval = setInterval(() => {
     // Call the emit function here
     Livewire.emit('refreshDataThesis'); // Replace 'functionName' with the actual function name you want to emit
+    }, intervalTime);
+    const intervalDiscussion = setInterval(() => {
+    // Call the emit function here
     Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
 
     chatMessages.scrollTop = chatMessages.scrollHeight;
-    }, intervalTime);
+    }, 10000);
 
 </script>
 @endsection
