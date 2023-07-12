@@ -106,7 +106,7 @@ class Datatable extends Component
 
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group')->with('user');
+        return Thesis::select('id', 'title', 'group', 'student_id')->with('user');
     }
 
     public function getView(): String
