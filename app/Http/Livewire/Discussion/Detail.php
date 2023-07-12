@@ -35,6 +35,7 @@ class Detail extends Component
         ]);
         Discussion::create([
             'chat' => $this->chat,
+            'theses_id' => $this->theses_id,
             "is_admin" => false,
         ]);
     }
