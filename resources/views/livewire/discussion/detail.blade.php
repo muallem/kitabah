@@ -106,6 +106,7 @@
             <!-- Chat input form -->
             <form class="chat-input px-3" wire:submit.prevent='store'>
                 <div class="input-group">
+                  <input type=hidden wire.model.lazy="theses_id">
                 <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                 <button type="submit" class="btn btn-primary">Send</button>
                 </div>
