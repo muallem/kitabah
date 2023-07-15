@@ -19,5 +19,5 @@
 @endsection
 
 @section('sidebar')
-    @livewire('sidebar')
+    @livewire('admin-thesis.sidebar')
 @endsection
