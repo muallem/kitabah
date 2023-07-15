@@ -17,7 +17,7 @@ class Sidebar extends Component
 
     public function mount()
     {
-        $this->thesis = Thesis::select('id')->with('user')->get();
+        $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
     }
 
     public function render()

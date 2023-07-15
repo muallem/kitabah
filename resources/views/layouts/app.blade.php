@@ -80,7 +80,7 @@
 
 
         <div class="sidebar">
-                @yield('sidebar1')
+                @yield('sidebar')
         </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
