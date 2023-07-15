@@ -61,3 +61,11 @@
         <li class="nav-item"><a href="#">{{$item->user->user_login}}</a></li>
     @endforeach
 </ul>
+@push('sidebar_nav')
+    
+<ul class="navbar-nav ms-auto">
+    @foreach($thesis as $item)
+        <li class="nav-item sidebar2"><a href="#" class="text-decoration-none text-dark">{{$item->user->user_login}}</a></li>
+    @endforeach
+</ul>
+@endpush
