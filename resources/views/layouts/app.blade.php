@@ -151,9 +151,6 @@
             $('#detailModal').modal('hide');
         })
         $(document).ready(function() {
-        $('.navbar-toggler').click(function() {
-            $('.sidebar2').toggle();
-        });
     });
     </script>
 
