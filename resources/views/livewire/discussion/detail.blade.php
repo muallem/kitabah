@@ -44,7 +44,7 @@
   <div class="container mt-4">
     <div class="row">
         <div class="mx-auto col-md-12 offset-md-3">
-            <div class="chat-box rounded">
+            <div class="chat-box rounded border-0">
             <div class="chat-messages pb-5" id="chatMessages">
                 <!-- Friend's chat messages -->
                 @if(session()->get('user_role') == 'admin')
