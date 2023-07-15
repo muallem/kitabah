@@ -12,14 +12,8 @@ class Discussion extends Component
     public $discussions;
     protected $listeners = [
         'refreshDiscussion' => '$refresh',
-        'showDiscussion'
     ];
 
-    public function showDiscussion($thesis_id){
-        $this->thesis_id = $thesis_id;
-        $this->discussions = modelDiscussion::where('theses_id', $thesis_id)->get();
-
-    }
     public function render()
     {
         if($this->thesis_id){
