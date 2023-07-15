@@ -17,7 +17,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.min.css">
 
     @livewireStyles
-
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #f1f1f1;
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            padding: 10px;
+        }
+        
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+         /* Existing CSS styles for the sidebar */
+    
+    @media (max-width: 767px) {
+        /* Hide the sidebar and display a hamburger menu */
+        .sidebar {
+            display: none;
+        }
+        
+        /* Show the hamburger menu icon */
+        .hamburger-menu {
+            display: block;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #f1f1f1;
+        }
+    }
+    </style>
+    
 @stack('css')
 </head>
 <body>
@@ -25,6 +68,14 @@
 
 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -48,6 +99,7 @@
                     </ul>
                 </div>
             </div>
+
         </nav>
       
         <main class="py-4 content">
@@ -82,6 +134,11 @@
         window.livewire.on('onSuccessStore', () => {
             $('#detailModal').modal('hide');
         })
+        $(document).ready(function() {
+        $('.hamburger-menu').click(function() {
+            $('.sidebar').toggle();
+        });
+    });
     </script>
 
 @yield('js')
