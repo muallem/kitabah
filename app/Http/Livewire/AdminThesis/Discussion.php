@@ -13,11 +13,6 @@ class Discussion extends Component
         'refreshDiscussion' => '$refresh',
         'showDiscussion'
     ];
-    public function mount($thesis_id)
-    {
-        $this->thesis_id = $thesis_id;
-        $this->discussions = Discussion::where('theses_id', $thesis_id)->get();
-    }
 
     public function showDiscussion($thesis_id){
         $this->thesis_id = $thesis_id;
