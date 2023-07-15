@@ -32,6 +32,9 @@
         background-color: #f1f1f1;
         z-index: 99; /* Ensure the sidebar appears above other elements */
     }
+    .sidebar2{
+        display: none;
+    }
     
     .sidebar ul {
         list-style-type: none;
