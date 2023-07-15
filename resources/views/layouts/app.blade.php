@@ -19,7 +19,7 @@
     @livewireStyles
     <style>
          .sidebar {
-        position: fixed;
+        position: absolute;
         top: 70px; /* Adjust the value as needed to create the desired margin-top */
         left: 0;
         width: 200px;
@@ -96,7 +96,7 @@
             </div>
         </nav>
       
-        <main class="py-4 content">
+        <main class="py-4 content position-relative">
             <div class="sidebar">
                 <ul>
                     <li><a href="#">Home</a></li>
