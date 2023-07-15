@@ -19,8 +19,8 @@
     @livewireStyles
     <style>
          .sidebar {
-        position: absolute;
-        top: 70px; /* Adjust the value as needed to create the desired margin-top */
+        position: fixed;
+         /* Adjust the value as needed to create the desired margin-top */
         left: 0;
         width: 200px;
         height: 100%;
@@ -29,6 +29,7 @@
     }
     
     .sidebar ul {
+        top: 70px;
         list-style-type: none;
         padding: 0;
     }
@@ -68,7 +69,14 @@
     <div id="app">
 
 
-       
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
             <div class="container">
@@ -96,15 +104,8 @@
             </div>
         </nav>
       
-        <main class="py-4 content position-relative">
-            <div class="sidebar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+        <main class="py-4 content">
+            
             @yield('content')
         </main>
     </div>
