@@ -22,6 +22,9 @@
 @section('sidebar')
     @livewire('admin-thesis.sidebar')
 @endsection
+@section('navbar')
+    @livewire('admin-thesis.navabr')
+@endsection
 
 @section('js')
 <script>

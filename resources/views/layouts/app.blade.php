@@ -51,7 +51,7 @@
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
                     </ul>
-                    @stack('sidebar_nav')
+                    @yield('navbar')
                 </div>
             </div>
         </nav>

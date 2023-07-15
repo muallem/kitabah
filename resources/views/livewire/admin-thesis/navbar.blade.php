@@ -15,7 +15,7 @@
         background-color: #f1f1f1;
         z-index: 99; /* Ensure the sidebar appears above other elements */
     }
-    .sidebar2{
+    .navbar_message{
         display: none;
     }
     
@@ -39,7 +39,7 @@
         .sidebar {
             display: none;
         }
-        .sidebar2 {
+        .navbar_message {
             display: block;
         }
         
@@ -59,7 +59,7 @@
 <ul class="navbar-nav ms-auto">
     @foreach($thesis as $item)
     <li class="nav-item">
-        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="btn btn-info">{{ $item->user->user_login }}</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="btn btn-info navbar_message">{{ $item->user->user_login }}</a>
     </li>
     
     @endforeach
