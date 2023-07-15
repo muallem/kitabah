@@ -40,7 +40,7 @@
             display: none;
         }
         .navbar_message {
-            display: block;
+            display: inline;
         }
         
         /* Show the hamburger menu icon */
