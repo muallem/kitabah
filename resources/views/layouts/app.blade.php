@@ -20,16 +20,19 @@
     <style>
          .sidebar {
         position: fixed;
+        padding-top: 70px;
          /* Adjust the value as needed to create the desired margin-top */
         left: 0;
         width: 200px;
         height: 100%;
         background-color: #f1f1f1;
-        z-index: 1000; /* Ensure the sidebar appears above other elements */
+        z-index: 99; /* Ensure the sidebar appears above other elements */
+    }
+    .navbar{
+        z-index: 999;
     }
     
     .sidebar ul {
-        top: 70px;
         list-style-type: none;
         padding: 0;
     }
