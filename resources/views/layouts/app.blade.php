@@ -57,7 +57,7 @@
             display: none;
         }
         .sidebar2 {
-            display: none;
+            display: block;
         }
         
         /* Show the hamburger menu icon */
