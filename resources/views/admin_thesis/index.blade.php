@@ -9,6 +9,7 @@
 @section('content')
 <div class="container">
     @livewire('admin-thesis.detail')
+    @livewire('admin-thesis.discussion')
 
     <div class="card">
         <div class="card-body">
