@@ -15,7 +15,7 @@ class Sidebar extends Component
         'refreshSidebar' => '$refresh',
     ];
 
-    public function onMount()
+    public function mount()
     {
         $this->thesis = Thesis::select('id')->with('user')->get();
     }
