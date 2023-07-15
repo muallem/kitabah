@@ -7,9 +7,6 @@
                 <h5 class="modal-title" id="exampleModalLabel">Detail Jenis Skripsi</h5>
             </div>
                 <div class="modal-body">
-                    {{$thesis_id}}
-                    {{$chat}}
-                    {{$thesis_id}}
                  @livewire('discussion.detail', ['id' => $thesis_id])
 
                 </div>
