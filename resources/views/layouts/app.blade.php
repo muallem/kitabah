@@ -140,7 +140,7 @@
             $('#detailModal').modal('hide');
         })
         $(document).ready(function() {
-        $('.hamburger-menu').click(function() {
+        $('.navbar-toggler').click(function() {
             $('.sidebar').toggle();
         });
     });
