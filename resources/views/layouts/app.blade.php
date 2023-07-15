@@ -52,6 +52,9 @@
         .sidebar {
             display: none;
         }
+        .sidebar2 {
+            display: none;
+        }
         
         /* Show the hamburger menu icon */
         .hamburger-menu {
@@ -102,6 +105,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
+                        <li class="sidebar2 d-none"><a href="#">Home</a></li>
+                        <li class="sidebar2 d-none"><a href="#">About</a></li>
+                        <li class="sidebar2 d-none"><a href="#">Services</a></li>
+                        <li class="sidebar2 d-none"><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -141,7 +148,7 @@
         })
         $(document).ready(function() {
         $('.navbar-toggler').click(function() {
-            $('.sidebar').toggle();
+            $('.sidebar2').toggle();
         });
     });
     </script>
