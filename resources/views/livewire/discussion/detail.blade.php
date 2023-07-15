@@ -48,7 +48,7 @@
             <div class="chat-messages pb-5" id="chatMessages">
                 <!-- Friend's chat messages -->
               theses id = {{$theses_id}}
-              {{$discussion}}
+              {{$discussions}}
                 @if(session()->get('user_role') == 'admin')
                   <div class="message owner">
                     <div class="message-content">
