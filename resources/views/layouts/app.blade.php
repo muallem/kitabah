@@ -105,10 +105,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
-                        <li class="sidebar2 d-none"><a href="#">Home</a></li>
-                        <li class="sidebar2 d-none"><a href="#">About</a></li>
-                        <li class="sidebar2 d-none"><a href="#">Services</a></li>
-                        <li class="sidebar2 d-none"><a href="#">Contact</a></li>
+                        <li class="sidebar2"><a href="#">Home</a></li>
+                        <li class="sidebar2"><a href="#">About</a></li>
+                        <li class="sidebar2"><a href="#">Services</a></li>
+                        <li class="sidebar2"><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
