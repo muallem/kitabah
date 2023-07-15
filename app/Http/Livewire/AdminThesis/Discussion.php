@@ -22,7 +22,6 @@ class Discussion extends Component
     public function render()
     {
         if($this->thesis_id){
-
             $this->discussions = Discussion::where('theses_id', $this->thesis_id)->get();
         }
         return view('livewire.admin-thesis.discussion');
