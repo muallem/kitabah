@@ -25,6 +25,7 @@
             width: 200px;
             height: 100%;
             background-color: #f1f1f1;
+            z-index: 999;
         }
         
         .sidebar ul {
