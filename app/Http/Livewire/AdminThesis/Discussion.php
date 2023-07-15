@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\AdminThesis;
 
 use Livewire\Component;
+use App\Models\Discussion as modelDiscussion;
 
 class Discussion extends Component
 {
@@ -16,13 +17,13 @@ class Discussion extends Component
 
     public function showDiscussion($thesis_id){
         $this->thesis_id = $thesis_id;
-        $this->discussions = Discussion::where('theses_id', $thesis_id)->get();
+        $this->discussions = modelDiscussion::where('theses_id', $thesis_id)->get();
 
     }
     public function render()
     {
         if($this->thesis_id){
-            $this->discussions = Discussion::where('theses_id', $this->thesis_id)->get();
+            $this->discussions = modelDiscussion::where('theses_id', $this->thesis_id)->get();
         }
         return view('livewire.admin-thesis.discussion');
     }
