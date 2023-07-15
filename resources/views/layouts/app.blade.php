@@ -18,6 +18,10 @@
 
     @livewireStyles
     <style>
+
+    .navbar{
+        z-index: 999;
+    }
          .sidebar {
         position: fixed;
         padding-top: 70px;
@@ -27,9 +31,6 @@
         height: 100%;
         background-color: #f1f1f1;
         z-index: 99; /* Ensure the sidebar appears above other elements */
-    }
-    .navbar{
-        z-index: 999;
     }
     
     .sidebar ul {
@@ -105,10 +106,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
-                        <li class="sidebar2"><a href="#">Home</a></li>
-                        <li class="sidebar2"><a href="#">About</a></li>
-                        <li class="sidebar2"><a href="#">Services</a></li>
-                        <li class="sidebar2"><a href="#">Contact</a></li>
+                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">Home</a></li>
+                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">About</a></li>
+                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">Services</a></li>
+                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">Contact</a></li>
                     </ul>
                 </div>
             </div>
