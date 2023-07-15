@@ -80,12 +80,7 @@
 
 
         <div class="sidebar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+                @yield('sidebar1')
         </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
@@ -109,10 +104,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
-                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">Home</a></li>
-                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">About</a></li>
-                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">Services</a></li>
-                        <li class="sidebar2"><a href="#" class="text-decoration-none text-dark">Contact</a></li>
+                        @yield('sidebar')
                     </ul>
                 </div>
             </div>
