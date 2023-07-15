@@ -18,32 +18,29 @@
 
     @livewireStyles
     <style>
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-            background-color: #f1f1f1;
-            z-index: 99;
-        }
-        .navbar{
-            z-index: 999;
-        }
-        
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .sidebar ul li {
-            padding: 10px;
-        }
-        
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-        }
+         .sidebar {
+        position: fixed;
+        top: 70px; /* Adjust the value as needed to create the desired margin-top */
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        z-index: 1000; /* Ensure the sidebar appears above other elements */
+    }
+    
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .sidebar ul li {
+        padding: 10px;
+    }
+    
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #333;
+    }
          /* Existing CSS styles for the sidebar */
     
     @media (max-width: 767px) {
@@ -104,7 +101,6 @@
                     </ul>
                 </div>
             </div>
-
         </nav>
       
         <main class="py-4 content">
