@@ -82,7 +82,7 @@
                     </div>
                   </div>
                   @foreach($discussions as $discussion)
-                    <div class="message {{ ($discussion->is_admin) ? "fiend" : "owner"}}">
+                    <div class="message {{ ($discussion->is_admin) ? "friend" : "owner"}}">
                       <div class="message-content">
                           {{ $discussion->chat }}
                       </div>
