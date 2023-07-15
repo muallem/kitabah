@@ -23,7 +23,7 @@
     @livewire('admin-thesis.sidebar')
 @endsection
 @section('navbar')
-    @livewire('admin-thesis.navabr')
+    @livewire('admin-thesis.navbar')
 @endsection
 
 @section('js')
