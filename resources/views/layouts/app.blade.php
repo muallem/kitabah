@@ -25,6 +25,9 @@
             width: 200px;
             height: 100%;
             background-color: #f1f1f1;
+            z-index: 99;
+        }
+        .navbar{
             z-index: 999;
         }
         
@@ -68,17 +71,17 @@
     <div id="app">
 
 
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
             <div class="container">
-                <div class="sidebar">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
