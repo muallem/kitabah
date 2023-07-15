@@ -59,7 +59,7 @@
 <ul class="navbar-nav ms-auto">
     @foreach($thesis as $item)
     <li class="nav-item">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="btn btn-info">{{ $item->user->user_login }}</button>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="btn btn-info">{{ $item->user->user_login }}</a>
     </li>
     
     @endforeach
@@ -68,11 +68,7 @@
     
 <ul class="navbar-nav ms-auto">
     @foreach($thesis as $item)
-        <li class="nav-item sidebar2">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#modalDiscussion"  wire:click="$emit('showDiscussion', {{ $item->id }})" class="btn btn-info">
-                {{$item->user->user_login}}
-            </button>
-        </li>
+        <li class="nav-item sidebar2"><a type="button" data-bs-toggle="modal" data-bs-target="#modalDiscussion"  wire:click="$emit('showDiscussion', {{ $item->id }})" class="btn btn-info text-decoration-none text-dark">{{$item->user->user_login}}</a></li>
     @endforeach
 </ul>
 @endpush
