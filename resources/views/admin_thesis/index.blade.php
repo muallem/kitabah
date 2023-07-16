@@ -34,7 +34,6 @@
         Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
         Livewire.emit('refreshNavbar'); // Replace 'functionName' with the actual function name you want to emit
         Livewire.emit('refreshSidebar'); // Replace 'functionName' with the actual function name you want to emit
-        Livewire.emit('refreshDatatable'); // Replace 'functionName' with the actual function name you want to emit
 
         }, 10000);
 </script>

@@ -92,10 +92,10 @@ class Datatable extends Component
                 },
             ],
             [
-                'key' => 'user.user_login',
+                'key' => 'wpjs_users.user_login',
                 'name' => 'Nama Siswa',
                 'render' => function ($item) {
-                    $name = $item->user->user_login;
+                    $name = $item->wpjs_users->user_login;
                     $html = "<div class='text-nowrap'>$name</div>";
 
                     return $html;
@@ -106,7 +106,7 @@ class Datatable extends Component
 
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group', 'student_id')->with('user');
+        return Thesis::select('id', 'title', 'group', 'student_id')->with('user as wpjs_users');
     }
 
     public function getView(): String
