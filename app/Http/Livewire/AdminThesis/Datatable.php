@@ -92,12 +92,12 @@ class Datatable extends Component
                 },
             ],
             [
-                'key' => 'wpjs_users.user_login',
+                'key' => 'wpjs_users',
                 'name' => 'Nama Siswa',
                 'render' => function ($item) {
                     $name = $item->wpjs_users->user_login;
                     $html = "<div class='text-nowrap'>$name</div>";
-
+            
                     return $html;
                 },
                 'query' => function ($query, $keyword) {
@@ -106,11 +106,12 @@ class Datatable extends Component
                     });
                 },
             ],
+            
         ];
     }
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group', 'student_id')->with('wpjs_users')->getQuery();
+        return Thesis::select('id', 'title', 'group', 'student_id')->with('wpjs_users');
     }    
 
     public function getView(): String
