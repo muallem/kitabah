@@ -108,12 +108,27 @@
 
     <!-- Add more chat messages as needed -->
 </div>
+
 @push('js')
 <script>
     document.addEventListener('livewire:load', function () {
+        var chatMessages = document.getElementById('chatMessages');
+        var shouldScrollToBottom = true;
+
+        chatMessages.addEventListener('scroll', function () {
+            var isScrolledToBottom = chatMessages.scrollHeight - chatMessages.clientHeight <= chatMessages.scrollTop + 1;
+
+            if (isScrolledToBottom) {
+                shouldScrollToBottom = true;
+            } else {
+                shouldScrollToBottom = false;
+            }
+        });
+
         Livewire.hook('message.processed', function () {
-            var chatMessages = document.getElementById('chatMessages');
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+            if (shouldScrollToBottom) {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
         });
     });
 </script>
