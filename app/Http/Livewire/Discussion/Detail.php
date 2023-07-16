@@ -22,8 +22,8 @@ class Detail extends Component
         $this->theses_id = $id;
     }
 
-    public function showDiscussion($thesis_id){
-        $this->theses_id = $thesis_id;
+    public function showDiscussion($theses_id){
+        $this->theses_id = $theses_id;
     }
 
     public function render()
