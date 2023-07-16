@@ -32,6 +32,7 @@
     .chat-messages {
       overflow-y: auto;
       max-height: 100%;
+      padding-bottom: 50px;
     }
   
     .chat-input {
