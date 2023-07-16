@@ -1,4 +1,4 @@
-<div class="chat-messages" id="chatMessages">
+<div class="chat-messages pb-5" id="chatMessages">
     <!-- Friend's chat messages -->
     @if(session()->get('user_role') == 'admin')
       <div class="message owner">
