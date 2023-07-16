@@ -1,4 +1,6 @@
 @push('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <style>
     .chat-box {
       position: relative;
@@ -39,6 +41,7 @@
       right: 0;
     }
   </style>
+
   @endpush
 
   <div class="container mt-4">
