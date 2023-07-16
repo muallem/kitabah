@@ -19,9 +19,10 @@ class Navbar extends Component
     {
         $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
     }
-
+    
     public function render()
     {
+        $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
         return view('livewire.admin-thesis.navbar');
     }
 }
