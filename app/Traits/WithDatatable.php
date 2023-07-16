@@ -2,8 +2,9 @@
 
 namespace App\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Str;
 use Livewire\WithPagination;
+use Illuminate\Database\Eloquent\Builder;
 
 trait WithDatatable
 {
@@ -67,32 +68,41 @@ trait WithDatatable
     }
 
     public function getProcessedQuery()
-    {
-        $columns = $this->getColumns();
-        $query = $this->getQuery();
-        $search = $this->search;
-        $sortBy = $this->sortBy;
-        $sortDirection = $this->sortDirection;
+{
+    $columns = $this->getColumns();
+    $query = $this->getQuery();
+    $search = $this->search;
+    $sortBy = $this->sortBy;
+    $sortDirection = $this->sortDirection;
 
-        $query->when($search, function ($query) use ($search, $columns) {
-            $query->where(function ($query) use ($columns, $search) {
-                foreach ($columns as $col) {
-                    if (
-                        isset($col['key'])
-                        && (!isset($col['searchable']) || (isset($col['searchable']) && $col['searchable']))
-                    ) {
+    $query->when($search, function ($query) use ($search, $columns) {
+        $query->where(function ($query) use ($columns, $search) {
+            foreach ($columns as $col) {
+                if (
+                    isset($col['key'])
+                    && (!isset($col['searchable']) || (isset($col['searchable']) && $col['searchable']))
+                ) {
+                    if (Str::contains($col['key'], '.')) {
+                        $relationship = Str::beforeLast($col['key'], '.');
+                        $column = Str::afterLast($col['key'], '.');
+                        $query->orWhereHas($relationship, function ($query) use ($column, $search) {
+                            $query->where($column, 'LIKE', "%$search%");
+                        });
+                    } else {
                         $query->orWhere($col['key'], 'LIKE', "%$search%");
                     }
                 }
-            });
+            }
         });
+    });
 
-        $query->when($sortBy, function ($query) use ($sortBy, $sortDirection) {
-            $query->orderBy($sortBy, $sortDirection);
-        });
+    $query->when($sortBy, function ($query) use ($sortBy, $sortDirection) {
+        $query->orderBy($sortBy, $sortDirection);
+    });
 
-        return $query;
-    }
+    return $query;
+}
+
     protected function getRelationships()
     {
         return ['wpjs_users']; // Add more relationships as needed
