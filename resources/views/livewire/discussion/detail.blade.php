@@ -35,7 +35,7 @@
                   <input wire:model="files" type="file" id="fileInput" style="display: none;" multiple>
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
-                  @if($files)
+                @if($files)
                   <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
                     <span wire:loading wire:target="store" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     <span wire:loading.remove>Upload</span>
