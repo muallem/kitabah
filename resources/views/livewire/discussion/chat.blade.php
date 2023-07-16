@@ -57,12 +57,14 @@
 
 
 </div>
-<script>
-    document.addEventListener('livewire:load', function () {
-        Livewire.on('chatToBottom', function () {
-            // Handle the event here, e.g., show a success message
-            const chatMessages = document.getElementById('chatMessages');
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+@push('js')
+    <script>
+        document.addEventListener('livewire:load', function () {
+            Livewire.on('chatToBottom', function () {
+                // Handle the event here, e.g., show a success message
+                const chatMessages = document.getElementById('chatMessages');
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            });
         });
-    });
-</script>
+    </script>
+@endpush
