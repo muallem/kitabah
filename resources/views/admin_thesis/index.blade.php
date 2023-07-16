@@ -28,18 +28,15 @@
 
 @section('js')
 <script>
-    var chatMessages = document.getElementById('chatMessages');
-
-
-    var chatMessages = document.getElementById('chatMessages');
-        chatMessages.scrollTop = chatMessages.scrollHeight;
 
         const intervalDiscussion = setInterval(() => {
         // Call the emit function here
         Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
 
-        chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 10000);
-
+    function discussionToBottom(){
+        const chatMessages = document.getElementById('chatMessages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
 </script>
 @endsection

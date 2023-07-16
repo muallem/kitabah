@@ -11,7 +11,7 @@
     }
   
     .message {
-    margin: auto;
+      margin: auto;
       margin-bottom: 10px;
       padding: 5px;
       border-radius: 5px;
@@ -135,17 +135,21 @@
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                   <button type="submit" class="btn btn-primary">Send</button>
-                  <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <i class="fas fa-file text-white"></i></button>
 
                 </div>
+                <div class="input-group">
+                  <button wire:click="$refs.fileInput.click()" type="button">
+                      <i class="fas fa-plus"></i> Add File
+                  </button>
+                  <input wire:model="photo" type="file" id="fileInput" style="display: none;" accept="image/*">
+
+                  <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-file text-white"></i></button>
+                  <button type="button" class="btn btn-outline-dark" onclick="discussionToBottom()">
+                    <i class="fas fa-arrow-bottom text-white"></i></button>
+              </div>
             </form>
             </div>
         </div>
     </div>
 </div>
-
-@push('js')
-    <script>
-  </script>
-@endpush
