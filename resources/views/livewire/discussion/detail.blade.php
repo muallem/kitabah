@@ -35,12 +35,17 @@
                   <input wire:model="files" type="file" id="fileInput" style="display: none;" multiple>
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
-                  <div wire:loading wire:target="files" class="">Loading...</div>
                   @if($files)
-                  <button type="submit" class="btn btn-primary">Upload</button>
-                  @else
-                  <button type="submit" class="btn btn-primary">Send</button>
-                  @endif
+                  <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
+                    <span wire:loading wire:target="store" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span wire:loading.remove>Send</span>
+                  </button>
+                @else
+                  <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
+                    <span wire:loading wire:target="files" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span wire:loading.remove>Send</span>
+                  </button>
+                @endif
                 </div>
               </form>
             </div>
