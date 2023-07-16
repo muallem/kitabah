@@ -44,7 +44,7 @@ class Detail extends Component
             // Handle the uploaded files
             foreach ($this->files as $file) {
                 // Process each uploaded photo
-                $fileName = Str::random(16) . '.' . $file->getClientOriginalExtension();
+                $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                 $originalName = $file->getClientOriginalName();
                 $filePath = $file->storeAs('attachments', $fileName, 'public');
 
