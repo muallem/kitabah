@@ -92,10 +92,8 @@
     @push('js')
     <script>
         document.addEventListener('livewire:load', function () {
-            Livewire.hook('message.processed', function () {
-                var chatMessages = document.getElementById('chatMessages');
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            });
+            var chatMessages = document.getElementById('chatMessages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         });
     </script>
     @endpush
