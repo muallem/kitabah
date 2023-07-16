@@ -51,9 +51,10 @@
             @if( $discussion->is_file )
 
               <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
-              className="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
+              class="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
               download
             >
+            <i class="fas fa-file"></i>
               {{ $discussion->chat }}
           </a>
             @else
@@ -82,9 +83,10 @@
                 @if( $discussion->is_file )
     
                   <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
-                  className="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
+                  class="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
                   download
                 >
+                <i class="fas fa-file"></i>
                   {{ $discussion->chat }}
               </a>
                 @else
