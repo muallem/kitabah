@@ -12,6 +12,7 @@ class Detail extends Component
     public $detailId;
     public $theses_id;
     public $chat;
+    public $file;
     protected $listeners = [
         'editDetailDiscussion',
         'showDiscussion',
@@ -24,6 +25,10 @@ class Detail extends Component
 
     public function showDiscussion($theses_id){
         $this->theses_id = $theses_id;
+    }
+    public function triggerFileInputClick()
+    {
+        $this->dispatchBrowserEvent('openFileInput');
     }
 
     public function render()
