@@ -50,7 +50,7 @@
 
               <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
               class="text-decoration-none text-info "
-              download
+              download="{{ $discussion->chat }}"
             >
             <i class="fas fa-file"></i>
               {{ $discussion->chat }}
@@ -82,7 +82,7 @@
     
                   <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
                   class="text-decoration-none text-info "
-                  download
+                  download="{{ $discussion->chat }}"
                 >
                 <i class="fas fa-file"></i>
                   {{ $discussion->chat }}
