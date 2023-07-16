@@ -29,7 +29,7 @@
   </style>
 
   @endpush
-<div class="chat-messages" id="chatMessages">
+<div class="chat-messages" id="chatMessages" wire:poll.750ms>
     @if(session()->get('user_role') == 'admin')
       <div class="message owner">
         <div class="message-content">
@@ -108,12 +108,13 @@
 
     <!-- Add more chat messages as needed -->
 </div>
-
 @push('js')
 <script>
     document.addEventListener('livewire:load', function () {
-        var chatMessages = document.getElementById('chatMessages');
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        Livewire.hook('message.processed', function () {
+            var chatMessages = document.getElementById('chatMessages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
     });
 </script>
 @endpush
