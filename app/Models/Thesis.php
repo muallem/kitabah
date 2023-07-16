@@ -29,4 +29,8 @@ class Thesis extends Model
     {
         return $this->belongsTo(User::class, 'student_id', 'ID');
     }
+    public function wpjs_users()
+    {
+        return $this->belongsTo(User::class, 'student_id', 'ID');
+    }
 }

@@ -106,7 +106,7 @@ class Datatable extends Component
 
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group', 'student_id')->with('user as wpjs_users');
+        return Thesis::select('id', 'title', 'group', 'student_id')->with('wpjs_users');
     }
 
     public function getView(): String
