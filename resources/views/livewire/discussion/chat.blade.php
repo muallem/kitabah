@@ -107,14 +107,13 @@
     </div> --}}
 
     <!-- Add more chat messages as needed -->
-
-
-    @push('js')
-    <script>
-        document.addEventListener('livewire:load', function () {
-            var chatMessages = document.getElementById('chatMessages');
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        });
-    </script>
-    @endpush
 </div>
+
+@push('js')
+<script>
+    document.addEventListener('livewire:load', function () {
+        var chatMessages = document.getElementById('chatMessages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    });
+</script>
+@endpush
