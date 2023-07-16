@@ -73,7 +73,7 @@ trait WithDatatable
         $search = $this->search;
         $sortBy = $this->sortBy;
         $sortDirection = $this->sortDirection;
-
+    
         $query->when($search, function ($query) use ($search, $columns) {
             $query->where(function ($query) use ($columns, $search) {
                 foreach ($columns as $col) {
@@ -86,13 +86,24 @@ trait WithDatatable
                 }
             });
         });
-
+    
         $query->when($sortBy, function ($query) use ($sortBy, $sortDirection) {
             $query->orderBy($sortBy, $sortDirection);
         });
-
+    
+        // Add eager loading relationships
+        $relationships = $this->getRelationships();
+        $query->with($relationships);
+    
         return $query;
     }
+    
+    protected function getRelationships()
+    {
+        // Define the relationships you want to eager load
+        return ['wpjs_users']; // Add more relationships as needed
+    }
+    
 
     public function getData()
     {
