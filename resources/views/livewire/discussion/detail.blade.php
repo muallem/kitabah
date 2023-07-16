@@ -91,6 +91,17 @@
                   
                 @endif
 
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <button
+                      type="button"
+                      className="btn btn-outline-info d-inline file_item m-2"
+                    >
+                      {file.name}
+                    </button>
+                  </div>
+                </div>
+
                 <!-- Me's chat messages -->
                 {{-- <div class="message owner">
                   <div class="message-content">
@@ -106,8 +117,11 @@
             <form class="chat-input px-3" wire:submit.prevent='store'>
                 <div class="input-group">
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
-                <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
-                <button type="submit" class="btn btn-primary">Send</button>
+                  <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
+                  <button type="submit" class="btn btn-primary">Send</button>
+                  <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-file"></i></button>
+
                 </div>
             </form>
             </div>
