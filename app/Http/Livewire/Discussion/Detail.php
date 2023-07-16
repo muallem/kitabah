@@ -5,9 +5,11 @@ namespace App\Http\Livewire\Discussion;
 use App\Models\Discussion;
 use Livewire\Component;
 use Illuminate\Support\Str;
+use Livewire\WithFileUploads;
 
 class Detail extends Component
 {
+    use WithFileUploads;
 
     public $detailId;
     public $theses_id;
