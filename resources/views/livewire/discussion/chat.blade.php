@@ -94,7 +94,7 @@
             Livewire.on('chatToBottom', function () {
                 // Handle the event here, e.g., show a success message
                 console.log('toBottom')
-                const chatMessages = document.getElementById('chatMessages');
+                let chatMessages = document.getElementById('chatMessages');
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             });
         });
