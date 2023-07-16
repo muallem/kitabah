@@ -92,18 +92,14 @@ class Datatable extends Component
                 },
             ],
             [
-                'key' => 'wpjs_users',
                 'name' => 'Nama Siswa',
+                'sortable' => false,
+                'searchable' => false,
                 'render' => function ($item) {
                     $name = $item->wpjs_users->user_login;
                     $html = "<div class='text-nowrap'>$name</div>";
             
                     return $html;
-                },
-                'query' => function ($query, $keyword) {
-                    $query->whereHas('wpjs_users', function ($query) use ($keyword) {
-                        $query->where('user_login', 'LIKE', "%$keyword%");
-                    });
                 },
             ],
             
@@ -111,9 +107,8 @@ class Datatable extends Component
     }
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group', 'student_id')->leftJoin('wpjs_users', 'theses.student_id', '=', 'wpjs_users.ID');
-    }
-
+        return Thesis::select('id', 'title', 'group', 'student_id')->with('wpjs_users');
+    }    
 
     public function getView(): String
     {
