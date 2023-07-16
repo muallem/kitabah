@@ -1,3 +1,34 @@
+@push('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+    .message {
+      margin: auto;
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      max-width: 90%;
+    }
+  
+    .message.friend {
+      background-color: #f2f2f2;
+      /* align-self: flex; */
+    }
+  
+    .message.owner {
+      background-color: #d4edda;
+      /* align-self: flex-start; */
+      /* margin-left: auto; Add this line */
+    }
+  
+    .chat-messages {
+      overflow-y: auto;
+      max-height: 100%;
+    }
+  
+  </style>
+
+  @endpush
 <div class="chat-messages pb-5" id="chatMessages">
     <!-- Friend's chat messages -->
     @if(session()->get('user_role') == 'admin')

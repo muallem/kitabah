@@ -10,30 +10,6 @@
       overflow-y: scroll;
     }
   
-    .message {
-      margin: auto;
-      margin-bottom: 10px;
-      padding: 5px;
-      border-radius: 5px;
-      max-width: 90%;
-    }
-  
-    .message.friend {
-      background-color: #f2f2f2;
-      /* align-self: flex; */
-    }
-  
-    .message.owner {
-      background-color: #d4edda;
-      /* align-self: flex-start; */
-      /* margin-left: auto; Add this line */
-    }
-  
-    .chat-messages {
-      overflow-y: auto;
-      max-height: 100%;
-    }
-  
     .chat-input {
       position: absolute;
       bottom: 10px;
