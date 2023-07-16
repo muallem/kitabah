@@ -100,6 +100,11 @@ class Datatable extends Component
 
                     return $html;
                 },
+                'query' => function ($query, $keyword) {
+                    $query->whereHas('wpjs_users', function ($query) use ($keyword) {
+                        $query->where('user_login', 'LIKE', "%$keyword%");
+                    });
+                },
             ],
         ];
     }
