@@ -29,7 +29,7 @@
   </style>
 
   @endpush
-<div class="chat-messages" id="chatMessages" wire:poll.350ms>
+<div class="chat-messages" id="chatMessages">
     @if(session()->get('user_role') == 'admin')
       <div class="message owner">
         <div class="message-content">
