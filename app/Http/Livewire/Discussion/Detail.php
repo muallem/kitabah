@@ -44,6 +44,7 @@ class Detail extends Component
         ]);
         $this->chat = "";
         $this->emit('refreshDataChat');
+        $this->emit('chatToBottom');
     }
     public function resetInput()
     {
