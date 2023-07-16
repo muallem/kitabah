@@ -29,7 +29,7 @@
   </style>
 
   @endpush
-<div class="chat-messages pb-5" id="chatMessages">
+<div class="chat-messages mb-5" id="chatMessages">
     <!-- Friend's chat messages -->
     @if(session()->get('user_role') == 'admin')
       <div class="message owner">
