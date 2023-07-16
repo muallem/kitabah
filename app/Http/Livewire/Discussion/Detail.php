@@ -12,7 +12,7 @@ class Detail extends Component
     public $detailId;
     public $theses_id;
     public $chat;
-    public $file;
+    public $files = [];
     protected $listeners = [
         'editDetailDiscussion',
         'showDiscussion',
@@ -38,16 +38,41 @@ class Detail extends Component
 
     public function store()
     {
-        $validatedData = $this->validate([
-            'chat' => ['required'],
-        ]);
-        Discussion::create([
-            'chat' => $this->chat,
-            'theses_id' => $this->theses_id,
-            "is_admin" => (session()->get('user_role') === 'admin') ? true : false,
-            "is_file" => false
-        ]);
-        $this->chat = "";
+        if ($this->files) {
+            // Handle the uploaded files
+            foreach ($this->files as $file) {
+                // Process each uploaded photo
+                $fileName = Str::random(16) . '.' . $file->getClientOriginalExtension();
+                $originalName = $file->getClientOriginalName();
+                $filePath = $file->storeAs('attachments', $fileName, 'public');
+
+
+                Discussion::create([
+                    'chat' => $originalName,
+                    'theses_id' => $this->theses_id,
+                    "is_admin" => (session()->get('user_role') === 'admin') ? true : false,
+                    "is_file" => true,
+                    'file' => $fileName
+                ]);
+            }
+        }
+
+        if ($this->chat) {
+            // Handle the input text
+            // Access the text input via $this->textInput
+            $validatedData = $this->validate([
+                'chat' => ['required'],
+            ]);
+            Discussion::create([
+                'chat' => $this->chat,
+                'theses_id' => $this->theses_id,
+                "is_admin" => (session()->get('user_role') === 'admin') ? true : false,
+                "is_file" => false
+            ]);
+        }
+
+        // Reset the form fields
+        $this->reset(['files', 'chat']);
         $this->emit('refreshDataChat');
     }
     public function resetInput()

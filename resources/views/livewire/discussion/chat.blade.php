@@ -31,6 +31,7 @@
   @endpush
 <div class="chat-messages" id="chatMessages" wire:poll.100ms>
     <!-- Friend's chat messages -->
+    {{$discussions}}
     @if(session()->get('user_role') == 'admin')
       <div class="message owner">
         <div class="message-content">

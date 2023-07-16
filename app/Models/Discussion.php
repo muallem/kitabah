@@ -13,7 +13,8 @@ class Discussion extends Model
         'chat',
         'theses_id',
         'is_admin',
-        'is_file'
+        'is_file',
+        'file'
     ];
 
     protected $hidden = [
