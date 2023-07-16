@@ -34,9 +34,5 @@
         Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
 
         }, 10000);
-    function discussionToBottom(){
-        const chatMessages = document.getElementById('chatMessages');
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
 </script>
 @endsection

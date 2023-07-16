@@ -26,6 +26,7 @@ class Chat extends Component
     public function showChat($thesis_id){
         $this->theses_id = $thesis_id;
         $this->discussions = Discussion::where('theses_id', $thesis_id)->get();
+        $this->emit('chatToBottom');
     }
 
     public function render()
