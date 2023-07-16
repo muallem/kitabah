@@ -54,23 +54,17 @@
             <!-- Chat input form -->
             <form class="chat-input px-3" wire:submit.prevent='store'>
                 <div class="input-group mb-2">
+
+                  <button wire:click="$refs.fileInput.click()" type="button" class="btn btn-outline-primary">
+                    <i class="fas fa-plus"></i> File
+                  </button>
+                  <input wire:model="photo" type="file" id="fileInput" style="display: none;" accept="image/*">
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                   <button type="submit" class="btn btn-primary">Send</button>
 
                 </div>
-                <div class="input-group d-flex justify-content-center">
-                  <button wire:click="$refs.fileInput.click()" type="button" class="btn btn-outline-primary">
-                      <i class="fas fa-plus"></i> File
-                  </button>
-                  <input wire:model="photo" type="file" id="fileInput" style="display: none;" accept="image/*">
-
-                  <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <i class="fas fa-file text-info"></i></button>
-                  <button type="button" class="btn btn-outline-dark" onclick="discussionToBottom()">
-                    <i class="fas fa-arrow-bottom text-white"></i></button>
-              </div>
-            </form>
+              </form>
             </div>
         </div>
     </div>
