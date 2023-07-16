@@ -91,4 +91,8 @@
 
 </div>
 @push('js')
+<script>
+    var chatMessages = document.getElementById('chatMessages');
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+</script>
 @endpush

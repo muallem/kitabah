@@ -43,7 +43,7 @@ class Detail extends Component
             "is_file" => false
         ]);
         $this->chat = "";
-        $this->emit('showChat', ['id', $this->theses_id]);
+        $this->emit('refreshDataChat');
     }
     public function resetInput()
     {
