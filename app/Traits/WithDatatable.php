@@ -93,6 +93,10 @@ trait WithDatatable
 
         return $query;
     }
+    protected function getRelationships()
+    {
+        return ['wpjs_users']; // Add more relationships as needed
+    }
 
     public function getData()
     {
