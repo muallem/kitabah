@@ -49,7 +49,7 @@
             @if( $discussion->is_file )
 
               <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
-              class="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
+              class="text-decoration-none text-info "
               download
             >
             <i class="fas fa-file"></i>
@@ -81,7 +81,7 @@
                 @if( $discussion->is_file )
     
                   <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
-                  class="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
+                  class="text-decoration-none text-info "
                   download
                 >
                 <i class="fas fa-file"></i>
