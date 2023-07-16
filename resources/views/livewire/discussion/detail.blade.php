@@ -29,11 +29,10 @@
             <!-- Chat input form -->
             <form class="chat-input px-3" wire:submit.prevent='store'>
                 <div class="input-group mb-2">
-
-                  <button wire:click="$refs.fileInput.click()" type="button" class="btn btn-outline-primary">
-                    <i class="fas fa-plus"></i> File
+                  <button wire:click="triggerFileInputClick" type="button">
+                      <i class="fas fa-plus"></i> File
                   </button>
-                  <input wire:model="photo" type="file" id="fileInput" style="display: none;" accept="image/*">
+                  <input wire:model="photo" type="file" id="fileInput" style="display: none;" multiple>
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                   <button type="submit" class="btn btn-primary">Send</button>
@@ -44,3 +43,14 @@
         </div>
     </div>
 </div>
+@push('js')
+    
+<script>
+  document.addEventListener('livewire:load', function () {
+      Livewire.on('triggerFileInputClick', function () {
+          document.getElementById('fileInput').click();
+      });
+  });
+</script>
+@endpush
+@endpush
