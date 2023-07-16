@@ -32,17 +32,20 @@
                   <button wire:click="triggerFileInputClick" type="button" class="btn btn-primary">
                       <i class="fas fa-plus"></i> File
                   </button>
-                  <input wire:model.lazy="files" type="file" id="fileInput" style="display: none;" multiple>
+                  <input wire:model="files" type="file" id="fileInput" style="display: none;" multiple>
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                   @if($files)
-                    <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
-                      <span wire:loading wire:target="store" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                      <span wire:loading.remove>Upload</span>
-                    </button>
-                  @else
-                    <button type="submit" class="btn btn-primary">Send</button>
-                  @endif
+                  <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
+                    <span wire:loading wire:target="store" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span wire:loading.remove>Upload</span>
+                  </button>
+                @else
+                  <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
+                    <span wire:loading wire:target="files" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span wire:loading.remove>Send</span>
+                  </button>
+                @endif
                 </div>
               </form>
             </div>
