@@ -48,7 +48,17 @@
       @foreach($discussions as $discussion)
         <div class="message {{ ($discussion->is_admin) ? "owner" : "friend"}}">
           <div class="message-content">
+            @if( $discussion->is_file )
+
+              <a href="{{ asset("storage/app/public/attachments/$discussion->file") }}"
+              className="text-decoration-none text-info btn btn-outline-info d-inline file_item m-2"
+              download
+            >
               {{ $discussion->chat }}
+          </a>
+            @else
+                {{ $discussion->chat }}
+            @endif
           </div>
         </div> 
       @endforeach
