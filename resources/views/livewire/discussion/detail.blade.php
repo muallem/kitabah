@@ -48,7 +48,7 @@
     <div class="row">
         <div class="mx-auto col-md-12 offset-md-3">
             <div class="chat-box rounded border-0">
-              @livewire('discussion.chat')
+              @livewire('discussion.chat', ['id' => $thesis_id])
 
             <!-- Chat input form -->
             <form class="chat-input px-3" wire:submit.prevent='store'>
