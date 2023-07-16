@@ -111,7 +111,7 @@ class Datatable extends Component
     }
     public function getQuery(): Builder
     {
-        return Thesis::select('id', 'title', 'group', 'student_id')->leftJoin('wpjs_users', 'theses.student_id', '=', 'wpjs_users.id');
+        return Thesis::select('id', 'title', 'group', 'student_id')->leftJoin('wpjs_users', 'theses.student_id', '=', 'wpjs_users.ID');
     }
 
 
