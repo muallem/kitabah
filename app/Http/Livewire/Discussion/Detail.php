@@ -28,7 +28,7 @@ class Detail extends Component
     }
     public function triggerFileInputClick()
     {
-        $this->dispatchBrowserEvent('openFileInput');
+        $this->emit('openFileInput');
     }
 
     public function render()
