@@ -23,10 +23,10 @@ class Chat extends Component
         $this->discussions = Discussion::where('theses_id', $id)->get();
     }
 
-    public function showChat($thesis_id){
-        $this->theses_id = $thesis_id;
-        $this->discussions = Discussion::where('theses_id', $thesis_id)->get();
-        $this->emit('chatToBottom');
+    public function showChat($id){
+        $this->theses_id = $id;
+        $this->discussions = Discussion::where('theses_id', $id)->get();
+        return view('livewire.discussion.chat');
     }
 
     public function render()
