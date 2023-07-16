@@ -48,7 +48,7 @@
     <div class="row">
         <div class="mx-auto col-md-12 offset-md-3">
             <div class="chat-box rounded border-0">
-            <div class="chat-messages pb-5" id="chatMessages">
+            <div class="chat-messages" id="chatMessages">
                 <!-- Friend's chat messages -->
                 @if(session()->get('user_role') == 'admin')
                   <div class="message owner">
@@ -94,16 +94,6 @@
                   
                 @endif
 
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    <button
-                      type="button"
-                      className="btn btn-outline-info d-inline file_item m-2"
-                    >
-                      {file.name}
-                    </button>
-                  </div>
-                </div>
 
                 <!-- Me's chat messages -->
                 {{-- <div class="message owner">
@@ -116,14 +106,37 @@
 
             </div>
 
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <button
+                  type="button"
+                  className="btn btn-outline-info d-inline file_item m-2"
+                >
+                  {file.name}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info d-inline file_item m-2"
+                >
+                  {file.name}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info d-inline file_item m-2"
+                >
+                  {file.name}
+                </button>
+              </div>
+            </div>
+
             <!-- Chat input form -->
-            <form class="chat-input px-3" wire:submit.prevent='store'>
+            <form class="chat-input px-3 pt-5" wire:submit.prevent='store'>
                 <div class="input-group">
                   <input type=hidden wire.model="theses_id" value={{$theses_id}}>
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                   <button type="submit" class="btn btn-primary">Send</button>
                   <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <i class="fas fa-file"></i></button>
+                    <i class="fas fa-file text-white"></i></button>
 
                 </div>
             </form>
