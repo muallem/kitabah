@@ -12,7 +12,8 @@ class Discussion extends Model
     protected $fillable = [
         'chat',
         'theses_id',
-        'is_admin'
+        'is_admin',
+        'is_file'
     ];
 
     protected $hidden = [

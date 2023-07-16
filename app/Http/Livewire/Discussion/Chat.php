@@ -2,33 +2,36 @@
 
 namespace App\Http\Livewire\Discussion;
 
-use App\Models\Discussion;
 use Livewire\Component;
-use Illuminate\Support\Str;
+use App\Models\Discussion;
 
-class Detail extends Component
+class Chat extends Component
 {
 
     public $detailId;
     public $theses_id;
     public $chat;
+    public $discussions;
     protected $listeners = [
-        'editDetailDiscussion',
-        'showDiscussion',
-        'refreshDataDiscussion' => '$refresh'
+        'editDetailChat',
+        'showChat',
+        'refreshDataChat' => '$refresh'
     ];
     public function mount($id)
     {
         $this->theses_id = $id;
+        $this->discussions = Discussion::where('theses_id', $id)->get();
     }
 
-    public function showDiscussion($thesis_id){
+    public function showChat($thesis_id){
         $this->theses_id = $thesis_id;
+        $this->discussions = Discussion::where('theses_id', $thesis_id)->get();
     }
 
     public function render()
     {
-        return view('livewire.discussion.detail');
+        $this->discussions = Discussion::where('theses_id', $this->theses_id)->get();
+        return view('livewire.discussion.chat');
     }
 
     public function store()
@@ -40,7 +43,6 @@ class Detail extends Component
             'chat' => $this->chat,
             'theses_id' => $this->theses_id,
             "is_admin" => (session()->get('user_role') === 'admin') ? true : false,
-            "is_file" => false
         ]);
         $this->chat = "";
     }
@@ -49,7 +51,7 @@ class Detail extends Component
         $this->detailId = '';
         $this->chat = '';
     }
-    public function editDetailDiscussion($id)
+    public function editDetailChat($id)
     {
         $detail = Discussion::find($id);
         if ($detail) {
