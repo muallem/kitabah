@@ -37,7 +37,7 @@
         // Call the emit function here
         Livewire.emit('refreshDataDiscussion'); // Replace 'functionName' with the actual function name you want to emit
 
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        // chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 10000);
 
 </script>

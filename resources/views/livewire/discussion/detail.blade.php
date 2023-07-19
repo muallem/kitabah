@@ -37,12 +37,12 @@
                   <input type="text" class="form-control" placeholder="Type your message" wire:model.lazy="chat">
                 @if($files)
                   <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
-                    <span wire:loading wire:target="store" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span wire:loading wire:target="store" class="spinner-border spinner-border-sm" role="status" aria-hidden="true">Upload</span>
                     <span wire:loading.remove>Upload</span>
                   </button>
                 @else
                   <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
-                    <span wire:loading wire:target="files" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span wire:loading wire:target="files" class="spinner-border spinner-border-sm" role="status" aria-hidden="true">Send</span>
                     <span wire:loading.remove>Send</span>
                   </button>
                 @endif
