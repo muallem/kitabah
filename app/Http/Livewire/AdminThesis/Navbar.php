@@ -4,8 +4,9 @@ namespace App\Http\Livewire\AdminThesis;
 
 use App\Models\Thesis;
 use Livewire\Component;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Builder;
 
 class Navbar extends Component
 {
@@ -17,12 +18,26 @@ class Navbar extends Component
 
     public function mount()
     {
-        $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
+        // $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
+        $this->thesis = Thesis::select('theses.*', DB::raw('COUNT(discussions.id) as discussion_count'))
+        ->leftJoin('discussions', function ($join) {
+            $join->on('theses.id', '=', 'discussions.theses_id')
+                ->where('discussions.created_at', '>', DB::raw('theses.last_seen'));
+        })
+        ->groupBy('theses.id')
+        ->get();
     }
     
     public function render()
     {
-        $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
+        // $this->thesis = Thesis::select('id', 'student_id')->with('user')->get();
+        $this->thesis = Thesis::select('theses.*', DB::raw('COUNT(discussions.id) as discussion_count'))
+    ->leftJoin('discussions', function ($join) {
+        $join->on('theses.id', '=', 'discussions.theses_id')
+            ->where('discussions.created_at', '>', DB::raw('theses.last_seen'));
+    })
+    ->groupBy('theses.id')
+    ->get();
         return view('livewire.admin-thesis.navbar');
     }
 }

@@ -13,6 +13,7 @@ class Thesis extends Model
         'group',
         'student_id',
         'teacher_id',
+        'last_seen'
     ];
 
     protected $hidden = [

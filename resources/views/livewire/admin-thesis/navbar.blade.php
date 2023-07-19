@@ -56,6 +56,7 @@
     }
     </style>
 @endpush
+{{$thesis}}
 <ul class="navbar-nav ms-auto">
     @foreach($thesis as $item)
     <li class="nav-item">
