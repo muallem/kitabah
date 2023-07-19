@@ -24,6 +24,7 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
     Route::get('/home', [App\Http\Controllers\ThesisController::class, 'admin_thesis'])->name('home');
     Route::get('/admin_thesis', [App\Http\Controllers\ThesisController::class, 'admin_thesis'])->name('thesis.admin_thesis');
     Route::get('/discussion', [App\Http\Controllers\DiscussionController::class, 'index'])->name('thesis.discussion');
+    Route::get('/print/{id}', [App\Http\Controllers\DiscussionController::class, 'print'])->name('print');
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['my.auth', 'student']], function () {
