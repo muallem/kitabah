@@ -5,7 +5,7 @@
             Buat Judul Skripsi
         </button>
     @else
-    <div class="input-group">
+    <div class="input-group w-100">
         <div class="alert alert-success" role="alert">
             {{$thesis->title}}
         </div>
