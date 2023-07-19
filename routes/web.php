@@ -30,6 +30,8 @@ Route::group(['middleware' => ['my.auth', 'student']], function () {
     Route::get('/home', [App\Http\Controllers\ThesisController::class, 'index'])->name('home');
     Route::get('/thesis', [App\Http\Controllers\ThesisController::class, 'index'])->name('thesis.index');
     Route::get('/discussion', [App\Http\Controllers\DiscussionController::class, 'index'])->name('thesis.discussion');
+
+    Route::get('/print/{id}', [App\Http\Controllers\DiscussionController::class, 'print'])->name('print');
 });
 Route::get('get_session', [HomeController::class, 'get_session']);
 Route::get('coba', [HomeController::class, 'coba']);

@@ -6,6 +6,7 @@ use App\Models\Thesis;
 use App\Traits\WithDatatable;
 use Livewire\Component;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 
 class Datatable extends Component
@@ -59,11 +60,17 @@ class Datatable extends Component
                                 <i class='fa fa-trash mr-2'></i>Hapus
                             </button>
                             </form>";
-                         $action = "
+                            $id = route('print', Crypt::encrypt($item->id));
+                                $printHtml =
+                                    "<a href='$id' target='_blank' class='btn btn-light text-nowrap dropdown-item'><i class='fas fa-print mr-2'></i> Cetak</a>
+                                    <div class=\"dropdown-divider\"></div>\n ";
+                            
+                     $action = "
 
                          <button type=\"button\" class=\"btn btn-primary btn-sm dropdown dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Aksi <i class=\"mdi mdi-chevron-down\"></i></button>\n
                          <div class=\"dropdown-menu\">\n     
                              $editHtml
+                             $printHtml
                              $destroyHtml
                          </div>
                     ";
