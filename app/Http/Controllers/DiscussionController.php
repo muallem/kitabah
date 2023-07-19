@@ -12,8 +12,8 @@ class DiscussionController extends Controller
     public function print(Request $request){
 
         $id = Crypt::decrypt($request->id);
-        return $id;
         $data = Thesis::select('id', 'title', 'group', 'student_id')->with('wpjs_users')->where('id', $id)->first();
+        return $data;
         return view('print', ['data' => $data]);
     }
     /**
