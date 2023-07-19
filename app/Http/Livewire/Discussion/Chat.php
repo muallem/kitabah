@@ -23,7 +23,7 @@ class Chat extends Component
     {
         $this->theses_id = $id;
         $this->discussions = Discussion::where('theses_id', $id)->get();
-        if (session()->get('user_role') === 'admin'){
+        if (session()->get('user_role') === 'admin' && $id){
             $theses = Thesis::where('id', $id)->first();
             $theses->last_seen = Carbon::now();
             $theses->save();
@@ -33,7 +33,7 @@ class Chat extends Component
     public function showChat($id){
         $this->theses_id = $id;
         $this->discussions = Discussion::where('theses_id', $id)->get();
-        if (session()->get('user_role') === 'admin'){
+        if (session()->get('user_role') === 'admin' && $id){
             $theses = Thesis::where('id', $id)->first();
             $theses->last_seen = Carbon::now();
             $theses->save();
@@ -44,7 +44,7 @@ class Chat extends Component
     public function render()
     {
         $this->discussions = Discussion::where('theses_id', $this->theses_id)->get();
-        if (session()->get('user_role') === 'admin'){
+        if (session()->get('user_role') === 'admin' && $this->theses_id){
             $theses = Thesis::where('id', $this->theses_id)->first();
             $theses->last_seen = Carbon::now();
             $theses->save();
