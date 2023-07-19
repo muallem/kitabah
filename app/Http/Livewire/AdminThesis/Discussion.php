@@ -19,6 +19,9 @@ class Discussion extends Component
         $this->emit('showChat', ['id' => $id]);
     }
 
+    public function resetInput(){
+        $this->reset(['thesis_id', 'chat']);
+    }
     public function render()
     {
         return view('livewire.admin-thesis.discussion');

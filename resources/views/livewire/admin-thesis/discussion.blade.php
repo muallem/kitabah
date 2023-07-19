@@ -17,3 +17,11 @@
         </div>
     </div>
 </div>
+
+@push('js')
+    <script>
+         $("#modalDiscussion").on('hide.bs.modal', function() {
+            @this.call('resetInput');
+        });
+    </script>
+@endpush
