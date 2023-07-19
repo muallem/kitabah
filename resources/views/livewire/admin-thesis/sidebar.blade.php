@@ -59,7 +59,7 @@
 <ul class="navbar-nav ms-auto">
     @foreach($thesis as $item)
     <li class="nav-item">
-        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="text-decoration-none text-dark position-relative p-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="text-decoration-none text-dark position-relative p-1">
             {{ $item->user_login }}
             @if($item->discussion_count > 0 )
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
