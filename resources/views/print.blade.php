@@ -23,7 +23,7 @@
                     {{($discussion->is_admin)? 'Admin : ' : $data['wpjs_users']['user_login'] ." : "}}
 
                     <button 
-                        class="text-decoration-none text-info btn-outline-info"
+                        class="text-decoration-none text-info btn btn-outline-info"
                         >
                         <i class="fas fa-file"></i>
                         {{ $discussion->chat }}
@@ -39,7 +39,7 @@
                     @if( $discussion->is_file )
                     {{($discussion->is_admin)? $data['wpjs_users']['user_login'] ." : " : 'Admin : '}}
                     <button 
-                        class="text-decoration-none text-info btn-outline-info"
+                        class="text-decoration-none text-info btn btn-outline-info"
                         >
                         <i class="fas fa-file"></i>
                         {{ $discussion->chat }}
