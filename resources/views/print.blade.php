@@ -3,6 +3,7 @@
 @section('content')
     
 <div class="p-4">
+    {{$data['wpjs_users']}}
     <h2 class="text-center fw-bold" id="text_form_supplier_name">{{ $data['title'] }}</h2>
     <p>          Kualitas (kual): <br />
         Kualitas mengacu pada tingkat keunggulan atau kecemerlangan suatu produk, layanan, atau proses. Ini mencakup atribut-atribut yang mempengaruhi kemampuan suatu produk atau layanan untuk memenuhi harapan atau kebutuhan pengguna. Kualitas dapat dilihat dari segi fungsionalitas, keandalan, kinerja, keamanan, kepuasan pengguna, dan aspek lainnya. Peningkatan kualitas bertujuan untuk memberikan nilai tambah dan meningkatkan kepuasan pengguna.
