@@ -17,7 +17,8 @@ class Chat extends Component
     protected $listeners = [
         'editDetailChat',
         'showChat',
-        'refreshDataChat' => '$refresh'
+        'refreshDataChat' => '$refresh',
+        'resetChat'
     ];
     public function mount($id)
     {
@@ -64,10 +65,9 @@ class Chat extends Component
         ]);
         $this->chat = "";
     }
-    public function resetInput()
+    public function resetChat()
     {
-        $this->detailId = '';
-        $this->chat = '';
+        $this->theses_id = '';
     }
     public function editDetailChat($id)
     {

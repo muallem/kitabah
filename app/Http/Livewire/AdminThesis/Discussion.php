@@ -11,7 +11,8 @@ class Discussion extends Component
     public $discussions;
     protected $listeners = [
         'refreshDiscussion' => '$refresh',
-        'showDiscussion'
+        'showDiscussion',
+        'resetAdminDiscussion',
     ];
 
     public function showDiscussion($id){
@@ -19,7 +20,7 @@ class Discussion extends Component
         $this->emit('showChat', ['id' => $id]);
     }
 
-    public function resetInput(){
+    public function resetAdminDiscussion(){
         $this->reset(['thesis_id', 'chat']);
     }
     public function render()

@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Detail Jenis Skripsi</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Diskusi</h5>
             </div>
                 <div class="modal-body">
                  @livewire('discussion.detail', ['id' => $thesis_id])
@@ -21,7 +21,8 @@
 @push('js')
     <script>
          $("#modalDiscussion").on('hide.bs.modal', function() {
-            @this.call('resetInput');
+            Livewire.emit('resetChat');
+            Livewire.emit('resetAdminDiscussion');
         });
     </script>
 @endpush
