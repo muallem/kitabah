@@ -34,4 +34,8 @@ class Thesis extends Model
     {
         return $this->belongsTo(User::class, 'student_id', 'ID');
     }
+    public function discussions()
+    {
+        return $this->hasMany(Discussion::class, 'theses_id', 'id');
+    }
 }
