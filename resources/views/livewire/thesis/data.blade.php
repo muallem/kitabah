@@ -5,14 +5,17 @@
             Buat Judul Skripsi
         </button>
     @else
-    <div class="input-group w-100">
-        <div class="alert alert-success" role="alert">
-            {{$thesis->title}}
+    <div class="row">
+        <div class="col-9">
+            <div class="alert alert-success" role="alert">
+                {{$thesis->title}}
+            </div>
         </div>
-        <div class="input-group-append">
-            <a href="{{ route('print', ['id' => Crypt::encrypt($thesis->id)]) }}" target="_blank" class="btn btn-outline-info"><i class="fas fa-print mr-2"></i>Cetak</a>
+        <div class="col-3">
+            <a href="{{ route('print', ['id' => Crypt::encrypt($thesis->id)]) }}" target="_blank" class="btn btn-outline-info btn-block"><i class="fas fa-print mr-2"></i>Cetak</a>
         </div>
     </div>
+    
     @if($thesis->group === null)
             <div class="alert alert-warning" role="alert">
                 Tunggu balasan dari admin!
