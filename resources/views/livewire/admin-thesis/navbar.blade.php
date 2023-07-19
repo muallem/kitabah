@@ -56,11 +56,15 @@
     }
     </style>
 @endpush
-{{$thesis}}
 <ul class="navbar-nav ms-auto">
     @foreach($thesis as $item)
     <li class="nav-item">
-        {{-- <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="navbar_message text-decoration-none text-dark">{{ $item->wpjs_users->user_login }}</a> --}}
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDiscussion" wire:click="$emit('showDiscussion', {{ $item->id }})" class="navbar_message text-decoration-none text-dark position-relative">
+            {{ $item->user_login }}
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                {{ $item->discussion_count }}
+            </span>
+        </a>
     </li>
     
     @endforeach
