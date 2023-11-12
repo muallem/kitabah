@@ -25,25 +25,25 @@
                 </li>
               </ul>
               <div class="tab-content" id="myTabContent">
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pendahuluan1-tab" data-bs-toggle="tab" data-bs-target="#pendahuluan1-tab-pane" type="button" role="tab" aria-controls="pendahuluan1-tab-pane" aria-selected="true">Pendahuluan 1</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pendahuluan2-tab" data-bs-toggle="tab" data-bs-target="#pendahuluan2-tab-pane" type="button" role="tab" aria-controls="pendahuluan2-tab-pane" aria-selected="false">Pendahuluan 2</button>
-                      </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="pendahuluan1-tab-pane" role="tabpanel" aria-labelledby="pendahuluan1-tab" tabindex="0">
-                        <h1>Pendahuluan 1</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est debitis nam aliquid totam? Ratione neque similique veniam, eos fuga accusantium! Dolor blanditiis, hic et magni saepe cum reiciendis commodi quaerat asperiores sit itaque facilis voluptatum quibusdam ea amet nisi mollitia!</p>
-                    </div>
-                      <div class="tab-pane fade" id="pendahuluan2-tab-pane" role="tabpanel" aria-labelledby="pendahuluan2-tab" tabindex="0">
-                        <h1>Pendahuluan 2</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est debitis nam aliquid totam? Ratione neque similique veniam, eos fuga accusantium! Dolor blanditiis, hic et magni saepe cum reiciendis commodi quaerat asperiores sit itaque facilis voluptatum quibusdam ea amet nisi mollitia!</p>
+                  <div class="tab-pane fade show active" id="pendahuluan-tab-pane" role="tabpanel" aria-labelledby="pendahuluan-tab" tabindex="0">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pendahuluan1-tab" data-bs-toggle="tab" data-bs-target="#pendahuluan1-tab-pane" type="button" role="tab" aria-controls="pendahuluan1-tab-pane" aria-selected="true">Pendahuluan 1</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pendahuluan2-tab" data-bs-toggle="tab" data-bs-target="#pendahuluan2-tab-pane" type="button" role="tab" aria-controls="pendahuluan2-tab-pane" aria-selected="false">Pendahuluan 2</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="pendahuluan1-tab-pane" role="tabpanel" aria-labelledby="pendahuluan1-tab" tabindex="0">
+                          <h1>Pendahuluan 1</h1>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est debitis nam aliquid totam? Ratione neque similique veniam, eos fuga accusantium! Dolor blanditiis, hic et magni saepe cum reiciendis commodi quaerat asperiores sit itaque facilis voluptatum quibusdam ea amet nisi mollitia!</p>
                       </div>
-                    </div>
-                <div class="tab-pane fade show active" id="pendahuluan-tab-pane" role="tabpanel" aria-labelledby="pendahuluan-tab" tabindex="0">
+                        <div class="tab-pane fade" id="pendahuluan2-tab-pane" role="tabpanel" aria-labelledby="pendahuluan2-tab" tabindex="0">
+                          <h1>Pendahuluan 2</h1>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est debitis nam aliquid totam? Ratione neque similique veniam, eos fuga accusantium! Dolor blanditiis, hic et magni saepe cum reiciendis commodi quaerat asperiores sit itaque facilis voluptatum quibusdam ea amet nisi mollitia!</p>
+                        </div>
+                      </div>
                     
                 </div>
                 <div class="tab-pane fade" id="bab1-tab-pane" role="tabpanel" aria-labelledby="bab1-tab" tabindex="0">
