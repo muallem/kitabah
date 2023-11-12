@@ -68,6 +68,9 @@
             @endif
         </a>
     </li>
+    <li>
+        <a href="{{route('kual')}}" class="text-decoration-none text-dark position-relative p-1">Kual</a>
+    </li>
     
     @endforeach
 </ul>
