@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Kitabah') }}</title>
+    <title>Kitabah</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://muallem.id/wp-content/uploads/2023/02/Asset-7.png">
 
 
