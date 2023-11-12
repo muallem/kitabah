@@ -47,20 +47,24 @@
                         <div class="tab-pane fade show active" id="bab1-sub1-tab-pane" role="tabpanel" aria-labelledby="bab1-sub1-tab" tabindex="0">
                           <h1>Sub 1</h1>
                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est debitis nam aliquid totam? Ratione neque similique veniam, eos fuga accusantium! Dolor blanditiis, hic et magni saepe cum reiciendis commodi quaerat asperiores sit itaque facilis voluptatum quibusdam ea amet nisi mollitia!</p>
+                          <div class="row">
+                            <div class="col-mb-4">
+                                <label for="formFileMultiple" class="form-label">Upload File</label>
+                                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            </div>
+                        </div>
                         </div>
                         <div class="tab-pane fade" id="bab1-sub1-tab-pane" role="tabpanel" aria-labelledby="bab1-sub1-tab" tabindex="0">
                           <h1>Sub 2</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est debitis nam aliquid totam? Ratione neque similique veniam, eos fuga accusantium! Dolor blanditiis, hic et magni saepe cum reiciendis commodi quaerat asperiores sit itaque facilis voluptatum quibusdam ea amet nisi mollitia!</p>
+                            <div class="row">
+                                <div class="col-mb-4">
+                                    <label for="formFileMultiple" class="form-label">Upload File</label>
+                                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                </div>
+                            </div>
                         </div>
                       </div>
-                    <h1>Bab 1</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt doloribus, reiciendis sapiente esse omnis id debitis commodi, velit ex, corrupti vitae? Nesciunt quaerat, dolor error quam eum quidem velit unde laboriosam mollitia cumque praesentium a obcaecati expedita aut id amet!</p>
-                    <div class="row">
-                        <div class="col-mb-4">
-                            <label for="formFileMultiple" class="form-label">Upload File</label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
-                        </div>
-                    </div>
   
                 </div>
                 <div class="tab-pane fade" id="bab2-tab-pane" role="tabpanel" aria-labelledby="bab2-tab" tabindex="0">
