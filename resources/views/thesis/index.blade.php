@@ -16,6 +16,9 @@
 
 </div>
 @endsection
+@section('sidebar')
+    @livewire('thesis.sidebar')
+@endsection
 
 @section('js')
 <script>
