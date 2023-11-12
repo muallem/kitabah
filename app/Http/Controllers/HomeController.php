@@ -28,6 +28,10 @@ class HomeController extends Controller
     public function coba(){
         return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
     }
+    public function kual(){
+        return 'Kual OI';
+        return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
+    }
     public function get_session(){
         $allData = Session::all();
         $data = [];
