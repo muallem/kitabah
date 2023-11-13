@@ -16,7 +16,15 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $result = AuthHelper::login($request->user_email, $request->password);
-        return $result;
+        if($result->message === 'Success' && $result->ok)
+        {
+            if(AuthHelper::isAdmin())
+            {
+                return redirect()->route('admin.index');
+            }else{
+                return redirect()->route('student.index');
+            }
+        }
     }
 
     public function logout(Request $request)
