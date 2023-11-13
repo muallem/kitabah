@@ -16,7 +16,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $result = AuthHelper::login($request->user_email, $request->password);
-        return $result['message'];
+        return $result->getData()->message;
         if($result['message'] === 'Success' && $result['ok'])
         {
             if(AuthHelper::isAdmin())
