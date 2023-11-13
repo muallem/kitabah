@@ -35,6 +35,7 @@ class AuthHelper
 
             Session::put('token', $token);
             Session::put('user_id', $user->ID);
+            Session::put('user_name', $user->user_login);
             Session::put('user_role', $user->role);
             return response()->json(['message' => 'Success', 'ok' => true], 200);
         } catch (Exception $e) {
