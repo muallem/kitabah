@@ -25,15 +25,24 @@ class StudentController extends Controller
     {
         return view('student.index');
     }
+    public function kual()
+    {
+        return view('student.kual');
+    }
+    public function kuan()
+    {
+        return view('student.kuan');
+    }
+    public function rnd()
+    {
+        return view('student.rnd');
+    }
     public function student()
     {
         return view('student.index');
     }
     public function coba(){
         return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
-    }
-    public function kual(){
-        return view('materi.kual');
     }
     public function get_session(){
         $allData = Session::all();

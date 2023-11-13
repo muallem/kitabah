@@ -26,5 +26,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['my.auth', 'student']], function () {
     Route::group(['controller' => StudentController::class, 'prefix' => 'student', 'as' => 'student.'], function () {
         Route::get('/', 'index')->name('index');
+        Route::get('/kual', 'kual')->name('kual');
+        Route::get('/kuan', 'kuan')->name('kuan');
+        Route::get('/rnd', 'rnd')->name('rnd');
     });
 });
