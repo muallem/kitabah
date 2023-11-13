@@ -6,275 +6,186 @@
         <div class="block-header py-lg-4 py-3">
             <div class="row g-3">
                 <div class="col-md-6 col-sm-12">
-                    <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Dashboard</h2>
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Kitabah</h2>
                     <ul class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="index.html">Lucid</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="index.html">Student</a></li>
+                        <li class="breadcrumb-item active">Judul</li>
                     </ul>
-                </div>
-                <div class="col-md-6 col-sm-12 text-md-end">
-                    <div class="d-inline-flex text-start">
-                        <div class="me-2">
-                            <h6 class="mb-0"><i class="fa fa-user"></i> 1,784</h6>
-                            <small>Visitors</small>
-                        </div>
-                        <span id="bh_visitors"></span>
-                    </div>
-                    <div class="d-inline-flex text-start ms-lg-3 me-lg-3 ms-1 me-1">
-                        <div class="me-2">
-                            <h6 class="mb-0"><i class="fa fa-globe"></i> 325</h6>
-                            <small>Visits</small>
-                        </div>
-                        <span id="bh_visits"></span>
-                    </div>
-                    <div class="d-inline-flex text-start">
-                        <div class="me-2">
-                            <h6 class="mb-0"><i class="fa fa-comments"></i> 13</h6>
-                            <small>Chats</small>
-                        </div>
-                        <span id="bh_chats"></span>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="row g-2 clearfix row-deck">
-            <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="card top_counter">
-                    <div class="list-group list-group-custom list-group-flush">
-                        <div class="list-group-item d-flex align-items-center py-3">
-                            <div class="icon text-center me-3"><i class="fa fa-user"></i> </div>
-                            <div class="content">
-                                <div>New Employee</div>
-                                <h5 class="mb-0">22</h5>
-                            </div>
-                        </div>
-                        <div class="list-group-item d-flex align-items-center py-3">
-                            <div class="icon text-center me-3"><i class="fa fa-users"></i> </div>
-                            <div class="content">
-                                <div>Total Employee</div>
-                                <h5 class="mb-0">425</h5>
-                            </div>
-                        </div>
-                        <div class="list-group-item d-flex align-items-center py-3">
-                            <div class="icon text-center me-3"><i class="fa fa-university"></i> </div>
-                            <div class="content">
-                                <div>Total Salary</div>
-                                <h5 class="mb-0">$2.8M</h5>
-                            </div>
-                        </div>
-                        <div class="list-group-item d-flex align-items-center py-3">
-                            <div class="icon text-center me-3"><i class="fa fa-university"></i> </div>
-                            <div class="content">
-                                <div>Avg. Salary</div>
-                                <h5 class="mb-0">$1,250</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="card text-center">
+        <div class="row g-3 clearfix">
+            <div class="col-lg-8 col-md-12">
+                <div class="card mb-3 single_post">
+                    <img class="card-img-top" src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/blog-page-1.jpg')}}" alt="First slide">
                     <div class="card-body">
-                        <h5>Income Analysis</h5>
-                        <span class="text-muted">8% High then last month</span>
-                        <div id="sparkline-pie" class="mt-3 d-flex justify-content-center"></div>
-                        <div class="stats-report">
-                            <div class="stat-item d-inline-block px-2 mt-4">
-                                <h5 class="mb-0 fw-normal fs-6">Design</h5>
-                                <strong>84.60%</strong>
-                            </div>
-                            <div class="stat-item d-inline-block px-2 mt-4">
-                                <h5 class="mb-0 fw-normal fs-6">Dev</h5>
-                                <strong>15.40%</strong>
-                            </div>
-                            <div class="stat-item d-inline-block px-2 mt-4">
-                                <h5 class="mb-0 fw-normal fs-6">SEO</h5>
-                                <strong>5.10%</strong>
-                            </div>
-                        </div>
+                        <h4><a href="blog-details.html">All photographs are accurate</a></h4>
+                        <p class="my-3">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-6 col-lg-12 col-md-12">
-                <div class="card">
-                    <div class="card-header border-0">
-                        <h6 class="card-title">Salary Statistics</h6>
-                        <ul class="header-dropdown list-unstyled">
-                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Weekly">W</a></li>
-                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Monthly">M</a></li>
-                            <li><a class="tab_btn active" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Yearly">Y</a>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="card-title">Comments 3</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="row clearfix mb-3">
+                                <div class="col-sm-2 col-4">
+                                    <img class="img-fluid img-thumbnail" src="{{asset('storage/app/public/bootstrap5/dist/assets/images/sm/avatar2.jpg')}}" alt="Awesome Image">
+                                </div>
+                                <div class="col-sm-10 col-8">
+                                    <h6>Gigi Hadid</h6>
+                                    <p class="mb-0">Why are there so many tutorials on how to decouple WordPress? how fast and easy it is to get it running (and keep it running!) and its massive ecosystem. </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item pe-2"><a href="javascript:void(0);">Mar 09 2021</a></li>
+                                        <li class="list-inline-item pe-2"><a href="javascript:void(0);">Reply</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
-                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
-                                    <li><a class="dropdown-item" href="javascript:void(0);">Another Action</a></li>
-                                    <li><a class="dropdown-item" href="javascript:void(0);">Something else</a></li>
-                                </ul>
+                            <li class="row clearfix mb-3">
+                                <div class="col-sm-2 col-4">
+                                    <img class="img-fluid img-thumbnail" src="{{asset('storage/app/public/bootstrap5/dist/assets/images/sm/avatar3.jpg')}}" alt="Awesome Image">
+                                </div>
+                                <div class="col-sm-10 col-8">
+                                    <h6>Christian Louboutin</h6>
+                                    <p class="mb-0">Great tutorial but few issues with it? If i try open post i get following errors. Please can you help me?</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item pe-2"><a href="javascript:void(0);">Mar 12 2021</a></li>
+                                        <li class="list-inline-item pe-2"><a href="javascript:void(0);">Reply</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="row clearfix">
+                                <div class="col-sm-2 col-4">
+                                    <img class="img-fluid img-thumbnail" src="{{asset('storage/app/public/bootstrap5/dist/assets/images/sm/avatar4.jpg')}}" alt="Awesome Image">
+                                </div>
+                                <div class="col-sm-10 col-8">
+                                    <h6>Kendall Jenner</h6>
+                                    <p class="mb-0">Very nice and informative article. In all the years I've done small and side-projects as a freelancer, I've ran into a few problems here and there.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item pe-2"><a href="javascript:void(0);">Mar 20 2021</a></li>
+                                        <li class="list-inline-item pe-2"><a href="javascript:void(0);">Reply</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="card-title">Leave a reply</h6>
+                        <small>Your email address will not be published. Required fields are marked*</small>
+                    </div>
                     <div class="card-body">
-                        <div id="Salary_Statistics"></div>
+                        <form class="row g-2">
+                            <div class="col-6">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <div class="col-12">
+                                <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button type="submit" class="btn btn-block btn-primary">SUBMIT</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8 col-lg-12 col-md-12">
-                <div class="card">
+            <div class="col-lg-4 col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
                     <div class="card-header">
-                        <h6 class="card-title">Total Salary by Unit</h6>
-                        <ul class="header-dropdown list-unstyled">
-                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Weekly">W</a></li>
-                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Monthly">M</a></li>
-                            <li><a class="tab_btn active" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Yearly">Y</a>
+                        <h6 class="card-title">Categories Clouds</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-inline">
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">eCommerce</a>
                             </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
-                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
-                                    <li><a class="dropdown-item" href="javascript:void(0);">Another Action</a></li>
-                                    <li><a class="dropdown-item" href="javascript:void(0);">Something else</a></li>
-                                </ul>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Microsoft Technologies</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Creative UX</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Wordpress</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Angular JS</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Enterprise Mobility</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Website Design</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">HTML5</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Infographics</a>
+                            </li>
+                            <li class="list-inline-item border border-primary rounded link-primary p-2 m-1">
+                                <a href="javascript:void(0);">Wordpress Development</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="card-body">
-                        <div id="total_Salary" class="ct-chart"></div>
-                    </div>
                 </div>
-            </div>
-            <div class="col-xl-4 col-lg-12 col-md-12">
-                <div class="card">
+                <div class="card mb-3">
                     <div class="card-header">
-                        <h6 class="card-title">ToDo List</h6>
-                    </div>
-                    <div class="card-body todo_list">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="Makers">
-                                <label class="form-check-label" for="Makers">
-                                    <strong>New Employee intro</strong>
-                                </label>
-                                <span class="text-muted d-flex small">SCHEDULED FOR 3:00 P.M. ON JUN 2021</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="Makers1"
-                                    checked>
-                                <label class="form-check-label" for="Makers1">
-                                    <strong>Send email to CEO</strong>
-                                </label>
-                                <span class="text-muted d-flex small">SCHEDULED FOR 4:30 P.M. ON JUN 2021</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="Makers2">
-                                <label class="form-check-label" for="Makers2">
-                                    <strong>New Joing Employee Welcome kit</strong>
-                                </label>
-                                <span class="text-muted d-flex small">
-                                    <small><a href="#">John Smith</a> Designer</small><br>
-                                </span>
-                                <span class="text-muted d-flex small">
-                                    <small><a href="#">Hossein Shams</a> Developer</small><br>
-                                </span>
-                                <span class="text-muted d-flex small">
-                                    <small><a href="#">Maryam Amiri</a> SEO</small><br>
-                                </span>
-                                <span class="text-muted d-flex small">
-                                    <small><a href="#">Mike Litorus</a> iOS Developer</small>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="Makers3">
-                                <label class="form-check-label" for="Makers3">
-                                    <strong>Birthday Wish</strong>
-                                </label>
-                                <span class="text-muted d-flex small">SCHEDULED FOR 4:30 P.M. ON JUN 2021</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-8 col-lg-7 col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h6 class="card-title">Employee Performance</h6>
+                        <h6 class="card-title">Popular Posts</h6>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>Avatar</th>
-                                        <th>Name</th>
-                                        <th>Designation</th>
-                                        <th>Performance</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><img src="../dist/assets/images/xs/avatar1.jpg" class="avatar rounded-circle" alt=""></td>
-                                        <td>Marshall Nichols</td>
-                                        <td><span>UI UX Designer</span></td>
-                                        <td><span class="badge bg-success">Good</span></td>
-                                        <td><span id="sparkbar_uideveloper"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../dist/assets/images/xs/avatar2.jpg" class="avatar rounded-circle" alt=""></td>
-                                        <td>Susie Willis</td>
-                                        <td><span>Designer</span></td>
-                                        <td><span class="badge bg-warning">Average</span></td>
-                                        <td><span id="sparkbar_designer1"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../dist/assets/images/xs/avatar3.jpg" class="avatar rounded-circle" alt=""></td>
-                                        <td>Francisco Vasquez</td>
-                                        <td><span>Team Leader</span></td>
-                                        <td><span class="badge bg-primary">Excellent</span></td>
-                                        <td><span id="sparkbar_leader"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../dist/assets/images/xs/avatar4.jpg" class="avatar rounded-circle" alt=""></td>
-                                        <td>Erin Gonzales</td>
-                                        <td><span>Android Developer</span></td>
-                                        <td><span class="badge bg-danger">Weak</span></td>
-                                        <td><span id="sparkbar_developer"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../dist/assets/images/xs/avatar5.jpg" class="avatar rounded-circle" alt=""></td>
-                                        <td>Ava Alexander</td>
-                                        <td><span>UI UX Designer</span></td>
-                                        <td><span class="badge bg-success">Good</span></td>
-                                        <td><span id="sparkbar_designer"></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="single_post mb-3">
+                            <img class="img-fluid rounded" src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/blog-page-1.jpg')}}" alt="Awesome Image">
+                            <p class="lead mb-0 mt-1">Apple Introduces Search Ads Basic</p>
+                            <span class="text-muted">jun 22, 2021</span>
+                        </div>
+                        <div class="single_post">
+                            <img class="img-fluid rounded" src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/blog-page-2.jpg')}}" alt="Awesome Image">
+                            <p class="lead mb-0 mt-1">new rules, more cars, more races</p>
+                            <span class="text-muted">jun 22, 2021</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-4 col-lg-5 col-md-12">
-                <div class="card">
+                <div class="card mb-4">
                     <div class="card-header">
-                        <h6 class="card-title">Employee Structure</h6>
+                        <h6 class="card-title">Instagram Post</h6>
                     </div>
-                    <div class="card-body text-center">
-                        <div id="apex-TotalStudent"></div>
-                        <div class="mb-3 mt-4">
-                            <span class="text-muted small">Male</span>
-                            <h4 class="mb-0">73%</h4>
-                        </div>
-                        <div>
-                            <span class="text-muted small">Female</span>
-                            <h4 class="mb-0">27%</h4>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex flex-wrap">
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/05-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/06-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/08-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/06-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/05-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/06-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/07-img.jpg')}}" alt="image description"></a></li>
+                            <li class="p-1"><a href="javascript:void(0);"><img src="{{asset('storage/app/public/bootstrap5/dist/assets/images/blog/08-img.jpg')}}" alt="image description"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6 class="card-title">Email Newsletter</h6>
+                        <small>Get our products/news earlier than others, let’s get in touch.</small>
+                    </div>
+                    <div class="card-body widget newsletter">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Email">
+                            <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
                         </div>
                     </div>
                 </div>

@@ -99,7 +99,7 @@
                         <div class="tab-pane fade show active" id="student_menu" role="tabpanel" >
                             <nav class="sidebar-nav">
                                 <ul class="metismenu list-unstyled">
-                                    <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i><span>Judul</span></a></li>
+                                    <li class="active"><a href="index.html"><i class="fa fa-pen"></i><span>Judul</span></a></li>
                                     <li><a href="app-holidays.html"><i class="fa fa-list-ul"></i><span>Kual</span></a></li>
                                     <li><a href="app-holidays.html"><i class="fa fa-list-ul"></i><span>Kuan</span></a></li>
                                     <li><a href="app-holidays.html"><i class="fa fa-list-ul"></i><span>RND</span></a></li>
