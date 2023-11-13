@@ -1,6 +1,20 @@
-@extends('layouts.login_layouts')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+    <meta charset="utf-8">
+    <title>:: Kitabah :: Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lucid HR & Project Admin Dashboard Template with Bootstrap 5x">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
+</head>
+
 <body>
     
 <div id="layout" class="theme-cyan">
@@ -27,27 +41,30 @@
                         <p class="fs-5 mb-0">Login to your account</p>
                     </div>
                     <div class="card-body">
-                        <form action="index.html">
+                        <form method="POST" action="{{ route('login') }}" id="loginForm">
+                            @csrf
                             <div class="form-floating mb-1">
-                                <input type="email" class="form-control" placeholder="name@example.com">
+                                <input id="user_email" type="email" class="form-control @error('user_email') is-invalid @enderror" name="user_email" value="{{ old('user_email') }}" required autocomplete="user_email" autofocus>
                                 <label>Email address</label>
+
+                                @error('user_email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-floating">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 <label>Password</label>
-                            </div>
-                            <div class="form-check my-3">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Remember me
-                                </label>
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary w-100 px-3 py-2">LOGIN</button>
                         </form>
-                        <div class="mt-3 pt-3 border-top">
-                            <p class="mb-1"><a href="page-forgot-password.html"><i class="fa fa-lock me-2"></i>Forgot password?</a></p>
-                            <span>Don't have an account? <a href="page-register.html">Register</a></span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -56,93 +73,4 @@
     <!-- END WRAPPER -->
 </div>
 </body>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}" id="loginForm">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="user_email" type="email" class="form-control @error('user_email') is-invalid @enderror" name="user_email" value="{{ old('user_email') }}" required autocomplete="user_email" autofocus>
-
-                                @error('user_email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
-
-@section('js')
-<script>
-    $(document).ready(function() {
-        $('#loginForm').submit(function(event) {
-            event.preventDefault(); 
-            
-            var formData = new FormData(this);
-            
-            $.ajax({
-                url: $(this).attr('action'),
-                type: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(response) {
-                    if(!response.ok){
-                            Swal.fire({
-                            type: 'error',
-                            title: 'Login failed!',
-                            text: response.message,
-                        });
-                    }
-                    else{
-                        Swal.fire({
-                            type: 'success',
-                            title: 'Login success!',
-                            text: response.message,
-                        });
-                        window.location.href = "/home";
-                    }
-
-                }
-            });
-        });
-    });
-</script>
-@endsection
+</html>
