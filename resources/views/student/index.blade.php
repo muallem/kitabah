@@ -29,12 +29,12 @@
                         <small>Tunggu Feedback dari admin setelah anda meng-upload tanggapan !</small>
                     </div>
                     <div class="card-body">
-                        <form class="row g-2">
+                        <form class="row">
                             <div class="col-12">
                                 <label for="formFileMultiple" class="form-label">Tanggapan</label>
                                 <input class="form-control" type="file" id="formFileMultiple" multiple="">
                             </div>
-                            <div class="col-12 mt-2">
+                            <div class="col-12 mt-4">
                                 <button type="submit" class="btn btn-block btn-primary">SUBMIT</button>
                             </div>
                         </form>
