@@ -69,7 +69,7 @@
         
                             <div class="flex-grow-1">
                                 <ul class="nav navbar-nav flex-row justify-content-end align-items-center">
-                                    <li><a href="page-login.html" class="icon-menu"><i class="fa fa-sign-out"></i></a></li>
+                                    <li><a href="{{route('logout')}}" class="icon-menu"><i class="fa fa-sign-out"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                 <span>Welcome,</span>
                                 <a href="#" class="dropdown-toggle user-name" data-bs-toggle="dropdown"><strong>Jessica Doe</strong></a>
                                 <ul class="dropdown-menu p-2 shadow-sm">
-                                    <li><a href="page-login.html"><i class="fa fa-power-off me-2"></i>Logout</a></li>
+                                    <li><a href="{{route('logout')}}"><i class="fa fa-power-off me-2"></i>Logout</a></li>
                                 </ul>
                             </div>
                         </div>
