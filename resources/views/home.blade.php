@@ -11,12 +11,12 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         
         <!-- VENDOR CSS -->
-        <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/vendor/font-awesome/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('storage/app/public/assets/vendor/bootstrap/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('storage/app/public/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
 
         <!-- MAIN CSS -->
-        <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/css/color_skins.css')}}">
+        <link rel="stylesheet" href="{{asset('storage/app/public/assets/css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('storage/app/public/assets/css/color_skins.css')}}">
 
         <!-- Styles -->
         <style>
@@ -604,10 +604,10 @@
     </div>
 
     <!-- Javascript -->
-    <script src="{{asset('assets/bundles/libscripts.bundle.js')}}"></script>
-    <script src="{{asset('assets/bundles/vendorscripts.bundle.js')}}"></script>
+    <script src="{{asset('storage/app/public/assets/bundles/libscripts.bundle.js')}}"></script>
+    <script src="{{asset('storage/app/public/assets/bundles/vendorscripts.bundle.js')}}"></script>
 
-    <script src="{{asset('assets/bundles/mainscripts.bundle.js')}}"></script>
+    <script src="{{asset('storage/app/public/assets/bundles/mainscripts.bundle.js')}}"></script>
     <script>
         $('.metismenu li').click(function () {
             var $this = $(this);
