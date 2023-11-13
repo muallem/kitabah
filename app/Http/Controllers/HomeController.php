@@ -25,6 +25,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function student()
+    {
+        return view('student.index');
+    }
     public function coba(){
         return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
     }
