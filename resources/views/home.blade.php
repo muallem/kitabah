@@ -16,646 +16,760 @@
 
         <!-- MAIN CSS -->
         <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
-        <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/color_skins.css')}}">
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-          <style>
-            .card .body {
-                font-size: 15px;
-            }
-    
-            .main_features li {
-                line-height: 35px;
-            }
-    
-            .main_features li.divider {
-                border-bottom: 1px solid #ececec;
-                margin: 10px 0;
-                list-style: none;
-                font-size: 12px;
-                text-transform: uppercase;
-                line-height: 1;
-                color: #ff0000;
-                padding-top: 15px;
-            }
-        </style>
     </head>
     
-    
-<body class="theme-cyan">
+    <body>
 
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="m-t-30"><img src="assets/img/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
-            <p>Please wait...</p>
-        </div>
-    </div>
-    <!-- Overlay For Sidebars -->
-
-    <div id="wrapper">
-
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
-                </div>
-
-                <div class="navbar-brand">
-                    <a href="#"><img src="assets/img/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
-                </div>
-
-                <div class="navbar-right">
-                    <form id="navbar-search" class="navbar-form search-form">
-                        <input value="" class="form-control" placeholder="Search here..." type="text">
-                        <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
-                    </form>
-
-                    <div id="navbar-menu">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a href="#" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i
-                                        class="icon-calendar"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span
-                                        class="notification-dot"></span></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                    <i class="icon-bell"></i>
-                                    <span class="notification-dot"></span>
-                                </a>
-                                <ul class="dropdown-menu notifications">
-                                    <li class="header"><strong>You have 4 new Notifications</strong></li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <i class="icon-info text-warning"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="text">Campaign <strong>Holiday Sale</strong> is nearly
-                                                        reach budget limit.</p>
-                                                    <span class="timestamp">10:00 AM Today</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <i class="icon-like text-success"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="text">Your New Campaign <strong>Holiday Sale</strong> is
-                                                        approved.</p>
-                                                    <span class="timestamp">11:30 AM Today</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <i class="icon-pie-chart text-info"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="text">Website visits from Twitter is 27% higher than last
-                                                        week.</p>
-                                                    <span class="timestamp">04:00 PM Today</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <i class="icon-info text-danger"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="text">Error on website analytics configurations</p>
-                                                    <span class="timestamp">Yesterday</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="footer"><a href="javascript:void(0);" class="more">See all
-                                            notifications</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu"
-                                    data-toggle="dropdown"><i class="icon-equalizer"></i></a>
-                                <ul class="dropdown-menu user-menu menu-icon">
-                                    <li class="menu-heading">ACCOUNT SETTINGS</li>
-                                    <li><a href="javascript:void(0);"><i class="icon-note"></i> <span>Basic</span></a>
-                                    </li>
-                                    <li><a href="javascript:void(0);"><i class="icon-equalizer"></i>
-                                            <span>Preferences</span></a></li>
-                                    <li><a href="javascript:void(0);"><i class="icon-lock"></i> <span>Privacy</span></a>
-                                    </li>
-                                    <li><a href="javascript:void(0);"><i class="icon-bell"></i>
-                                            <span>Notifications</span></a></li>
-                                    <li class="menu-heading">BILLING</li>
-                                    <li><a href="javascript:void(0);"><i class="icon-credit-card"></i>
-                                            <span>Payments</span></a></li>
-                                    <li><a href="javascript:void(0);"><i class="icon-printer"></i>
-                                            <span>Invoices</span></a></li>
-                                    <li><a href="javascript:void(0);"><i class="icon-refresh"></i>
-                                            <span>Renewals</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+        <div id="layout" class="theme-cyan">
+        
+            <!-- Page Loader -->
+            <div class="page-loader-wrapper text-center">
+                <div class="loader">
+                    <svg class="p-3 bg-light rounded" width="120px" viewBox="0 0 85 25">
+                        <path d="M12.3,7.2l1.5-3.7l8.1,19.4H19l-2.4-5.7H8.2l1.1-2.5h6.1L12.3,7.2z M14.8,20.2l1,2.7H0L9.5,0h3.1L4.3,20.2H14.8
+                        z M29,18.5v-14h1.6v12.6h6.2v1.5H29V18.5z M49.6,4.5v9.1c0,1.6-0.5,2.9-1.5,3.8s-2.3,1.4-4,1.4s-3-0.5-3.9-1.4s-1.4-2.2-1.4-3.8V4.5
+                        h1.6v9.1c0,1.2,0.3,2.1,1,2.7c0.6,0.6,1.6,0.9,2.8,0.9s2.1-0.3,2.7-0.9c0.6-0.6,1-1.5,1-2.7V4.5H49.6z M59.4,5.7
+                        c-1.5,0-2.8,0.5-3.7,1.5s-1.3,2.4-1.3,4.2s0.4,3.3,1.3,4.3c0.9,1,2.1,1.5,3.7,1.5c1,0,2.1-0.2,3.4-0.5v1.4c-1,0.4-2.2,0.5-3.6,0.5
+                        c-2.1,0-3.7-0.6-4.8-1.9s-1.7-3-1.7-5.4c0-1.4,0.3-2.7,0.8-3.8c0.5-0.9,1.3-1.8,2.3-2.4s2.2-0.9,3.6-0.9c1.5,0,2.8,0.3,3.9,0.8
+                        l-0.7,1.4C61.5,6,60.4,5.7,59.4,5.7z M65.8,18.5v-14h1.6v14.1h-1.6V18.5z M82.5,11.3c0,2.3-0.6,4.1-1.9,5.3s-3.1,1.8-5.4,1.8h-3.9
+                        V4.5h4.3c2.2,0,3.9,0.6,5.1,1.8S82.5,9.2,82.5,11.3z M80.8,11.4c0-1.8-0.5-3.2-1.4-4.1s-2.3-1.4-4.1-1.4h-2.4v11.2h2
+                        c1.9,0,3.4-0.5,4.4-1.4S80.8,13.3,80.8,11.4z" />
+                    </svg>
+                    <div class="h5 fw-light mt-3">Please wait</div>
                 </div>
             </div>
-        </nav>
-
-        <div id="left-sidebar" class="sidebar">
-            <div class="sidebar-scroll">
-                <nav id="left-sidebar-nav" class="sidebar-nav">
-                    <ul id="main-menu" class="metismenu">
-                        <li class="active"><a href="#documenter_cover"><span>Start </span></a></li>
-                        <li><a href="#overview"><span>Overview</span></a></li>
-                        <li><a href="#features"><span>Features</span></a></li>
-                        <li><a href="#template"><span>Template</span></a></li>
-                        <li><a href="#grunt_file"><span>Grunt File</span></a></li>
-                        <li><a href="#main_content"><span>Main Content</span></a></li>
-                        <li><a href="#folder_structure"><span>Folder Structure</span></a></li>
-                        <li><a href="#SCSS"><span>SCSS</span></a></li>
-                        <li><a href="#javascript"><span>Javascript</span></a></li>
-                        <li><a href="#fonts"><span>Fonts</span></a></li>
-                        <li><a href="#thank_you"><span>THANK YOU!</span></a></li>
-                    </ul>
+            <!-- Overlay For Sidebars -->
+        
+            <div id="wrapper">
+        
+                <!-- top navbar -->
+                <nav class="navbar navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-btn">
+                            <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-bars"></i></button>
+                        </div>
+        
+                        <div class="navbar-brand ps-2">
+                            <a href="index.html" class="d-flex">
+                                <svg width="85px" viewBox="0 0 85 25">
+                                    <path class="fill-primary" d="M12.3,7.2l1.5-3.7l8.1,19.4H19l-2.4-5.7H8.2l1.1-2.5h6.1L12.3,7.2z M14.8,20.2l1,2.7H0L9.5,0h3.1L4.3,20.2H14.8
+                                    z M29,18.5v-14h1.6v12.6h6.2v1.5H29V18.5z M49.6,4.5v9.1c0,1.6-0.5,2.9-1.5,3.8s-2.3,1.4-4,1.4s-3-0.5-3.9-1.4s-1.4-2.2-1.4-3.8V4.5
+                                    h1.6v9.1c0,1.2,0.3,2.1,1,2.7c0.6,0.6,1.6,0.9,2.8,0.9s2.1-0.3,2.7-0.9c0.6-0.6,1-1.5,1-2.7V4.5H49.6z M59.4,5.7
+                                    c-1.5,0-2.8,0.5-3.7,1.5s-1.3,2.4-1.3,4.2s0.4,3.3,1.3,4.3c0.9,1,2.1,1.5,3.7,1.5c1,0,2.1-0.2,3.4-0.5v1.4c-1,0.4-2.2,0.5-3.6,0.5
+                                    c-2.1,0-3.7-0.6-4.8-1.9s-1.7-3-1.7-5.4c0-1.4,0.3-2.7,0.8-3.8c0.5-0.9,1.3-1.8,2.3-2.4s2.2-0.9,3.6-0.9c1.5,0,2.8,0.3,3.9,0.8
+                                    l-0.7,1.4C61.5,6,60.4,5.7,59.4,5.7z M65.8,18.5v-14h1.6v14.1h-1.6V18.5z M82.5,11.3c0,2.3-0.6,4.1-1.9,5.3s-3.1,1.8-5.4,1.8h-3.9
+                                    V4.5h4.3c2.2,0,3.9,0.6,5.1,1.8S82.5,9.2,82.5,11.3z M80.8,11.4c0-1.8-0.5-3.2-1.4-4.1s-2.3-1.4-4.1-1.4h-2.4v11.2h2
+                                    c1.9,0,3.4-0.5,4.4-1.4S80.8,13.3,80.8,11.4z" />
+                                </svg>
+                            </a>
+                        </div>
+        
+                        <div class="d-flex flex-grow-1 align-items-center">
+                            <div class="d-flex">
+                                <ul class="nav nav-pills me-4 ms-2 d-none d-lg-block">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menu Version</a>
+                                        <ul class="dropdown-menu shadow-sm">
+                                            <li><a class="dropdown-item" href="index.html">Sidebar menu</a></li>
+                                            <li><a class="dropdown-item" href="horizontal/index.html">Horizontal menu</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="sidebar-mini/index.html">Sidebar mini</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <form id="navbar-search" class="navbar-form search-form position-relative d-none d-md-block">
+                                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                                    <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+        
+                            <div class="flex-grow-1">
+                                <ul class="nav navbar-nav flex-row justify-content-end align-items-center">
+                                    <li class="d-none d-sm-block"><a href="app-events.html" class="icon-menu"><i class="fa fa-calendar"></i></a></li>
+                                    <li class="d-none d-sm-block"><a href="app-chat.html" class="icon-menu"><i class="fa fa-comments"></i></a></li>
+                                    <li><a href="app-inbox.html" class="icon-menu"><i class="fa fa-envelope"></i><span class="notification-dot"></span></a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle icon-menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-bell"></i>
+                                            <span class="notification-dot"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end p-0 shadow notification">
+                                            <ul class="list-unstyled feeds_widget">
+                                                <li class="d-flex">
+                                                    <div class="feeds-left"><i class="fa fa-thumbs-o-up"></i></div>
+                                                    <div class="feeds-body flex-grow-1">
+                                                        <h6 class="mb-1">7 New Feedback <small class="float-end text-muted small">Today</small></h6>
+                                                        <span class="text-muted">It will give a smart finishing to your site</span>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex">
+                                                    <div class="feeds-left"><i class="fa fa-user"></i></div>
+                                                    <div class="feeds-body flex-grow-1">
+                                                        <h6 class="mb-1">New User <small class="float-end text-muted small">10:45</small></h6>
+                                                        <span class="text-muted">I feel great! Thanks team</span>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex">
+                                                    <div class="feeds-left"><i class="fa fa-question-circle"></i></div>
+                                                    <div class="feeds-body flex-grow-1">
+                                                        <h6 class="mb-1 text-warning">Server Warning <small class="float-end text-muted small">10:50</small></h6>
+                                                        <span class="text-muted">Your connection is not private</span>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex">
+                                                    <div class="feeds-left"><i class="fa fa-check"></i></div>
+                                                    <div class="feeds-body flex-grow-1">
+                                                        <h6 class="mb-1 text-danger">Issue Fixed <small class="float-end text-muted small">11:05</small></h6>
+                                                        <span class="text-muted">WE have fix all Design bug with Responsive</span>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex">
+                                                    <div class="feeds-left"><i class="fa fa-shopping-basket"></i></div>
+                                                    <div class="feeds-body flex-grow-1">
+                                                        <h6 class="mb-1">7 New Orders <small class="float-end text-muted small">11:35</small></h6>
+                                                        <span class="text-muted">You received a new oder from Tina.</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- more link -->
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle icon-menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-sliders"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end p-2 shadow">
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-pencil-square-o"></i> <span>Basic</span></a></li>
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-sliders fa-rotate-90"></i> <span>Preferences</span></a></li>
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-lock"></i> <span>Privacy</span></a></li>
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-bell"></i> <span>Notifications</span></a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-credit-card"></i> <span>Payments</span></a></li>
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-print"></i> <span>Invoices</span></a></li>
+                                            <li><a class="dropdown-item rounded-pill" href="javascript:void(0);"><i class="me-2 fa fa-refresh"></i> <span>Renewals</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="page-login.html" class="icon-menu"><i class="fa fa-sign-out"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
-            </div>
-        </div>
-
-        <div id="main-content">
-            <div class="container-fluid">
-                <div class="block-header">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-8 col-sm-12">
-                            <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Documentation</h2>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="icon-home"></i></a></li>
-                                <li class="breadcrumb-item active">Documentation</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-12 text-right">
-                            <div class="bh_chart hidden-xs">
-                                <div class="float-left m-r-15">
-                                    <small>Visitors</small>
-                                    <h6 class="mb-0 mt-1"><i class="icon-user"></i> 1,784</h6>
-                                </div>
-                                <span class="bh_visitors float-right">2,5,1,8,3,6,7,5</span>
-                            </div>
-                            <div class="bh_chart hidden-sm">
-                                <div class="float-left m-r-15">
-                                    <small>Visits</small>
-                                    <h6 class="mb-0 mt-1"><i class="icon-globe"></i> 325</h6>
-                                </div>
-                                <span class="bh_visits float-right">10,8,9,3,5,8,5</span>
-                            </div>
-                            <div class="bh_chart hidden-sm">
-                                <div class="float-left m-r-15">
-                                    <small>Chats</small>
-                                    <h6 class="mb-0 mt-1"><i class="icon-bubbles"></i> 13</h6>
-                                </div>
-                                <span class="bh_chats float-right">1,8,5,6,2,4,3,2</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row clearfix">
-                    <div class="col-sm-12">
-                        <div class="card" id="documenter_cover">
-                            <div class="header">
-                                <h2>Start Lucid</h2>
-                            </div>
-                            <div class="body">
-                                <h3 class="m-b-25">Lucid HR - Everything you need for your Bootstrap 4 Webapp</h3>
-                                <ul>
-                                    <li>Created: 03-July-2018</li>
-                                    <li>latest update: 04-July-2023</li>
+        
+                <!-- Sidbar menu -->
+                <div id="left-sidebar" class="sidebar">
+                    <div class="user-account p-3 mb-3">
+                        <div class="d-flex mb-3 pb-3 border-bottom align-items-center">
+                            <img src="../dist/assets/images/user.png" class="avatar lg rounded me-3" alt="User Profile Picture">
+                            <div class="dropdown flex-grow-1">
+                                <span>Welcome,</span>
+                                <a href="#" class="dropdown-toggle user-name" data-bs-toggle="dropdown"><strong>Jessica Doe</strong></a>
+                                <ul class="dropdown-menu p-2 shadow-sm">
+                                    <li><a href="page-profile2.html"><i class="fa fa-user me-2"></i>My Profile</a></li>
+                                    <li><a href="app-inbox.html"><i class="fa fa-envelope-open me-2"></i>Messages</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa fa-cog me-2"></i>Settings</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="page-login.html"><i class="fa fa-power-off me-2"></i>Logout</a></li>
                                 </ul>
-                                <p>Thank you for purchasing our template. If you have any questions that are beyond the scope of this help file, please feel free to email at wraptheme@gmail.com</p>
-                                <p>If you really like our work, design, performance and support then <a href="https://themeforest.net/downloads"> please don't forgot to rate us</a> on Themeforest,<br> it really motivate us to provide something better.
-                                    <span>
-                                        <i class="fa fa-star text-warning m-r-5"></i>
-                                        <i class="fa fa-star text-warning m-r-5"></i>
-                                        <i class="fa fa-star text-warning m-r-5"></i>
-                                        <i class="fa fa-star text-warning m-r-5"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </span>
-                                </p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col">
+                                <h6 class="mb-0">5+</h6>
+                                <small class="text-muted">Experience</small>
+                            </div>
+                            <div class="col">
+                                <h6 class="mb-0">400+</h6>
+                                <small class="text-muted">Employees</small>
+                            </div>
+                            <div class="col">
+                                <h6 class="mb-0">80+</h6>
+                                <small class="text-muted">Clients</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="overview">
-                            <div class="header">
-                                <h2>Brief Overview</h2>
-                            </div>
-                            <div class="body">
-                                <p>Lucid is a popular open source WebApp template for admin dashboards and admin panels. It’s responsive HTML template, which is based on the Bootstrap 4X framework. It utilizes all of the Bootstrap components in design and re-styles many commonly used plugins to create a consistent design that can be used as a user interface for backend applications.</p>
-                                <p class="m-b-20">Lucid is based on a modular design, which allows it to be easily customised and built upon any backend project in no-time. Our documentation will guide you through installing the template and exploring the various components that are bundled with the template.</p>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 text-center">
-                                        <i class="fa fa-heart fa-2x"></i>
-                                        <h6 class="m-t-20">Bootstrap 5.3.0 Framework</h6>
-                                        <p class="text-muted">Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center">
-                                        <i class="fa fa-gear fa-2x "></i>
-                                        <h6 class="m-t-20">Easily Customizable</h6>
-                                        <p class="text-muted">The internet is society’s true equalizer. It gives voices to the masses, as people from across the world can now express their opinions and ideals. Not since the industrial revolution, has humanity experienced such a game-changing invention.</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center">
-                                        <i class="fa fa-html5 fa-2x"></i>
-                                        <h6 class="m-t-20 ">HTML5/CSS3</h6>
-                                        <p class="text-muted">HTML5 is a core technology markup language of the Internet used for structuring and presenting content for the World Wide Web.</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center">
-                                        <i class="fa fa-power-off fa-2x"></i>
-                                        <h6 class="m-t-20">Integrated plugins</h6>
-                                        <p class="text-muted">You can enable one or more of the integrated Apache Cordova plugins to extend the functionality of your app. The integrated plugins are custom Apache Cordova plugins that the AppBuilder team modifies, configures and updates regularly.</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center">
-                                        <i class="fa fa-laptop fa-2x"></i>
-                                        <h6 class="m-t-20">Responsive layout</h6>
-                                        <p class="text-muted">Let this collection of responsive designed websites across a variety of website types help get your creative and developer juices flowing. Each site features a screenshot across 4 device widths and you can see the media queries.</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center">
-                                        <i class="fa fa-flag fa-2x"></i>
-                                        <h6 class="m-t-20">Most advanced</h6>
-                                        <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="features">
-                            <div class="header">
-                                <h2>Main Features</h2>
-                            </div>
-                            <div class="body">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-12">
-                                        <ul class="main_features">
-                                            <li><strong><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank" rel="nofollow">Bootstrap</a> v5.3.0</strong> Separate Version in .zip</li>
-                                            <li><strong><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 4x</strong></li>
-                                            <li>Latest <strong><a href="https://jquery.com/" target="_blank">jQuery v3x</a></strong></li>
-                                            <li>Built in <strong><a href="http://sass-lang.com/" target="_blank">SASS</a></strong></li>
-                                            <li>JS Bundling Ready (<strong>Bundle</strong>) <span class="badge badge-default m-b-0">New</span></li>
-                                            <li>RTL Support</li>
-
-                                            <li class="divider">Lucid</li>
-                                            <li><strong>6 Unique</strong> Color Scheme</li>
-                                            <li>500+ Use Full Pages (No extra pages)</li>
-                                            <li>Fully <strong>Responsive</strong> & Interactive</li>
-                                            <li>Elegant & Clean User Interface</li>
-                                            <li>50+ Ready to used <strong>widget</strong></li>
-                                            <li>3000+ Icons</li>
-                                            <li>Detailed Documentation</li>
-                                            <li>Expanded and Collapsed Menu (Multi Menu Levels)</li>
-                                            <li>Google fonts (<a href="https://fonts.google.com/specimen/Ubuntu" target="_blank">Ubuntu</a>)</li>
-
-                                            <li class="divider">Ready to Use Application</li>
-                                            <li><strong>Inbox</strong> Full App <span class="badge badge-default m-b-0">New</span></li>
-                                            <li><strong>Chat App</strong> <span class="badge badge-default m-b-0">New</span></li>
-                                            <li><strong>Calendar</strong> integration</li>
-                                            <li>Scrum/Kanban type <strong>Taskboard</strong></li>
-
-                                            <li class="divider">Many Charts Options</li>
-                                            <li>Morris</li>
-                                            <li>ChartJS</li>
-                                            <li>Knob</li>
-                                            <li>Flot</li>
-                                            <li>C3 Chart</li>
-                                            <li>Gauges Chart</li>
+                    <!-- nav tab: menu list -->
+                    <ul class="nav nav-tabs text-center mb-2" role="tablist">
+                        <li class="nav-item flex-fill"><a class="nav-link active" id="hr_menu_nav_link" data-bs-toggle="tab" href="#hr_menu" role="tab">HR</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#project_menu" role="tab">Project</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#sub_menu" role="tab"><i class="fa fa-th-large"></i></a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#setting_menu" role="tab"><i class="fa fa-cog"></i></a></li>
+                    </ul>
+                    <!-- nav tab: content -->
+                    <div class="tab-content px-0">
+                        <div class="tab-pane fade show active" id="hr_menu" role="tabpanel" >
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu list-unstyled">
+                                    <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i><span>HR Dashboard</span></a></li>
+                                    <li><a href="app-holidays.html"><i class="fa fa-list-ul"></i><span>Holidays</span></a></li>
+                                    <li><a href="app-events.html"><i class="fa fa-calendar"></i><span>Events</span></a></li>
+                                    <li><a href="app-activities.html"><i class="fa fa-file-text-o"></i><span>Activities</span></a></li>
+                                    <li><a href="app-social.html"><i class="fa fa-globe"></i><span>HR Social</span></a></li>
+                                    <li>
+                                        <a href="#Employees" class="has-arrow"><i class="fa fa-users"></i><span>Employees</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="emp-all.html">All Employees</a></li>
+                                            <li><a href="emp-leave.html">Leave Requests</a></li>
+                                            <li><a href="emp-attendance.html">Attendance</a></li>
+                                            <li><a href="emp-departments.html">Departments</a></li>
                                         </ul>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <ul class="main_features">
-                                            <li class="divider">HR Features</li>
-                                            <li>Holidays</li>
-                                            <li>Employees Activities</li>
-                                            <li>Employees Leave Requests</li>
-                                            <li>Employees Attendance</li>
-                                            <li>Accounts Payments</li>
-                                            <li>Payroll</li>
-                                            <li>Employee Salary</li>
-                                            <li>Users Module Permission</li>
-                                            <li>Projects List</li>
-                                            <li>Projects TaskBoard</li>
-                                            <li>Support Tickets</li>
-
-                                            <li class="divider">User</li>
-                                            <li>Invoice</li>
-                                            <li>Invoice V2<span class="badge badge-default m-b-0">New</span></li>
-                                            <li>User <strong>Profile</strong> Page </li>
-                                            <li>User <strong>Profile V2</strong> Page <span class="badge badge-default m-b-0">New</span></li>
-                                            <li>Image Gallery (Bootstrap 4 Gallery)</li>
-                                            <li>Image Gallery V2</li>
-                                            <li>Messenger Notifications</li>
-                                            <li>Timeline <span class="badge badge-default m-b-0">New</span></li>
-                                            <li>Timeline Horizontal</li>
-
-                                            <li class="divider">Editor</li>
-                                            <li>Summernote</li>
-                                            <li>CKEditor</li>
-                                            <li>Markdown</li>
+                                    </li>
+                                    <li>
+                                        <a href="#Accounts" class="has-arrow"><i class="fa fa-briefcase"></i><span>Accounts</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="acc-payments.html">Payments</a></li>
+                                            <li><a href="acc-expenses.html">Expenses</a></li>
+                                            <li><a href="acc-invoices.html">Invoices</a></li>
                                         </ul>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <ul class="main_features">
-                                            <li class="divider">Lots of Table Examples</li>
-                                            <li>Jquery <strong>Datatable</strong></li>
-                                            <li><strong>Editable</strong> Tables</li>
-                                            <li>Table <strong>Dragger</strong></li>
-                                            <li>Table <strong>Filter</strong></li>
-                                            <li>Responsive Tables</li>
-
-                                            <li class="divider">Forms</li>
-                                            <li>Form Examples</li>
-                                            <li>Form <strong>Validation</strong></li>
-                                            <li><strong>Advanced</strong> Form Elements</li>
-                                            <li>Form <strong>Wizard</strong></li>
-
-                                            <li class="divider">Form Elements</li>
-                                            <li><strong>Color</strong> Pickers</li>
-                                            <li>Masked Text Inputs</li>
-                                            <li>Multi Select</li>
-                                            <li><strong>Tags</strong> Input</li>
-                                            <li>Input Slider</li>
-                                            <li>Date Picker</li>
-
-                                            <li class="divider">Elements</li>
-                                            <li>Drag & Drop Upload</li>
-                                            <li>Image Cropping</li>
-                                            <li>Sortable & Nestable</li>
-                                            <li>Treeview</li>
-                                            <li>Progress Bars</li>
-                                            <li>Range Sliders</li>
-                                            <li><strong>Sweet Alert</strong> Dialog</li>
+                                    </li>
+                                    <li>
+                                        <a href="#Payroll" class="has-arrow"><i class="fa fa-credit-card"></i><span>Payroll</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="payroll-payslip.html">Payslip</a></li>
+                                            <li><a href="payroll-salary.html">Employee Salary</a></li>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="alert alert-success" role="alert">
-                                    <p class="mb-0"><strong>Authentication:-</strong> login, lock screen, Sign Up, Forgot Password, Lockscreen, 404, 500 Error Pages</p>
-                                    <p class="mb-0"><strong>Widgets:-</strong>Liks Statistics, Data, Chart, Weather, Social</p>
-                                    <p class="mb-0"><strong>Note:-</strong> Works well in all latest browsers like Chrome, Firefox, Safari, Microsoft Edge, IE11+</p>
-                                </div>
-                                <div class="alert alert-danger" role="alert">
-                                    <strong>Note:-</strong> jQuery plugin dependencies may relay on used platform and their versions.
-                                </div>
-                            </div>
+                                    </li>
+                                    <li>
+                                        <a href="#Report" class="has-arrow"><i class="fa fa-bar-chart"></i><span>Report</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="report-expense.html">Expense Report</a></li>
+                                            <li><a href="report-invoice.html">Invoice Report</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="app-users.html"><i class="fa fa-user"></i><span>Users</span></a></li>
+                                    <li>
+                                        <a href="#Authentication" class="has-arrow"><i class="fa fa-lock"></i><span>Authentication</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="page-login.html">Login</a></li>
+                                            <li><a href="page-register.html">Register</a></li>
+                                            <li><a href="page-lockscreen.html">Lockscreen</a></li>
+                                            <li><a href="page-forgot-password.html">Forgot Password</a></li>
+                                            <li><a href="page-404.html">Page 404</a></li>
+                                            <li><a href="page-403.html">Page 403</a></li>
+                                            <li><a href="page-500.html">Page 500</a></li>
+                                            <li><a href="page-503.html">Page 503</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="template">
-                            <div class="header">
-                                <h2>Main Template</h2>
-                            </div>
-                            <div class="body">
-                                <p><img alt="" src="doc/images/1.png" class="img-fluid"></p>
-                            </div>
+                        <div class="tab-pane fade" id="project_menu" role="tabpanel" >
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu list-unstyled">
+                                    <li><a href="index2.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+                                    <li><a href="app-inbox.html"><i class="fa fa-envelope-o"></i><span>Inbox App</span></a></li>
+                                    <li><a href="app-chat.html"><i class="fa fa-comments"></i><span>Chat App</span></a></li>
+                                    <li>
+                                        <a href="#Projects" class="has-arrow"><i class="fa fa-list-ul"></i><span>Projects</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="project-add.html">Add Projects</a></li>
+                                            <li><a href="project-list.html">Projects List</a></li>
+                                            <li><a href="project-grid.html">Projects Grid</a></li>
+                                            <li><a href="project-detail.html">Projects Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#Clients" class="has-arrow"><i class="fa fa-user"></i><span>Clients</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="client-add.html">Add Clients</a></li>
+                                            <li><a href="client-list.html">Clients List</a></li>
+                                            <li><a href="client-detail.html">Clients Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="project-team.html"><i class="fa fa-users"></i><span>Team</span></a></li>
+                                    <li><a href="app-taskboard.html"><i class="fa fa-tag"></i><span>Taskboard</span></a></li>
+                                    <li><a href="app-tickets.html"><i class="fa fa-ticket"></i><span>Tickets</span></a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="card">
-                            <div class="header">
-                                <h2><strong>Main</strong> HTML Structre</h2>
-                            </div>
-                            <div class="body">
-                                <p><img alt="" src="doc/images/html.png" class="img-fluid"></p>
-                            </div>
+                        <div class="tab-pane fade" id="sub_menu" role="tabpanel" >
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu list-unstyled">
+                                    <li>
+                                        <a href="#Blog" class="has-arrow"><i class="fa fa-globe"></i><span>Blog</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="blog-dashboard.html">Dashboard</a></li>
+                                            <li><a href="blog-post.html">New Post</a></li>
+                                            <li><a href="blog-list.html">Blog List</a></li>
+                                            <li><a href="blog-details.html">Blog Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#FileManager" class="has-arrow"><i class="fa fa-folder"></i><span>File Manager</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="file-dashboard.html">Dashboard</a></li>
+                                            <li><a href="file-documents.html">Documents</a></li>
+                                            <li><a href="file-media.html">Media</a></li>
+                                            <li><a href="file-images.html">Images</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#Widgets" class="has-arrow"><i class="fa fa-puzzle-piece"></i><span>Widgets</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="widgets-statistics.html">Statistics Widgets</a></li>
+                                            <li><a href="widgets-data.html">Data Widgets</a></li>
+                                            <li><a href="widgets-chart.html">Chart Widgets</a></li>
+                                            <li><a href="widgets-weather.html">Weather Widgets</a></li>
+                                            <li><a href="widgets-social.html">Social Widgets</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#Pages" class="has-arrow"><i class="fa fa-files-o"></i><span>Extra Pages</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="page-blank.html">Blank Page</a></li>
+                                            <li><a href="page-profile2.html">Profile</a></li>
+                                            <li><a href="page-gallery.html">Image Gallery <span class="badge bg-secondary float-end">v1</span></a></li>
+                                            <li><a href="page-timeline.html">Timeline</a></li>
+                                            <li><a href="page-timeline-h.html">Horizontal Timeline</a></li>
+                                            <li><a href="page-pricing.html">Pricing</a></li>
+                                            <li><a href="page-invoices.html">Invoices</a></li>
+                                            <li><a href="page-invoices2.html">Invoices <span class="badge bg-warning float-end">v2</span></a></li>
+                                            <li><a href="page-search-results.html">Search Results</a></li>
+                                            <li><a href="page-helper-class.html">Helper Classes</a></li>
+                                            <li><a href="page-maintenance.html">Maintenance</a></li>
+                                            <li><a href="page-testimonials.html">Testimonials</a></li>
+                                            <li><a href="page-faq.html">FAQs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>UI Elements</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="ui-typography.html">Typography</a></li>
+                                            <li><a href="ui-tabs.html">Tabs</a></li>
+                                            <li><a href="ui-buttons.html">Buttons</a></li>
+                                            <li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
+                                            <li><a href="ui-icons.html">Icons</a></li>
+                                            <li><a href="ui-notifications.html">Notifications</a></li>
+                                            <li><a href="ui-colors.html">Colors</a></li>
+                                            <li><a href="ui-dialogs.html">Dialogs</a></li>
+                                            <li><a href="ui-list-group.html">List Group</a></li>
+                                            <li><a href="ui-media-object.html">Media Object</a></li>
+                                            <li><a href="ui-modals.html">Modals</a></li>
+                                            <li><a href="ui-nestable.html">Nestable</a></li>
+                                            <li><a href="ui-progressbars.html">Progress Bars</a></li>
+                                            <li><a href="ui-range-sliders.html">Range Sliders</a></li>
+                                            <li><a href="ui-treeview.html">Treeview</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#forms" class="has-arrow"><i class="fa fa-pencil"></i><span>Forms</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="forms-validation.html">Form Validation</a></li>
+                                            <li><a href="forms-advanced.html">Advanced Elements</a></li>
+                                            <li><a href="forms-basic.html">Basic Elements</a></li>
+                                            <li><a href="forms-wizard.html">Form Wizard</a></li>
+                                            <li><a href="forms-dragdropupload.html">Drag &amp; Drop Upload</a></li>
+                                            <li><a href="forms-cropping.html">Image Cropping</a></li>
+                                            <li><a href="forms-summernote.html">Summernote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#Tables" class="has-arrow"><i class="fa fa-tag"></i><span>Tables</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="table-basic.html">Tables Example<span class="badge bg-info float-end">New</span></a></li>
+                                            <li><a href="table-normal.html">Normal Tables</a></li>
+                                            <li><a href="table-jquery-datatable.html">Jquery Datatables</a></li>
+                                            <li><a href="table-editable.html">Editable Tables</a></li>
+                                            <li><a href="table-color.html">Tables Color</a></li>
+                                            <li><a href="table-filter.html">Table Filter <span class="badge bg-info float-end">New</span></a></li>
+                                            <li><a href="table-dragger.html">Table dragger <span class="badge bg-info float-end">New</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#charts" class="has-arrow"><i class="fa fa-bar-chart"></i><span>Charts</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="chart-morris.html">Morris</a></li>
+                                            <li><a href="chart-flot.html">Flot</a></li>
+                                            <li><a href="chart-jquery-knob.html">Jquery Knob</a></li>
+                                            <li><a href="chart-sparkline.html">Sparkline Chart</a></li>
+                                            <li><a href="chart-peity.html">Peity</a></li>
+                                            <li><a href="chart-apex.html">Apex Charts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#Maps" class="has-arrow"><i class="fa fa-map-o"></i><span>Maps</span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="map-yandex.html">Yandex Map</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="grunt_file">
-                            <div class="header">
-                                <h2>Grunt File & Installation <small>The JavaScript Task Runner.</small></h2>
-                            </div>
-                            <div class="body m-b-10">
-                                <p><strong>Installing Grunt:</strong> Run <code>npm install grunt --save-dev</code> command from your teminal to install grunt within your project.</p>
-                                <p><strong>Grunt Sass:</strong> Run <code>grunt sass</code> command from your project directory. It will compile SASS to CSS for the project. This will read the file `assets/scss/filename.scss` and output a plain-css file to `/assets/css/filename.css`. </p>
-                                <p><strong>Grunt JSHint:</strong> Run <code>grunt jshint</code> command from your project directory. It will checks all *.js files under `assetsjs/filename` for common syntax or coding errors using the JSHint utility.</p>
-                                <p><strong>Grunt Sprite:</strong> Run <code>grunt sprite</code> command from your project directory. </p>
-                                <p><strong>Further help:</strong> To get more help on the grunt checkout <a href="https://gruntjs.com/getting-started">Grunt</a></p>
-                                <p><strong>Note:</strong> However, any SASS code you write must be able compile via Grunt as well.It will generate pre-compiled javascript templates. Reads all the *.html files from `assets/js/filename` and outputs `assets/js/filename.templates.js`. Template.js will contains code of UI design and will be change each time you build solution through above command.</p>
-                            </div>
-                            <div class="body">
-                                <p><a href="https://gruntjs.com/" target="_blank"><strong>Grunt</strong></a> is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting. It uses a command-line interface to run custom tasks defined in a file.</p>
-                                <img alt="" src="doc/images/4.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="main_content">
-                            <div class="header">
-                                <h2>Main Content</h2>
-                            </div>
-                            <div class="body">
-                                <pre class="prettyprint lang-html linenums">
-&lt;!-- START CONTENT --&gt;
-&lt;div class="page-loader-wrapper"&gt;
-    &lt;div class="loader"&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="navbar navbar-fixed-top"&gt;
-    &lt;div class="container-fluid"&gt;
-        &lt;div class="row clearfix"&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id="left-sidebar" class="sidebar"&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="row clearfix"&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;div id="main-content"&gt;
-    &lt;div class="container-fluid"&gt;
-        &lt;div class="row clearfix"&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- END CONTENT --&gt;
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="folder_structure">
-                            <div class="header">
-                                <h2>Folder Structure</h2>
-                            </div>
-                            <div class="body">
-<pre class="prettyprint"><span class="pln">LUCID-HR</span>
-</span><span class="pun">├─</span><span class="pln"> Bootstrap4</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> assets</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> dark</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> high-contrast</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> h-menu</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> js</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> light</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> mini-sidebar</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> rtl</span><span class="pun">/</span>
-
-</span><span class="pun">├─</span><span class="pln"> Bootstrap5</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> dist</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   </span><span class="pln"><span class="pun">   ├─</span><span class="pln"></span> assets</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   </span><span class="pln"><span class="pun">   ├─</span><span class="pln"></span> horizontal</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   </span><span class="pln"><span class="pun">   ├─</span><span class="pln"></span> sidebar-mini</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> js</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> scss</span><span class="pun">/</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> Gruntfile.js</span>
-</span><span class="pun"></span><span class="pun">   ├─</span><span class="pln"> package.json</span>
-
-</span><span class="pun">├─</span><span class="pln"> Documentation</span>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="SCSS">
-                            <div class="header">
-                                <h2>SCSS Structure</h2>
-                            </div>
-                            <div class="body">
-                                <blockquote>
-                                    <p class="blockquote blockquote-primary">
-                                        Please note that all Detail main Web Site, you need to set it up on your project
-                                        <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html"
-                                            class="col-blue" target="_blank">Click Here..</a>
-                                        <br>
-                                        <br>
-                                        <small>
-                                            - <strong>SCSS</strong>
-                                        </small>
-                                    </p>
-                                </blockquote>
-                                <p>main.css is the main CSS file located in assets/css/ folder of the package. Whole CSS
-                                    file is well indexed with topic and its related code.</p>
-                                <img alt="" src="doc/images/9.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="javascript">
-                            <div class="header">
-                                <h2>Javascript</h2>
-                            </div>
-                            <div class="body">
-                                <p>Lucid admin.js is the mail javascript file having all the js code. File is located in assets/js/ folder. This file code is also well formatted and section in different respective function names.</p>
-                                <p class="m-b-30">Along with this chart library based js code and dashboard based js code are added in separate files for ease of use of user.</p>
-                                <p><img alt="" src="doc/images/8.png" class="img-fluid"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="fonts">
-                            <div class="header">
-                                <h2>Font Used</h2>
-                            </div>
-                            <div class="body">
-                                <p>Google fonts are used in the template. They are as follows: <a href="https://fonts.google.com/specimen/Ubuntu">Ubuntu</a></p>
-                                <p>Font Awesome: <a href="https://fontawesome.com/v4.7.0/">Click to See</a></p>
-                                <p>All Images are used: <a href="https://www.pexels.com/">Pexels.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card" id="thank_you">
-                            <div class="header">
-                                <h2>THANK YOU!</h2>
-                            </div>
-                            <div class="body">
-                                <p> Once again, thank you so much for purchasing this template. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this template.</p>
-                                <p>If you really like our work, design, performance and support then <a href="https://themeforest.net/downloads"> please don't forgot to rate us</a> on Themeforest, it really motivate us to provide something better.</p>
+                        <div class="tab-pane fade" id="setting_menu" role="tabpanel" >
+                            <div class="px-3">
+                                <h6>Choose Skin</h6>
+                                <ul class="choose-skin list-unstyled">
+                                    <li data-theme="purple" class="mb-2"><div class="purple"></div><span>Purple</span></li>
+                                    <li data-theme="blue" class="mb-2"><div class="blue"></div><span>Blue</span></li>
+                                    <li data-theme="cyan" class="active mb-2"><div class="cyan"></div><span>Cyan</span></li>
+                                    <li data-theme="green" class="mb-2"><div class="green"></div><span>Green</span></li>
+                                    <li data-theme="orange" class="mb-2"><div class="orange"></div><span>Orange</span></li>
+                                    <li data-theme="blush" class="mb-2"><div class="blush"></div><span>Blush</span></li>
+                                </ul>
+                                <hr>
+                                <h6>Theme Option</h6>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-1">
+                                        <div class="form-check form-switch theme-switch">
+                                            <input class="form-check-input" type="checkbox" id="theme-switch">
+                                            <label class="form-check-label" for="theme-switch">Enable Dark Mode!</label>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-1">
+                                        <div class="form-check form-switch theme-high-contrast">
+                                            <input class="form-check-input" type="checkbox" id="theme-high-contrast">
+                                            <label class="form-check-label" for="theme-high-contrast">Enable High Contrast</label>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-1">
+                                        <div class="form-check form-switch theme-rtl">
+                                            <input class="form-check-input" type="checkbox" id="theme-rtl">
+                                            <label class="form-check-label" for="theme-rtl">Enable RTL Mode!</label>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-1">
+                                        <div class="form-check form-switch minisidebar-active">
+                                            <input class="form-check-input" type="checkbox" id="mini-active">
+                                            <label class="form-check-label" for="mini-active">Mini Sidebar</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <hr>
+                                <h6>General Settings</h6>
+                                <ul class="setting-list list-unstyled">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                                            <label class="form-check-label" for="flexCheckDefault1">Email Redirect</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked>
+                                            <label class="form-check-label" for="flexCheckDefault2">Notifications</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                            <label class="form-check-label" for="flexCheckDefault3">Auto Updates</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                                            <label class="form-check-label" for="flexCheckDefault4">Offline</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                                            <label class="form-check-label" for="flexCheckDefault5">Location Permission</label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
+        
+                <div id="main-content">
+                    <div class="container-fluid">
+        
+                        <div class="block-header py-lg-4 py-3">
+                            <div class="row g-3">
+                                <div class="col-md-6 col-sm-12">
+                                    <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Dashboard</h2>
+                                    <ul class="breadcrumb mb-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Lucid</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 col-sm-12 text-md-end">
+                                    <div class="d-inline-flex text-start">
+                                        <div class="me-2">
+                                            <h6 class="mb-0"><i class="fa fa-user"></i> 1,784</h6>
+                                            <small>Visitors</small>
+                                        </div>
+                                        <span id="bh_visitors"></span>
+                                    </div>
+                                    <div class="d-inline-flex text-start ms-lg-3 me-lg-3 ms-1 me-1">
+                                        <div class="me-2">
+                                            <h6 class="mb-0"><i class="fa fa-globe"></i> 325</h6>
+                                            <small>Visits</small>
+                                        </div>
+                                        <span id="bh_visits"></span>
+                                    </div>
+                                    <div class="d-inline-flex text-start">
+                                        <div class="me-2">
+                                            <h6 class="mb-0"><i class="fa fa-comments"></i> 13</h6>
+                                            <small>Chats</small>
+                                        </div>
+                                        <span id="bh_chats"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row g-2 clearfix row-deck">
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="card top_counter">
+                                    <div class="list-group list-group-custom list-group-flush">
+                                        <div class="list-group-item d-flex align-items-center py-3">
+                                            <div class="icon text-center me-3"><i class="fa fa-user"></i> </div>
+                                            <div class="content">
+                                                <div>New Employee</div>
+                                                <h5 class="mb-0">22</h5>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center py-3">
+                                            <div class="icon text-center me-3"><i class="fa fa-users"></i> </div>
+                                            <div class="content">
+                                                <div>Total Employee</div>
+                                                <h5 class="mb-0">425</h5>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center py-3">
+                                            <div class="icon text-center me-3"><i class="fa fa-university"></i> </div>
+                                            <div class="content">
+                                                <div>Total Salary</div>
+                                                <h5 class="mb-0">$2.8M</h5>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center py-3">
+                                            <div class="icon text-center me-3"><i class="fa fa-university"></i> </div>
+                                            <div class="content">
+                                                <div>Avg. Salary</div>
+                                                <h5 class="mb-0">$1,250</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5>Income Analysis</h5>
+                                        <span class="text-muted">8% High then last month</span>
+                                        <div id="sparkline-pie" class="mt-3 d-flex justify-content-center"></div>
+                                        <div class="stats-report">
+                                            <div class="stat-item d-inline-block px-2 mt-4">
+                                                <h5 class="mb-0 fw-normal fs-6">Design</h5>
+                                                <strong>84.60%</strong>
+                                            </div>
+                                            <div class="stat-item d-inline-block px-2 mt-4">
+                                                <h5 class="mb-0 fw-normal fs-6">Dev</h5>
+                                                <strong>15.40%</strong>
+                                            </div>
+                                            <div class="stat-item d-inline-block px-2 mt-4">
+                                                <h5 class="mb-0 fw-normal fs-6">SEO</h5>
+                                                <strong>5.10%</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header border-0">
+                                        <h6 class="card-title">Salary Statistics</h6>
+                                        <ul class="header-dropdown list-unstyled">
+                                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Weekly">W</a></li>
+                                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Monthly">M</a></li>
+                                            <li><a class="tab_btn active" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Yearly">Y</a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                                <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Another Action</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Something else</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="Salary_Statistics"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="card-title">Total Salary by Unit</h6>
+                                        <ul class="header-dropdown list-unstyled">
+                                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Weekly">W</a></li>
+                                            <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Monthly">M</a></li>
+                                            <li><a class="tab_btn active" href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Yearly">Y</a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Another Action</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Something else</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="total_Salary" class="ct-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="card-title">ToDo List</h6>
+                                    </div>
+                                    <div class="card-body todo_list">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="Makers">
+                                                <label class="form-check-label" for="Makers">
+                                                    <strong>New Employee intro</strong>
+                                                </label>
+                                                <span class="text-muted d-flex small">SCHEDULED FOR 3:00 P.M. ON JUN 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="Makers1"
+                                                    checked>
+                                                <label class="form-check-label" for="Makers1">
+                                                    <strong>Send email to CEO</strong>
+                                                </label>
+                                                <span class="text-muted d-flex small">SCHEDULED FOR 4:30 P.M. ON JUN 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="Makers2">
+                                                <label class="form-check-label" for="Makers2">
+                                                    <strong>New Joing Employee Welcome kit</strong>
+                                                </label>
+                                                <span class="text-muted d-flex small">
+                                                    <small><a href="#">John Smith</a> Designer</small><br>
+                                                </span>
+                                                <span class="text-muted d-flex small">
+                                                    <small><a href="#">Hossein Shams</a> Developer</small><br>
+                                                </span>
+                                                <span class="text-muted d-flex small">
+                                                    <small><a href="#">Maryam Amiri</a> SEO</small><br>
+                                                </span>
+                                                <span class="text-muted d-flex small">
+                                                    <small><a href="#">Mike Litorus</a> iOS Developer</small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="Makers3">
+                                                <label class="form-check-label" for="Makers3">
+                                                    <strong>Birthday Wish</strong>
+                                                </label>
+                                                <span class="text-muted d-flex small">SCHEDULED FOR 4:30 P.M. ON JUN 2021</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-7 col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="card-title">Employee Performance</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover align-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Avatar</th>
+                                                        <th>Name</th>
+                                                        <th>Designation</th>
+                                                        <th>Performance</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="../dist/assets/images/xs/avatar1.jpg" class="avatar rounded-circle" alt=""></td>
+                                                        <td>Marshall Nichols</td>
+                                                        <td><span>UI UX Designer</span></td>
+                                                        <td><span class="badge bg-success">Good</span></td>
+                                                        <td><span id="sparkbar_uideveloper"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../dist/assets/images/xs/avatar2.jpg" class="avatar rounded-circle" alt=""></td>
+                                                        <td>Susie Willis</td>
+                                                        <td><span>Designer</span></td>
+                                                        <td><span class="badge bg-warning">Average</span></td>
+                                                        <td><span id="sparkbar_designer1"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../dist/assets/images/xs/avatar3.jpg" class="avatar rounded-circle" alt=""></td>
+                                                        <td>Francisco Vasquez</td>
+                                                        <td><span>Team Leader</span></td>
+                                                        <td><span class="badge bg-primary">Excellent</span></td>
+                                                        <td><span id="sparkbar_leader"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../dist/assets/images/xs/avatar4.jpg" class="avatar rounded-circle" alt=""></td>
+                                                        <td>Erin Gonzales</td>
+                                                        <td><span>Android Developer</span></td>
+                                                        <td><span class="badge bg-danger">Weak</span></td>
+                                                        <td><span id="sparkbar_developer"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../dist/assets/images/xs/avatar5.jpg" class="avatar rounded-circle" alt=""></td>
+                                                        <td>Ava Alexander</td>
+                                                        <td><span>UI UX Designer</span></td>
+                                                        <td><span class="badge bg-success">Good</span></td>
+                                                        <td><span id="sparkbar_designer"></span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-5 col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="card-title">Employee Structure</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div id="apex-TotalStudent"></div>
+                                        <div class="mb-3 mt-4">
+                                            <span class="text-muted small">Male</span>
+                                            <h4 class="mb-0">73%</h4>
+                                        </div>
+                                        <div>
+                                            <span class="text-muted small">Female</span>
+                                            <h4 class="mb-0">27%</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
             </div>
+        
         </div>
-
-    </div>
-
-    <!-- Javascript -->
-    <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
-    <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/vendorscripts.bundle.js')}}"></script>
-
-    <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
-    <script>
-        $('.metismenu li').click(function () {
-            var $this = $(this);
-            if (!$this.is('active')) {
-                $('.metismenu li').removeClass('active').removeData("top");
-                $this.addClass('active').data("top", $this.offset().top);
-            }
-        });
-        document.createElement('section');
-        var duration = '500',
-            easing = 'swing';
-
-        // Select all links with hashes
-        $('a[href*="#"]')
-            // Remove links that don't actually link to anything
-            .not('[href="#"]')
-            .not('[href="#0"]')
-            .click(function (event) {
-                // On-page links
-                if (
-                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                    &&
-                    location.hostname == this.hostname
-                ) {
-                    // Figure out element to scroll to
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    // Does a scroll target exist?
-                    if (target.length) {
-                        // Only prevent default if animation is actually gonna happen
-                        event.preventDefault();
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000, function () {
-                            // Callback after animation
-                            // Must change focus!
-                            var $target = $(target);
-                            $target.focus();
-                            if ($target.is(":focus")) { // Checking if the target was focused
-                                return false;
-                            } else {
-                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                                $target.focus(); // Set focus again
-                            };
-                        });
-                    }
-                }
-            });
-    </script>
-</body>
+        <!-- core js file -->
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
+        
+        <!-- page js file -->
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
+        <script src="{{asset('storage/app/public/bootstrap5/js/pages/index.js')}}"></script>
+    </body>
 </html>
