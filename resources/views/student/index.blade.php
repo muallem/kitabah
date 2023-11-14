@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('sidebar')
+    @livewire('compoenent.sidebar')    
+@endsection
+
 @section('content')
     <div class="container-fluid">
             

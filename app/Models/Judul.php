@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Judul extends Model
 {
+    Const TYPE_KUAN = 'kual';
+    Const TYPE_KUAL = 'kual';
+    Const TYPE_RND = 'rnd';
+
+    Const TYPE_CHOICE = [
+        TYPE_KUAN => 'Kuantitatif',
+        TYPE_KUAL => 'Kualitatif',
+        TYPE_RND => 'Research And Development',
+    ];
+
     use HasFactory;
     protected $fillable = [
         'title',
