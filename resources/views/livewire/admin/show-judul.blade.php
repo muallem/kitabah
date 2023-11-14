@@ -18,7 +18,7 @@
                     
                     <select class="form-control" id="select_feedback">
                         @foreach (\App\Models\Judul::TYPE_CHOICE as $key => $value)
-                            <option value="{{ $key }}">{{ $value }}</option>
+                            <option value="{{ $key }}" {{($key === $data->group) ? 'selected' : ''}}>{{ $value }}</option>
                         @endforeach
                     </select>
                 </div>
