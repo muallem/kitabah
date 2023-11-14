@@ -16,10 +16,11 @@
 </div>
 
 @push('js')
-
     <script>
-        setInterval(function () {
-            Livewire.emit('refreshStudentIndex'); 
-        }, 10000); 
+        document.addEventListener('livewire:load', function() {
+            setInterval(function () {
+                Livewire.emit('refreshStudentIndex'); 
+            }, 10000); 
+        });
     </script>
 @endpush
