@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>:: Lucid HR BS5 :: Home</title>
+    <title>Kitabah</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Lucid HR & Project Admin Dashboard Template with Bootstrap 5x">

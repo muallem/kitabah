@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('discussions', function (Blueprint $table) {
+        Schema::create('juduls', function (Blueprint $table) {
             $table->id();
-            $table->text('chat');
-            $table->bigInteger('theses_id')->unsigned();
-            $table->boolean('is_admin');
+            $table->string('title');
+            $table->string('group')->nullable()->default(null);
+            $table->bigInteger('student_id');
+            $table->bigInteger('teacher_id')->nullable()->default(null);
+            $table->dateTime('last_seen')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('discussions');
+        Schema::dropIfExists('juduls');
     }
 };

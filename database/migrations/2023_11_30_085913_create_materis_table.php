@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('juduls', function (Blueprint $table) {
+        Schema::create('materis', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('group')->nullable()->default(null);
-            $table->string('student_id');
-            $table->string('teacher_id')->nullable()->default(null);
-            $table->dateTime('last_seen')->nullable()->default(null);
+            $table->text('student_file');
+            $table->text('admin_feedback');
+            $table->bigInteger('student_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('juduls');
+        Schema::dropIfExists('materis');
     }
 };
