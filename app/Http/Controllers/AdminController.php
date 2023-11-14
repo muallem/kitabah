@@ -31,6 +31,7 @@ class AdminController extends Controller
                 ->where('materis.created_at', '>', DB::raw('juduls.last_seen'));
         })
         ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
+        ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
         ->get();
         return $data;
         return view('admin.index');
