@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Student\Judul;
 
+use Carbon\Carbon;
 use App\Models\Judul;
 use Livewire\Component;
 
@@ -22,7 +23,8 @@ class Create extends Component
         );
         Judul::create([
             'title' => $this->input_title,
-            "student_id" => session()->get('user_id')
+            "student_id" => session()->get('user_id'),
+            "last_seen" => Carbon::now(),
         ]);
     
         $this->emit('onSuccessSweetAlert', "Berhasil", 'Berhasil Membuat Judul !');
