@@ -15,9 +15,14 @@ class Create extends Component
     public function store()
     {
 
-        $validatedData = $this->validate([
-            'input_title' => 'required|string|max_words:2',
-        ]);
+        $validatedData = $this->validate(
+            [
+                'input_title' => 'required|string|max_words:2',
+            ],
+            [
+                'input_title.max_words' => 'Judul tidak boleh lebih dari 20 kata !',
+            ],
+        );
         Judul::create([
             'title' => $this->input_title,
             "student_id" => session()->get('user_id')
