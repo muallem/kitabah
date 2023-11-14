@@ -23,23 +23,7 @@
                         <p class="my-3">Judul skripsi harus dirumuskan secara jelas, spesifik, sederhana, singkat, tidak boleh lebih dari 20 kata, dan dalam bentuk pernyataan.</p>
                     </div>
                 </div>
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h6 class="card-title">Korim Tanggapan</h6>
-                        <small>Tunggu Feedback dari admin setelah anda mengirim tanggapan !</small>
-                    </div>
-                    <div class="card-body">
-                        <form class="row">
-                            <div class="col-12">
-                                <label for="formFileMultiple" class="form-label">Tanggapan</label>
-                                <input class="form-control" type="text" id="formFileMultiple">
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-block btn-primary">SUBMIT</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                @livewire('student.index')
             </div>
         </div>
 

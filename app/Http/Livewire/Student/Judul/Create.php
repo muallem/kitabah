@@ -2,23 +2,28 @@
 
 namespace App\Http\Livewire\Student\Judul;
 
+use App\Models\Judul;
 use Livewire\Component;
 
 class Create extends Component
 {
     public $input_title;
+    public $group_type;
+    protected $listeners = [
+        'refreshJudul' => '$refresh',
+    ];
     public function store()
     {
 
         $validatedData = $this->validate([
-            'title' => 'required|string|max_words:2',
+            'input_title' => 'required|string|max_words:2',
         ]);
-        Thesis::create([
-            'title' => $this->title,
+        Judul::create([
+            'title' => $this->input_title,
             "student_id" => session()->get('user_id')
         ]);
     
-        $this->emit('refreshData');
+        $this->emit('refreshJudul');
         $this->emit('SwalSuccess', "Berhasil", 'Berhasil Membuat Judul !');
         $this->emit('onSuccessStore');
     }
