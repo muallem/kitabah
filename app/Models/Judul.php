@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Judul extends Model
 {
-    Const TYPE_KUAN = 'kual';
+    Const TYPE_KUAN = 'kuan';
     Const TYPE_KUAL = 'kual';
     Const TYPE_RND = 'rnd';
 
