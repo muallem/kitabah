@@ -16,3 +16,18 @@
         </form>
     </div>
 </div>
+
+@push('js')
+    <script>
+        document.addEventListener('livewire:load', function() {
+            $("#editModal").on('hide.bs.modal', function() {
+                @this.call('resetInput');
+            });
+
+            window.livewire.on('onSuccessStore', (message) => {
+                $('#editModal').modal('hide');
+            });
+
+        });
+    </script>
+@endpush

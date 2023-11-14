@@ -16,7 +16,7 @@
 
         <!-- MAIN CSS -->
         <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
-
+        @livewireStyles
     </head>
     
     <body>
@@ -151,5 +151,7 @@
         <!-- page js file -->
         <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
         <script src="{{asset('storage/app/public/bootstrap5/js/pages/index.js')}}"></script>
+        @livewireScripts
+        @stack('js')
     </body>
 </html>
