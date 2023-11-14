@@ -41,7 +41,7 @@
                                     @endif
                                 </a>
                                 <ul class="list-unstyled mm-collapse">
-                                    <li><a href="acc-payments.html">Judul</a></li>
+                                    <li><a href="acc-payments.html">Judul {!! ($item->group) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
                                     <li><a href="acc-expenses.html">Materi</a></li>
                                 </ul>
                             </li>
