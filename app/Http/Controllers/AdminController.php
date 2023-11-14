@@ -34,7 +34,7 @@ class AdminController extends Controller
         // ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
         // ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
         // ->get();
-        $data = Materi::whereNull('admin_feedback')->get();
+        $data = Materi::where('admin_feedback', "")->get();
         return $data;
         return view('admin.index');
     }
