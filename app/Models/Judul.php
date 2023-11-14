@@ -12,9 +12,9 @@ class Judul extends Model
     Const TYPE_RND = 'rnd';
 
     Const TYPE_CHOICE = [
-        TYPE_KUAN => 'Kuantitatif',
-        TYPE_KUAL => 'Kualitatif',
-        TYPE_RND => 'Research And Development',
+        self::TYPE_KUAN => 'Kuantitatif',
+        self::TYPE_KUAL => 'Kualitatif',
+        self::TYPE_RND => 'Research And Development',
     ];
 
     use HasFactory;
