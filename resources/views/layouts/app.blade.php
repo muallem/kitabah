@@ -148,6 +148,5 @@
         
         <!-- page js file -->
         <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
-        <script src="{{asset('storage/app/public/bootstrap5/js/pages/index.js')}}"></script>
 </body>
 </html>
