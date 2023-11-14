@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Judul;
+use App\Models\Materi;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
 use Illuminate\Http\Request;
@@ -25,14 +26,15 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data = Judul::select('juduls.id', 'juduls.group', 'wpjs_users.user_login', DB::raw('COUNT(materis.id) as materi_count'))
-        ->leftJoin('materis', function ($join) {
-            $join->on('juduls.student_id', '=', 'materis.student_id')
-            ->whereNull('materis.admin_feedback');
-        })
-        ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
-        ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
-        ->get();
+        // $data = Judul::select('juduls.id', 'juduls.group', 'wpjs_users.user_login', DB::raw('COUNT(materis.id) as materi_count'))
+        // ->leftJoin('materis', function ($join) {
+        //     $join->on('juduls.student_id', '=', 'materis.student_id')
+        //     ->whereNull('materis.admin_feedback');
+        // })
+        // ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
+        // ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
+        // ->get();
+        $data = Materi::whereNull('admin_feedback')->get();
         return $data;
         return view('admin.index');
     }
