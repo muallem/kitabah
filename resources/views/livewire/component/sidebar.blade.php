@@ -29,7 +29,17 @@
                     <ul class="metismenu list-unstyled">
                         @foreach($thesis as $item)
                             <li>
-                                <a href="#" class="has-arrow" aria-expanded="false"><i class="fa fa-briefcase"></i><span>{{$item->user_login}}</span> {!! ($item->group) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a>
+                                <a href="#" class="has-arrow text-decoration-none text-dark position-relative p-1" aria-expanded="false">
+                                    <i class="fa fa-briefcase"></i>
+                                    <span>{{$item->user_login}}</span> 
+                                    {!! ($item->group) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}
+
+                                    @if($item->materi_count > 0 )
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                                            {{ $item->materi_count }}
+                                        </span>
+                                    @endif
+                                </a>
                                 <ul class="list-unstyled mm-collapse">
                                     <li><a href="acc-payments.html">Judul</a></li>
                                     <li><a href="acc-expenses.html">Materi</a></li>
