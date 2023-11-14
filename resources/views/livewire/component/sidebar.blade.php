@@ -29,7 +29,7 @@
                     <ul class="metismenu list-unstyled">
                         @foreach($thesis as $item)
                             <li>
-                                <a href="#" class="has-arrow" aria-expanded="false"><i class="fa fa-briefcase"></i><span>{{$item->user_login}}</span> {{($item->group) ? '' ; '<span class="notification-dot"></span>'}}</a>
+                                <a href="#" class="has-arrow" aria-expanded="false"><i class="fa fa-briefcase"></i><span>{{$item->user_login}}</span> {{($item->group) ? '' ; '<span class="notification-dot"></span>' ;}}</a>
                                 <ul class="list-unstyled mm-collapse">
                                     <li><a href="acc-payments.html">Judul</a></li>
                                     <li><a href="acc-expenses.html">Materi</a></li>
