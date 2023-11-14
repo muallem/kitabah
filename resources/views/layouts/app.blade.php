@@ -9,10 +9,6 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        
-        <!-- VENDOR CSS -->
-        <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/vendor/bootstrap/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
 
         <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/sweetalert2.min.css')}}">
         <!-- MAIN CSS -->
