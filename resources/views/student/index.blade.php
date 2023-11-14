@@ -19,20 +19,20 @@
             <div class="col-lg-12 col-md-12">
                 <div class="card mb-3 single_post">
                     <div class="card-body">
-                        <h4>Lorem ipsum dolor sit amet.</h4>
-                        <p class="my-3">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <h4>Judul.</h4>
+                        <p class="my-3">Judul skripsi harus dirumuskan secara jelas, spesifik, sederhana, singkat, tidak boleh lebih dari 20 kata, dan dalam bentuk pernyataan.</p>
                     </div>
                 </div>
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h6 class="card-title">Upload Tanggapan</h6>
-                        <small>Tunggu Feedback dari admin setelah anda meng-upload tanggapan !</small>
+                        <h6 class="card-title">Korim Tanggapan</h6>
+                        <small>Tunggu Feedback dari admin setelah anda mengirim tanggapan !</small>
                     </div>
                     <div class="card-body">
                         <form class="row">
                             <div class="col-12">
                                 <label for="formFileMultiple" class="form-label">Tanggapan</label>
-                                <input class="form-control" type="file" id="formFileMultiple" multiple="">
+                                <input class="form-control" type="text" id="formFileMultiple">
                             </div>
                             <div class="col-12 mt-4">
                                 <button type="submit" class="btn btn-block btn-primary">SUBMIT</button>
