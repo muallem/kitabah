@@ -19,7 +19,7 @@ class Sidebar extends Component
             $this->thesis = Judul::select('juduls.id', 'juduls.group', 'wpjs_users.user_login', DB::raw('COUNT(materis.id) as materi_count'))
             ->leftJoin('materis', function ($join) {
                 $join->on('juduls.student_id', '=', 'materis.student_id')
-                    ->whereNull('materis.admin_feedback');
+                    ->where('materis.admin_feedback', "");
             })
             ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
             ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
