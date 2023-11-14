@@ -13,7 +13,27 @@
                     <p>{{$data_judul->title}}</p>
                 </blockquote>
                 <hr>
+                <div class="w-100">
+                    <label class="form-label">Feedback</label>
+                    
+                    <select class="form-control" id="select_feedback">
+                        @foreach (\App\Models\Judul::TYPE_CHOICE as $key => $value)
+                            <option value="{{ $key }}">{{ $value }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+@push('js')
+    <script>
+        $(() => {
+            $('#select_feedback').on('change', async function(e) {
+                let feedback = $('#select_feedback').val();
+                await @this.call('setFeedback', feedback);
+            });
+        })
+    </script>
+@endpush

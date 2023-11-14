@@ -14,6 +14,11 @@ class ShowJudul extends Component
         'refreshStudentIndex' => '$refresh',
     ];
 
+    public function setFeedback($feedback)
+    {
+        $this->emit('onSuccessSweetAlert', $feedback);
+    }
+
     public function render()
     {
         $this->data_judul = Judul::where('id', $this->thesis_id)->with('user')->first();
