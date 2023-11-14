@@ -3,8 +3,7 @@
     <div class="col-lg-12 col-md-12">
         <div class="card mb-3 single_post">
             <div class="card-body">
-                {{var_dump($data_judul)}}
-                <h4>{{$data_judul->user->login_name}}</h4>
+                <h4>{{$data_judul->wpjs_users->login_name}}</h4>
             </div>
         </div>
         <div class="card mb-3">
