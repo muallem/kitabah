@@ -47,7 +47,6 @@ class AdminController extends Controller
 
     public function judul(Request $request)
     {
-        return $request->all();
         return view('admin.judul', [
             'thesis_id' => $request->thesis_id,
         ]);
