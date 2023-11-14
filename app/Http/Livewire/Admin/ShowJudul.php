@@ -16,7 +16,7 @@ class ShowJudul extends Component
 
     public function setFeedback($feedback)
     {
-        $this->emit('onSuccessSweetAlert', $feedback);
+        $this->emit('onSuccessSweetAlert', "$feedback - $this->thesis_id");
     }
 
     public function render()
