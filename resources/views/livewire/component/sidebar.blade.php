@@ -29,7 +29,7 @@
                     <ul class="metismenu list-unstyled">
                         @foreach($thesis as $item)
                             <li>
-                                <a href="#" class="has-arrow text-decoration-none text-dark p-1" aria-expanded="false">
+                                <a href="#" class="has-arrow text-decoration-none text-dark" aria-expanded="false">
                                     <i class="fa fa-briefcase"></i>
                                     <span>{{$item->user_login}}</span> 
                                     {!! ($item->group) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}
