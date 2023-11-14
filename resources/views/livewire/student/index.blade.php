@@ -7,7 +7,8 @@
                 <p>{{$data_judul->title}}</p>
             </blockquote>
             <hr>
-            <div class="alert alert-success mt-3" role="alert">Feedback !</div>
+            @livewire('student.judul.feedback', ['group' => $data_judul->group])
+            
         @else
             @livewire('student.judul.create')
         @endif

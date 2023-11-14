@@ -8,17 +8,14 @@ use Livewire\Component;
 class Index extends Component
 {
     public $data_judul;
+
     protected $listeners = [
         'refreshStudentIndex' => '$refresh',
     ];
-
-    public function mount()
+    public function render()
     {
         $student_id = session()->get('user_id');
         $this->data_judul = Judul::where('student_id', $student_id)->first();
-    }
-    public function render()
-    {
         return view('livewire.student.index');
     }
 }
