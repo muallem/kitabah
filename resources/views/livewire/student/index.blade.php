@@ -14,3 +14,12 @@
         @endif
     </div>
 </div>
+
+@push('js')
+
+    <script>
+        setInterval(function () {
+            Livewire.emit('refreshStudentIndex'); 
+        }, 10000); 
+    </script>
+@endpush

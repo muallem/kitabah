@@ -1,7 +1,7 @@
 <div>
     <div class="card-header">
         <h6 class="card-title">Kirim Tanggapan</h6>
-        <small>Tunggu Feedback dari admin setelah anda mengirim tanggapan !</small>
+        <small>Tunggu Feedback dari Dosen setelah anda mengirim tanggapan !</small>
     </div>
     <div class="card-body">
         <form class="row" wire:submit.prevent='store'>

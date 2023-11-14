@@ -12,6 +12,7 @@ class Index extends Component
     protected $listeners = [
         'refreshStudentIndex' => '$refresh',
     ];
+
     public function render()
     {
         $student_id = session()->get('user_id');
