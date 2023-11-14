@@ -13,15 +13,38 @@
                     <p>{{$data_judul->title}}</p>
                 </blockquote>
                 <hr>
-                <div class="w-100">
-                    <label class="form-label">Feedback</label>
-                    
-                    <select class="form-control" id="select_feedback">
-                        @foreach (\App\Models\Judul::TYPE_CHOICE as $key => $value)
-                            <option value="{{ $key }}" {{($key === $data_judul->group) ? 'selected' : ''}}>{{ $value }}</option>
-                        @endforeach
-                    </select>
-                </div>
+                @if($data_judul->group)
+                    <div class="w-100">
+                        <label class="form-label">Feedback</label>
+                        
+                        <blockquote class="blockquote border border-primary p-3">
+                            <p>
+                                @switch($data_judul->group)
+                                    @case(\App\Models\Judul::TYPE_KUAN)
+                                        Kuantitatif (KUAN)
+                                        @break
+                                    @case(\App\Models\Judul::TYPE_KUAL)
+                                        Kuanlitatif (KUAL)
+                                        @break
+                                    @case(\App\Models\Judul::TYPE_RND)
+                                        Research And Development (RND)
+                                        @break
+                                @endswitch
+                            </p>
+                        </blockquote>
+                    </div>
+                @else
+                    <div class="w-100">
+                        <label class="form-label">Feedback</label>
+                        
+                        <select class="form-control" id="select_feedback">
+                            @foreach (\App\Models\Judul::TYPE_CHOICE as $key => $value)
+                                <option value="{{ $key }}" {{($key === $data_judul->group) ? 'selected' : ''}}>{{ $value }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                @endif
             </div>
         </div>
     </div>
