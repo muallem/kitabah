@@ -8,6 +8,9 @@ use Livewire\Component;
 class Index extends Component
 {
     public $data_judul;
+    protected $listeners = [
+        'refreshStudentIndex' => '$refresh',
+    ];
 
     public function mount()
     {

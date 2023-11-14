@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/vendor/bootstrap/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
 
+        <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/sweetalert2.min.css')}}">
         <!-- MAIN CSS -->
         <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
         @livewireStyles
@@ -147,11 +148,37 @@
         </div>
         <!-- core js file -->
         <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
         
         <!-- page js file -->
         <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
         <script src="{{asset('storage/app/public/bootstrap5/js/pages/index.js')}}"></script>
         @livewireScripts
+
+        <script>
+            window.livewire.on('onSuccessSweetAlert', (message) => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil',
+                    text: message,
+                });
+            });
+
+            window.livewire.on('onFailSweetAlert', (message) => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: message,
+                });
+            });
+
+            window.livewire.on('openNewTab', (url) => {
+                window.open(url, '_blank');
+            });
+            window.livewire.on('closeTab', () => {
+                window.close();
+            });
+        </script>
         @stack('js')
     </body>
 </html>

@@ -9,15 +9,12 @@ class Create extends Component
 {
     public $input_title;
     public $group_type;
-    protected $listeners = [
-        'refreshJudul' => '$refresh',
-    ];
     public function store()
     {
 
         $validatedData = $this->validate(
             [
-                'input_title' => 'required|string|max_words:2',
+                'input_title' => 'required|string|max_words:20',
             ],
             [
                 'input_title.max_words' => 'Judul tidak boleh lebih dari 20 kata !',
@@ -28,9 +25,8 @@ class Create extends Component
             "student_id" => session()->get('user_id')
         ]);
     
-        $this->emit('refreshJudul');
-        $this->emit('SwalSuccess', "Berhasil", 'Berhasil Membuat Judul !');
-        $this->emit('onSuccessStore');
+        $this->emit('onSuccessSweetAlert', "Berhasil", 'Berhasil Membuat Judul !');
+        $this->emit('refreshStudentIndex');
     }
     public function render()
     {
