@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('sidebar')
-    @livewire('compoenent.sidebar')    
+    @livewire('component.sidebar')    
 @endsection
 
 @section('content')
