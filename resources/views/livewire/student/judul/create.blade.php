@@ -8,7 +8,7 @@
             <div class="col-12">
                 <label for="formFileMultiple" class="form-label">Tanggapan</label>
                 <input class="form-control" type="text" wire:model.lazy="input_title" placeholder="Ketik Judul Disini ...">
-                @error('inputValue') <span class="text-danger">{{ $message }}</span> @enderror
+                @error('input_title') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="col-12 mt-4">
                 <button type="submit" class="btn btn-block btn-primary">KIRIM</button>
