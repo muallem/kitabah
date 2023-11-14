@@ -27,7 +27,7 @@ class AdminController extends Controller
     {
         $data = Judul::select('juduls.id', 'wpjs_users.user_login', DB::raw('COUNT(materis.id) as materi_count'))
         ->leftJoin('materis', function ($join) {
-            $join->on('juduls.id', '=', 'materis.theses_id')
+            $join->on('juduls.student_id', '=', 'materis.student_id')
                 ->where('materis.created_at', '>', DB::raw('juduls.last_seen'));
         })
         ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
