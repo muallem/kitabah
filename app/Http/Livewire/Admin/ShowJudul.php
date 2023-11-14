@@ -16,7 +16,13 @@ class ShowJudul extends Component
 
     public function setFeedback($feedback)
     {
-        $this->emit('onSuccessSweetAlert', "$feedback - $this->thesis_id");
+        $data = Judul::find($this->thesis_id);
+        $data->group = $feedback;
+        if($data->save())
+        {
+            $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Feedback !');
+        }
+        $this->emit('refreshStudentIndex');
     }
 
     public function render()
