@@ -11,6 +11,7 @@ class Sidebar extends Component
 {
     public $thesis;
 
+    
     public function getSidebar()
     {
         if(AuthHelper::isAdmin())
