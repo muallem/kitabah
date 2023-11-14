@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Livewire\Admin;
+
+use App\Models\Judul;
+use Livewire\Component;
+
+class ShowJudul extends Component
+{
+    public $thesis_id;
+    public $data_judul;
+
+    protected $listeners = [
+        'refreshStudentIndex' => '$refresh',
+    ];
+
+    public function render()
+    {
+        $this->data_judul = Judul::where('id', $this->thesis_id)->with('user')->first();
+        return view('livewire.student.index');
+    }
+}

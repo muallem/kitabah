@@ -44,6 +44,13 @@ class AdminController extends Controller
     {
         return view('student.index');
     }
+
+    public function judul(Request $request)
+    {
+        return view('admin.judul', [
+            'thesis_id' => $request->thesis_id,
+        ]);
+    }
     public function coba(){
         return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
     }
