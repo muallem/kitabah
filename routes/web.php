@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,12 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => ['my.auth', 'admin']], function () {
+    Route::group(['controller' => AdminController::class, 'prefix' => 'admin', 'as' => 'admin.'], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/kual', 'kual')->name('kual');
+        Route::get('/kuan', 'kuan')->name('kuan');
+        Route::get('/rnd', 'rnd')->name('rnd');
+    });
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['my.auth', 'student']], function () {
