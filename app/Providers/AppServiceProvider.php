@@ -17,8 +17,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot()
     {
-        //
+        Validator::extend('max_words', function ($attribute, $value, $parameters, $validator) {
+            $wordCount = str_word_count($value);
+            return $wordCount <= $parameters[0];
+        });
     }
 }
