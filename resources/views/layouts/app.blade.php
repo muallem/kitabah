@@ -10,10 +10,10 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/dataTables.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('storage/app/public/assets/css/dataTables.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('storage/app/public/assets/css/select2.min.css') }}" />
         <!-- MAIN CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('storage/app/public/assets/css/main.css') }}">
         @livewireStyles
         @yield('css')
     
@@ -149,19 +149,19 @@
         
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- core js file -->
-<script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script>
-<script src="{{ asset('assets/bundles/dataTables.bundle.js') }}"></script>
-<script src="{{ asset('assets/bundles/sweetalert2.bundle.js') }}"></script>
-<script src="{{ asset('assets/bundles/select2.bundle.js') }}"></script>
+<script src="{{ asset('storage/app/public/assets/bundles/libscripts.bundle.js') }}"></script>
+<script src="{{ asset('storage/app/public/assets/bundles/dataTables.bundle.js') }}"></script>
+<script src="{{ asset('storage/app/public/assets/bundles/sweetalert2.bundle.js') }}"></script>
+<script src="{{ asset('storage/app/public/assets/bundles/select2.bundle.js') }}"></script>
 
-<script src="{{ asset('assets/bundles/datepicker.bundle.js') }}"></script>
+<script src="{{ asset('storage/app/public/assets/bundles/datepicker.bundle.js') }}"></script>
 
-<script src="{{ asset('assets/bundles/tagsinput.bundle.js') }}"></script>
+<script src="{{ asset('storage/app/public/assets/bundles/tagsinput.bundle.js') }}"></script>
 
-<script src="{{asset('assets/plugin/Sortable.min.js')}}"></script>>
+<script src="{{asset('storage/app/public/assets/plugin/Sortable.min.js')}}"></script>>
 
     <!-- page js file -->
-    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
+    <script src="{{ asset('storage/app/public/assets/bundles/mainscripts.bundle.js') }}"></script>
     
     @livewireScripts
 
