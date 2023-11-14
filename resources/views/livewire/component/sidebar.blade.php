@@ -27,10 +27,15 @@
             <div class="tab-pane fade show active" id="student_menu" role="tabpanel" >
                 <nav class="sidebar-nav">
                     <ul class="metismenu list-unstyled">
-                        <li><a href="{{route('student.index')}}"><i class="fa fa-pen"></i><span>Judul</span></a></li>
-                        <li><a href="{{route('student.kual')}}"><i class="fa fa-list-ul"></i><span>Kual</span></a></li>
-                        <li><a href="{{route('student.kuan')}}"><i class="fa fa-list-ul"></i><span>Kuan</span></a></li>
-                        <li><a href="{{route('student.rnd')}}"><i class="fa fa-list-ul"></i><span>RND</span></a></li>
+                        @foreach($thesis as $item)
+                            <li>
+                                <a href="#" class="has-arrow" aria-expanded="false"><i class="fa fa-briefcase"></i><span>{{$item->user_login}}</span> {{($item->group) ? '' ; '<span class="notification-dot"></span>'}}</a>
+                                <ul class="list-unstyled mm-collapse">
+                                    <li><a href="acc-payments.html">Judul</a></li>
+                                    <li><a href="acc-expenses.html">Materi</a></li>
+                                </ul>
+                            </li>
+                        @endforeach
                     </ul>
                 </nav>
             </div>
