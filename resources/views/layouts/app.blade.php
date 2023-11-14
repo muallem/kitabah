@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Kitabah</title>
+<head>
+    <meta charset="utf-8">
+    <title>:: Lucid HR BS5 :: Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lucid HR & Project Admin Dashboard Template with Bootstrap 5x">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{{ asset('storage/app/public/assets/css/dataTables.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('storage/app/public/assets/css/select2.min.css') }}" />
-        <!-- MAIN CSS -->
-        <link rel="stylesheet" href="{{ asset('storage/app/public/assets/css/main.css') }}">
-        @livewireStyles
-        @yield('css')
+    <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/sweetalert2.min.css')}}">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
+    @livewireStyles
+</head>
+
+<body>
+
+<div id="layout" class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper text-center">
+        <div class="loader">
+            <svg class="p-3 bg-light rounded" width="120px" viewBox="0 0 85 25">
+                <path d="M12.3,7.2l1.5-3.7l8.1,19.4H19l-2.4-5.7H8.2l1.1-2.5h6.1L12.3,7.2z M14.8,20.2l1,2.7H0L9.5,0h3.1L4.3,20.2H14.8
+                z M29,18.5v-14h1.6v12.6h6.2v1.5H29V18.5z M49.6,4.5v9.1c0,1.6-0.5,2.9-1.5,3.8s-2.3,1.4-4,1.4s-3-0.5-3.9-1.4s-1.4-2.2-1.4-3.8V4.5
+                h1.6v9.1c0,1.2,0.3,2.1,1,2.7c0.6,0.6,1.6,0.9,2.8,0.9s2.1-0.3,2.7-0.9c0.6-0.6,1-1.5,1-2.7V4.5H49.6z M59.4,5.7
+                c-1.5,0-2.8,0.5-3.7,1.5s-1.3,2.4-1.3,4.2s0.4,3.3,1.3,4.3c0.9,1,2.1,1.5,3.7,1.5c1,0,2.1-0.2,3.4-0.5v1.4c-1,0.4-2.2,0.5-3.6,0.5
+                c-2.1,0-3.7-0.6-4.8-1.9s-1.7-3-1.7-5.4c0-1.4,0.3-2.7,0.8-3.8c0.5-0.9,1.3-1.8,2.3-2.4s2.2-0.9,3.6-0.9c1.5,0,2.8,0.3,3.9,0.8
+                l-0.7,1.4C61.5,6,60.4,5.7,59.4,5.7z M65.8,18.5v-14h1.6v14.1h-1.6V18.5z M82.5,11.3c0,2.3-0.6,4.1-1.9,5.3s-3.1,1.8-5.4,1.8h-3.9
+                V4.5h4.3c2.2,0,3.9,0.6,5.1,1.8S82.5,9.2,82.5,11.3z M80.8,11.4c0-1.8-0.5-3.2-1.4-4.1s-2.3-1.4-4.1-1.4h-2.4v11.2h2
+                c1.9,0,3.4-0.5,4.4-1.4S80.8,13.3,80.8,11.4z" />
+            </svg>
+            <div class="h5 fw-light mt-3">Please wait</div>
+        </div>
+    </div>
     
-        @stack('css')
-    </head>
-    
-    <body>
-
-        <div id="layout" class="theme-cyan">
-        
-            <!-- Page Loader -->
-            <div class="page-loader-wrapper text-center">
-                <div class="loader">
-                    <svg class="p-3 bg-light rounded" width="120px" viewBox="0 0 85 25">
-                        <path d="M12.3,7.2l1.5-3.7l8.1,19.4H19l-2.4-5.7H8.2l1.1-2.5h6.1L12.3,7.2z M14.8,20.2l1,2.7H0L9.5,0h3.1L4.3,20.2H14.8
-                        z M29,18.5v-14h1.6v12.6h6.2v1.5H29V18.5z M49.6,4.5v9.1c0,1.6-0.5,2.9-1.5,3.8s-2.3,1.4-4,1.4s-3-0.5-3.9-1.4s-1.4-2.2-1.4-3.8V4.5
-                        h1.6v9.1c0,1.2,0.3,2.1,1,2.7c0.6,0.6,1.6,0.9,2.8,0.9s2.1-0.3,2.7-0.9c0.6-0.6,1-1.5,1-2.7V4.5H49.6z M59.4,5.7
-                        c-1.5,0-2.8,0.5-3.7,1.5s-1.3,2.4-1.3,4.2s0.4,3.3,1.3,4.3c0.9,1,2.1,1.5,3.7,1.5c1,0,2.1-0.2,3.4-0.5v1.4c-1,0.4-2.2,0.5-3.6,0.5
-                        c-2.1,0-3.7-0.6-4.8-1.9s-1.7-3-1.7-5.4c0-1.4,0.3-2.7,0.8-3.8c0.5-0.9,1.3-1.8,2.3-2.4s2.2-0.9,3.6-0.9c1.5,0,2.8,0.3,3.9,0.8
-                        l-0.7,1.4C61.5,6,60.4,5.7,59.4,5.7z M65.8,18.5v-14h1.6v14.1h-1.6V18.5z M82.5,11.3c0,2.3-0.6,4.1-1.9,5.3s-3.1,1.8-5.4,1.8h-3.9
-                        V4.5h4.3c2.2,0,3.9,0.6,5.1,1.8S82.5,9.2,82.5,11.3z M80.8,11.4c0-1.8-0.5-3.2-1.4-4.1s-2.3-1.4-4.1-1.4h-2.4v11.2h2
-                        c1.9,0,3.4-0.5,4.4-1.4S80.8,13.3,80.8,11.4z" />
-                    </svg>
-                    <div class="h5 fw-light mt-3">Please wait</div>
-                </div>
-            </div>
             <!-- Overlay For Sidebars -->
         
             <div id="wrapper">
@@ -111,31 +109,10 @@
                             <nav class="sidebar-nav">
                                 <ul class="metismenu list-unstyled">
                                     <li><a href="index2.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
-                                    <li><a href="app-inbox.html"><i class="fa fa-envelope-o"></i><span>Inbox App</span></a></li>
-                                    <li><a href="app-chat.html"><i class="fa fa-comments"></i><span>Chat App</span></a></li>
-                                    <li>
-                                        <a href="#Projects" class="has-arrow"><i class="fa fa-list-ul"></i><span>Projects</span></a>
-                                        <ul class="list-unstyled">
-                                            <li><a href="project-add.html">Add Projects</a></li>
-                                            <li><a href="project-list.html">Projects List</a></li>
-                                            <li><a href="project-grid.html">Projects Grid</a></li>
-                                            <li><a href="project-detail.html">Projects Detail</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#Clients" class="has-arrow"><i class="fa fa-user"></i><span>Clients</span></a>
-                                        <ul class="list-unstyled">
-                                            <li><a href="client-add.html">Add Clients</a></li>
-                                            <li><a href="client-list.html">Clients List</a></li>
-                                            <li><a href="client-detail.html">Clients Detail</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="project-team.html"><i class="fa fa-users"></i><span>Team</span></a></li>
-                                    <li><a href="app-taskboard.html"><i class="fa fa-tag"></i><span>Taskboard</span></a></li>
-                                    <li><a href="app-tickets.html"><i class="fa fa-ticket"></i><span>Tickets</span></a></li>
                                 </ul>
                             </nav>
                         </div>
+                        
                     </div>
                 </div>
         
@@ -144,29 +121,19 @@
                 </div>
         
             </div>
+
+</div>
+
+        <!-- core js file -->
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
         
-        </div>
-        
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- core js file -->
-<script src="{{ asset('storage/app/public/assets/bundles/libscripts.bundle.js') }}"></script>
-<script src="{{ asset('storage/app/public/assets/bundles/dataTables.bundle.js') }}"></script>
-<script src="{{ asset('storage/app/public/assets/bundles/sweetalert2.bundle.js') }}"></script>
-<script src="{{ asset('storage/app/public/assets/bundles/select2.bundle.js') }}"></script>
+        <!-- page js file -->
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
+        @livewireScripts
 
-<script src="{{ asset('storage/app/public/assets/bundles/datepicker.bundle.js') }}"></script>
-
-<script src="{{ asset('storage/app/public/assets/bundles/tagsinput.bundle.js') }}"></script>
-
-<script src="{{asset('storage/app/public/assets/plugin/Sortable.min.js')}}"></script>>
-
-    <!-- page js file -->
-    <script src="{{ asset('storage/app/public/assets/bundles/mainscripts.bundle.js') }}"></script>
-    
-    @livewireScripts
-
-    <script>
-
+        <script>
+            
             window.livewire.on('onSuccessSweetAlert', (message) => {
                 Swal.fire({
                     icon: 'success',
@@ -189,8 +156,7 @@
             window.livewire.on('closeTab', () => {
                 window.close();
             });
-    </script>
-    @yield('js')
-    @stack('js')
-    </body>
+        </script>
+        @stack('js')
+</body>
 </html>
