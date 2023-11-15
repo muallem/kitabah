@@ -66,7 +66,11 @@
             @else
                 @if(isset($data_materi) && $data_materi->isNotEmpty())
                     @foreach($data_materi as $materi)
-                        {{$materi['file']}}
+
+                        @if(isset($materi->$kode_materi))
+                            <!-- Your code for individual materi here -->
+                            {{$materi->file}}
+                        @endif
                         {{-- <a href="{{ asset("storage/app/public/attachments/$materi->file") }}"
                             class="text-decoration-none text-info "
                             download="{{ $materi->file_name }}"
