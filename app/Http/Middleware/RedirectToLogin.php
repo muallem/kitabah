@@ -9,7 +9,7 @@ class RedirectToLogin
 {
     public function handle(Request $request, Closure $next)
     {
-        if ($request->status() === 404 || $request->status() === 419) {
+        if ($request->getStatusCode() === 404 || $request->getStatusCode() === 419) {
             return redirect()->route('login.index');
         }
 
