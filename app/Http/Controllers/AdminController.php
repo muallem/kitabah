@@ -30,7 +30,7 @@ class AdminController extends Controller
     }
     public function materi(Request $request)
     {
-        $thesis = Judul::find($request->id);
+        $thesis = Judul::find($request->thesis_id);
 
         return view('admin.materi', compact('thesis'));
     }
