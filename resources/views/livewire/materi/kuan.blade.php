@@ -65,7 +65,7 @@
                 <input wire:model.lazy="feedback" type="text">
             @else
                 <label for="formFileMultiple" class="form-label">Upload File</label>
-                <input wire:model="files" type="file" id="fileInput" multiple>
+                <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
             @endif
             
             <button type="submit" class="btn btn-primary">

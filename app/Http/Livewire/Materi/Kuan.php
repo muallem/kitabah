@@ -12,6 +12,7 @@ class Kuan extends Component
 
     public $files = [];
     public $kode_materi;
+    public $input_feedback;
     public $tab1;
     public $tab2;
 
@@ -52,7 +53,7 @@ class Kuan extends Component
         }
 
         // Reset the form fields
-        $this->reset(['files', 'chat']);
+        $this->reset(['files', 'input_feedback']);
         $this->emit('onSuccessSweetAlert', 'Berhasil Meng-Upload File !');
     }
     public function render()
