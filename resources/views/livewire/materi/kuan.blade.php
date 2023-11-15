@@ -73,7 +73,7 @@
 <script> 
     function setKodeMateri(data)
     {
-        alert(data)
+        Livewire.emit('setKodeMateri', data);
     }
   document.addEventListener('livewire:load', function () {
   });

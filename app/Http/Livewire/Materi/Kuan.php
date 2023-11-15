@@ -7,6 +7,10 @@ use Livewire\Component;
 class Kuan extends Component
 {
     public $kode_materi;
+
+    protected $listeners = [
+        'setKodeMateri',
+    ];
     public function mount()
     {
         $this->kode_materi = 'kuan-bab_1_pendahuluan-latar_belakang';
