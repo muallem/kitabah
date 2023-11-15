@@ -59,7 +59,14 @@
                     <h4>Selanjutnya</h4>
                 </div>
             </div>
-            {{"Tab1 $tab1 Tab2 $tab2 Kode $kode_materi"}}
+
+            @if(\App\Helpers\AuthHelper::isAdmin())
+
+            @else
+                <label for="formFileMultiple" class="form-label">Upload File</label>
+                <input wire:model="files" type="file" id="fileInput" style="display: none;" multiple>
+            @endif
+            
             <button type="submit" class="btn btn-primary">
                 Kirim
               </button>

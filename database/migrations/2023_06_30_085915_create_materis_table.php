@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('student_file');
             $table->text('admin_feedback');
+            $table->text('kode_materi');
             $table->bigInteger('student_id')->unsigned();
             $table->timestamps();
         });

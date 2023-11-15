@@ -12,6 +12,7 @@ class Materi extends Model
     protected $fillable = [
         'student_file',
         'admin_feedback',
+        'kode_materi',
         'student_id',
     ];
 
