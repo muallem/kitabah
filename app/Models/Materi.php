@@ -22,8 +22,10 @@ class Materi extends Model
         'deleted_at',
         'updated_at',
     ];
-    protected static function onBoot()
+    protected static function boot()
     {
+        parent::boot();
+
         self::created(function ($model) {
             $materi_feedback = new MateriFeedback();
             $materi_feedback->student_id = $model->student_id;
