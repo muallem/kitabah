@@ -64,27 +64,24 @@
                 <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
                 <input wire:model.lazy="feedback" type="text">
             @else
-                @foreach($data_materi as $key_materi => $item_materi)
-                    @if($key_materi == $kode_materi)
-                        <ul class="list-group list-group-custom list-group-flush">
-                            @foreach ($item_materi as $item)
-                                <li class="list-group-item">
-                                    <a href="{{ asset("storage/app/public/attachments/$item->file") }}"
-                                        class="text-decoration-none text-info "
-                                        download="{{ $item->file_name }}"
-                                    >
-                                    <i class="fa fa-book"></i>
-                                        {{ $item->file_name }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                @endforeach
-
+                @if(isset($data_materi[$kode_materi]))
+                    <ul class="list-group list-group-custom list-group-flush">
+                        @foreach ($data_materi[$kode_materi] as $item)
+                            <li class="list-group-item">
+                                <a href="{{ asset("storage/app/public/attachments/$item->file") }}"
+                                    class="text-decoration-none text-info "
+                                    download="{{ $item->file_name }}"
+                                >
+                                <i class="fa fa-book"></i>
+                                    {{ $item->file_name }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
                     <label for="formFileMultiple" class="form-label">Upload File</label>
                     <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
-                
+                @endif
             @endif
             
             <button type="submit" class="btn btn-primary px-3 mt-3">
