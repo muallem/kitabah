@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('materis', function (Blueprint $table) {
             $table->id();
             $table->text('student_file');
-            $table->text('admin_feedback');
+            $table->text('admin_feedback')->nullable();
             $table->text('kode_materi');
             $table->bigInteger('student_id')->unsigned();
             $table->timestamps();
