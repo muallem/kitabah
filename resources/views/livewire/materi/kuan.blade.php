@@ -71,11 +71,11 @@
 @push('js')
     
 <script> 
-  document.addEventListener('livewire:load', function () {
     function setKodeMateri(data)
     {
         alert(data)
     }
+  document.addEventListener('livewire:load', function () {
   });
 </script>
 @endpush
