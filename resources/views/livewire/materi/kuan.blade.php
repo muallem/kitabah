@@ -7,7 +7,7 @@
                 <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-selanjutnya', '')"><a class="nav-link {{ $tab1 === 'kuan-selanjutnya' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-selanjutnya" aria-selected="false" role="tab" tabindex="-1" >Selanjutnya</a></li>
             </ul>
             <div class="tab-content mt-3">
-                <div class="tab-pane {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }} fade active show" id="kuan-bab_1_pendahuluan" role="tabpanel">
+                <div class="tab-pane {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" id="kuan-bab_1_pendahuluan" role="tabpanel">
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-latar_belakang' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab" >Latar Belakang</a></li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-rumusan_masalah')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-rumusan_masalah" aria-selected="false" role="tab" tabindex="-1" >Rumusan Masalah</a></li>
@@ -59,7 +59,7 @@
                     <h4>Selanjutnya</h4>
                 </div>
             </div>
-            {{"$tab1 - $tab2 - $kode_materi"}}
+            {{"Tab1 $tab1 Tab2 $tab2 Kode $kode_materi"}}
             <button type="submit" class="btn btn-primary">
                 Kirim
               </button>
