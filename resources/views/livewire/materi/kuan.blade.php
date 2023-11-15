@@ -3,13 +3,13 @@
 
         <form class="chat-input px-3" wire:submit.prevent='store'>
             <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
-                <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link show active" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >Bab 1 Pendahuluan</a></li>
+                <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >Bab 1 Pendahuluan</a></li>
                 <li class="nav-item" role="presentation" onclick="setKodeMateri('')"><a class="nav-link" data-bs-toggle="tab" href="#kuan-selanjutnya" aria-selected="false" role="tab" tabindex="-1" >Selanjutnya</a></li>
             </ul>
             <div class="tab-content mt-3">
                 <div class="tab-pane fade active show" id="kuan-bab_1_pendahuluan" role="tabpanel">
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
-                        <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link show active" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab" >Latar Belakang</a></li>
+                        <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab" >Latar Belakang</a></li>
                         <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-rumusan_masalah')"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-rumusan_masalah" aria-selected="false" role="tab" tabindex="-1" >Rumusan Masalah</a></li>
                         <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-tujuan_penelitian')"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-tujuan_penelitian" aria-selected="false" role="tab" tabindex="-1" >Tujuan Penelitian</a></li>
                         <li class="nav-item" role="presentation" onclick="setKodeMateri('kuan-bab_1_pendahuluan-manfaat_penelitian')"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-manfaat_penelitian" aria-selected="false" role="tab" tabindex="-1" >Manfaat Penelitian</a></li>
