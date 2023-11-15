@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('materi_feedback', function (Blueprint $table) {
             $table->id();
-            $table->text('feedback');
+            $table->text('feedback')->nullable();
             $table->text('kode_materi');
             $table->bigInteger('student_id')->unsigned();
+            $table->bigInteger('materi_id')->unsigned();
             $table->timestamps();
         });
     }

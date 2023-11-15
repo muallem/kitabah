@@ -10,9 +10,10 @@ class MateriFeedback extends Model
     use HasFactory;
 
     protected $fillable = [
-        'admin_feedback',
+        'feedback',
         'kode_materi',
         'student_id',
+        'materi_id',
     ];
 
     protected $hidden = [
