@@ -61,10 +61,11 @@
             </div>
 
             @if(\App\Helpers\AuthHelper::isAdmin())
-
+                <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
+                <input wire:model.lazy="feedback" type="text">
             @else
                 <label for="formFileMultiple" class="form-label">Upload File</label>
-                <input wire:model="files" type="file" id="fileInput" style="display: none;" multiple>
+                <input wire:model="files" type="file" id="fileInput" multiple>
             @endif
             
             <button type="submit" class="btn btn-primary">
