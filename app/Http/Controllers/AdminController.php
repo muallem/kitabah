@@ -40,7 +40,7 @@ class AdminController extends Controller
         $data = new MateriFeedback();
         $data->kode_materi = "123";
         $data->student_id = "123";
-        $data->materi_ir = "123";
+        $data->materi_id = "123";
         $data->save();
 
         $data = MateriFeedback::all();
