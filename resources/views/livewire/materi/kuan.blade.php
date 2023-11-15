@@ -66,7 +66,7 @@
             @else
                 @if(isset($data_materi) && $data_materi->isNotEmpty())
                     @foreach($data_materi as $materi)
-                        {{$materi}}
+                        {{$materi['file']}}
                         {{-- <a href="{{ asset("storage/app/public/attachments/$materi->file") }}"
                             class="text-decoration-none text-info "
                             download="{{ $materi->file_name }}"
