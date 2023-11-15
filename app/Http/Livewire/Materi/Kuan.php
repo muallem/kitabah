@@ -24,7 +24,7 @@ class Kuan extends Component
     ];
     public function mount()
     {
-        $user_id = session()->get('user_id');
+        $user_id = 20;
         $materi = Materi::where('student_id', $user_id)->get();
         $data_materi = $materi->groupBy('kode_materi');
         $this->data_materi = $data_materi;
