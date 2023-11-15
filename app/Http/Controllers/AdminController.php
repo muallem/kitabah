@@ -37,6 +37,18 @@ class AdminController extends Controller
     }
     public function rnd()
     {
+
+        $thesis = Judul::select('juduls.id', 'juduls.group', 'wpjs_users.user_login', DB::raw('COUNT(materi_feedback.id) as materi_count'))
+        ->leftJoin('materi_feedback', function ($join) {
+            $join->on('juduls.student_id', '=', 'materi_feedback.student_id')
+                ->where('feedback', "");
+        })
+        ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
+        ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
+        ->get();
+
+        return $thesis;
+
         $data = new MateriFeedback();
         $data->kode_materi = "123";
         $data->student_id = "123";
