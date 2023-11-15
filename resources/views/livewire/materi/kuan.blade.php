@@ -67,8 +67,11 @@
                 @if(isset($data_materi[$kode_materi]))
                     <ul class="list-group list-group-custom list-group-flush">
                         @foreach ($data_materi[$kode_materi] as $item)
+                        @php
+                            $file = $item['file'];
+                        @endphp
                             <li class="list-group-item">
-                                <a href="{{ asset("storage/app/public/attachments/$item['file']") }}"
+                                <a href="{{ asset("storage/app/public/attachments/$file") }}"
                                     class="text-decoration-none text-info "
                                     download="{{ $item['file_name'] }}"
                                 >
