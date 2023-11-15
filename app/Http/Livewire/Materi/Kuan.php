@@ -47,9 +47,7 @@ class Kuan extends Component
                 Materi::create([
                     'student_file' => $originalName,
                     "kode_materi" => $this->kode_materi,
-                    "is_admin" => (session()->get('user_role') === 'admin') ? true : false,
-                    "is_file" => true,
-                    'file' => $fileName
+                    "student_id" => session()->get('user_id'),
                 ]);
             }
         }
