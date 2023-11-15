@@ -65,28 +65,7 @@
                 <input wire:model.lazy="feedback" type="text">
             @else
 
-            {{-- @foreach($data_materi as $materi) --}}
-                <li>{{ var_dump($data_materi) }}</li>
-            {{-- @endforeach --}}
-                {{-- @if(isset($data_materi) && $data_materi->isNotEmpty())
-                    @foreach($data_materi as $materi)
-
-                        @if(isset($materi->$kode_materi))
-                            <!-- Your code for individual materi here -->
-                            {{$materi->file}}
-                        @endif
-                        {{-- <a href="{{ asset("storage/app/public/attachments/$materi->file") }}"
-                            class="text-decoration-none text-info "
-                            download="{{ $materi->file_name }}"
-                        >
-                        <i class="fas fa-file"></i>
-                            {{ $materi->file_name }}
-                        </a> --}}
-                    {{-- @endforeach
-                @else 
-                    <label for="formFileMultiple" class="form-label">Upload File</label>
-                    <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
-                @endif --}} 
+            <li>{{ var_dump($data_materi) }}</li>
             @endif
             
             <button type="submit" class="btn btn-primary px-3 mt-3">
