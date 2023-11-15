@@ -65,9 +65,9 @@
                 <input wire:model.lazy="feedback" type="text">
             @else
 
-            @foreach($data_materi as $materi)
-                <li>{{ var_dump($materi) }}</li>
-            @endforeach
+            {{-- @foreach($data_materi as $materi) --}}
+                <li>{{ var_dump($data_materi) }}</li>
+            {{-- @endforeach --}}
                 {{-- @if(isset($data_materi) && $data_materi->isNotEmpty())
                     @foreach($data_materi as $materi)
 
