@@ -57,17 +57,22 @@ class Kuan extends Component
             // Handle the uploaded files
             foreach ($this->files as $file) {
                 // Process each uploaded photo
-                $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
-                $originalName = $file->getClientOriginalName();
-                $filePath = $file->storeAs('attachments', $fileName, 'public');
+
+        if(!AuthHelper::isAdmin())
+        {
+            $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
+            $originalName = $file->getClientOriginalName();
+            $filePath = $file->storeAs('attachments', $fileName, 'public');
 
 
-                Materi::create([
-                    'file_name' => $originalName,
-                    'file' => $fileName,
-                    "kode_materi" => $this->kode_materi,
-                    "student_id" => session()->get('user_id'),
-                ]);
+            $materi = new Materi();
+            $materi->file_name = $originalName;
+            $materi->file = $fileName;
+            $materi->kode_materi = $this->kode_materi;
+            $materi->student_id = session()->get('user_id');
+            $materi->save();
+        }
+                
             }
         }
 
