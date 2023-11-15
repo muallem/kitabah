@@ -8,6 +8,7 @@ use App\Models\Materi;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
 use Illuminate\Http\Request;
+use App\Models\MateriFeedback;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -36,7 +37,9 @@ class AdminController extends Controller
     }
     public function rnd()
     {
+        $data = MateriFeedback::all();
 
+        return $data;
         // $user_id = session()->get('user_id');
         $user_id = 20;
         $materi = Materi::where('student_id', $user_id)->get();
