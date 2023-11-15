@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('materi_feedbacks', function (Blueprint $table) {
+        Schema::create('materi_feedback', function (Blueprint $table) {
             $table->id();
             $table->text('feedback');
             $table->text('kode_materi');
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('materi_feedbacks');
+        Schema::dropIfExists('materi_feedback');
     }
 };
