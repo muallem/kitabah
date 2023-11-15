@@ -26,7 +26,7 @@ class Kuan extends Component
     {
         $user_id = 20;
         $materi = Materi::where('student_id', $user_id)->get();
-        $this->data_materi = $materi;
+        $this->data_materi = $materi->groupBy('kode_materi');
         $this->tab1 = 'kuan-bab_1_pendahuluan';
         $this->tab2 = 'kuan-bab_1_pendahuluan-latar_belakang';
         $this->kode_materi = 'kuan-bab_1_pendahuluan-latar_belakang';
