@@ -17,7 +17,7 @@ class Kuan extends Component
     public $input_feedback;
     public $tab1;
     public $tab2;
-    public $data_materi;
+    public $data_materi = [];
 
     protected $listeners = [
         'setKodeMateri',
@@ -25,8 +25,10 @@ class Kuan extends Component
     public function mount()
     {
         $user_id = 20;
-        $materi = Materi::where('student_id', $user_id)->get()->toArray();
-        $this->data_materi = $materi->groupBy('kode_materi');
+        $query = Materi::where('student_id', $user_id)->get();
+        $materi = collect($query);
+        $grouped = $materi->groupBy('kode_materi');
+        $this->data_materi = $grouped;
         $this->tab1 = 'kuan-bab_1_pendahuluan';
         $this->tab2 = 'kuan-bab_1_pendahuluan-latar_belakang';
         $this->kode_materi = 'kuan-bab_1_pendahuluan-latar_belakang';
