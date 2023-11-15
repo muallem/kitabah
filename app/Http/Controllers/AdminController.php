@@ -38,10 +38,6 @@ class AdminController extends Controller
     }
     public function rnd()
     {
-        // $materi = Materi::where('student_id', session()->get('user_id'))->get();
-        $materi = Materi::where('student_id', '20')->get();
-        $data = $materi->groupBy('kode_materi');
-        return $data;
         return view('student.rnd');
     }
     public function student()

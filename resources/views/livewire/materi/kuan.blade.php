@@ -64,8 +64,20 @@
                 <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
                 <input wire:model.lazy="feedback" type="text">
             @else
-                <label for="formFileMultiple" class="form-label">Upload File</label>
-                <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
+                @if(isset($data_materi[$kode_materi]))
+                    @foreach ($data_materi[$kode_materi] as $item)
+                        <a href="{{ asset("storage/app/public/attachments/$item->file") }}"
+                            class="text-decoration-none text-info "
+                            download="{{ $discussion->chat }}"
+                        >
+                        <i class="fas fa-file"></i>
+                            {{ $discussion->chat }}
+                        </a>
+                    @endforeach
+                @else 
+                    <label for="formFileMultiple" class="form-label">Upload File</label>
+                    <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
+                @endif
             @endif
             
             <button type="submit" class="btn btn-primary px-3 mt-3">

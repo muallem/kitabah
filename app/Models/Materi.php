@@ -10,7 +10,8 @@ class Materi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'student_file',
+        'file',
+        'file_name',
         'admin_feedback',
         'kode_materi',
         'student_id',
