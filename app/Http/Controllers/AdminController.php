@@ -37,8 +37,13 @@ class AdminController extends Controller
     }
     public function rnd()
     {
-        $data = MateriFeedback::all();
+        $data = new MateriFeedback();
+        $data->kode_materi = "123";
+        $data->student_id = "123";
+        $data->materi_ir = "123";
+        $data->save();
 
+        $data = MateriFeedback::all();
         return $data;
         // $user_id = session()->get('user_id');
         $user_id = 20;
