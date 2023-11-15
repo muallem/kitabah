@@ -66,12 +66,12 @@
             @else
                 @if(isset($data_materi) && $data_materi->isNotEmpty())
                     @foreach($data_materi as $materi)
-                        <a href="{{ asset("storage/app/public/attachments/$item->file") }}"
+                        <a href="{{ asset("storage/app/public/attachments/$materi->file") }}"
                             class="text-decoration-none text-info "
-                            download="{{ $discussion->chat }}"
+                            download="{{ $materi->file_name }}"
                         >
                         <i class="fas fa-file"></i>
-                            {{ $discussion->chat }}
+                            {{ $materi->file_name }}
                         </a>
                     @endforeach
                 @else 
