@@ -40,8 +40,7 @@ class AdminController extends Controller
 
         $thesis = Judul::select('juduls.id', 'juduls.group', 'wpjs_users.user_login', DB::raw('COUNT(materi_feedback.id) as materi_count'))
         ->leftJoin('materi_feedback', function ($join) {
-            $join->on('juduls.student_id', '=', 'materi_feedback.student_id')
-                ->where('feedback', '=', '');
+            $join->on('juduls.student_id', '=', 'materi_feedback.student_id');
         })
         ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
         ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
