@@ -38,8 +38,9 @@
                         <label class="form-label">Feedback</label>
                         
                         <select class="form-control" id="select_feedback">
+                            <option value="" selected>Pilih Feedback</option>
                             @foreach (\App\Models\Judul::TYPE_CHOICE as $key => $value)
-                                <option value="{{ $key }}" {{($key === $data_judul->group) ? 'selected' : ''}}>{{ $value }}</option>
+                                <option value="{{ $key }}">{{ $value }}</option>
                             @endforeach
                         </select>
                     </div>
