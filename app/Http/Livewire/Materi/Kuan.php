@@ -32,12 +32,12 @@ class Kuan extends Component
         {
             $this->student_id = session()->get('user_id');
         }
-        $query = Materi::where('student_id', $student_id)->get();
+        $query = Materi::where('student_id', $this->student_id)->get();
         $materi = collect($query);
         $grouped = $materi->groupBy('kode_materi')->toArray();
         $this->data_materi = $grouped;
 
-        $query = MateriFeedback::where('student_id', $student_id)->get();
+        $query = MateriFeedback::where('student_id', $this->student_id)->get();
         $materi = collect($query);
         $grouped = $materi->groupBy('kode_materi')->toArray();
         $this->data_feedback = $grouped;
