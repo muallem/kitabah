@@ -66,13 +66,14 @@
             @else
                 @if(isset($data_materi) && $data_materi->isNotEmpty())
                     @foreach($data_materi as $materi)
-                        <a href="{{ asset("storage/app/public/attachments/$materi->file") }}"
+                        {{$materi}}
+                        {{-- <a href="{{ asset("storage/app/public/attachments/$materi->file") }}"
                             class="text-decoration-none text-info "
                             download="{{ $materi->file_name }}"
                         >
                         <i class="fas fa-file"></i>
                             {{ $materi->file_name }}
-                        </a>
+                        </a> --}}
                     @endforeach
                 @else 
                     <label for="formFileMultiple" class="form-label">Upload File</label>
