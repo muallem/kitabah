@@ -22,37 +22,60 @@
         <div class="row g-3 clearfix">
             <div class="col-lg-12 col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h6 class="card-title">Example Tab 3</h6>
-                        <small class="d-block"><code class="highlighter-rouge">.nav-tabs-new2</code></small>
-                    </div>
                     <div class="card-body">
                         <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
-                            <li class="nav-item" role="presentation"><a class="nav-link show active" data-bs-toggle="tab" href="#Home-new2" aria-selected="true" role="tab">Home</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#Profile-new2" aria-selected="false" role="tab" tabindex="-1">Profile</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#Contact-new2" aria-selected="false" role="tab" tabindex="-1">Contact</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link show active" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab">Bab 1 Pendahuluan</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#kuan-selanjutnya" aria-selected="false" role="tab" tabindex="-1">Selanjutnya</a></li>
                         </ul>
                         <div class="tab-content mt-3">
-                            <div class="tab-pane fade active show" id="Home-new2" role="tabpanel">
-                                <h6>Home</h6>
-                                <p>
-                                    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
-                                    retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-                                </p>
+                            <div class="tab-pane fade active show" id="kuan-bab_1_pendahuluan" role="tabpanel">
+                                <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
+                                    <li class="nav-item" role="presentation"><a class="nav-link show active" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab">Latar Belakang</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-rumusan_masalah" aria-selected="false" role="tab" tabindex="-1">Rumusan Masalah</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-tujuan_penelitian" aria-selected="false" role="tab" tabindex="-1">Tujuan Penelitian</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-manfaat_penelitian" aria-selected="false" role="tab" tabindex="-1">Manfaat Penelitian</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-batasan_penelitian" aria-selected="false" role="tab" tabindex="-1">Batasan Penelitian</a></li>
+                                </ul>
+                                <div class="tab-content mt-3">
+                                    <div class="tab-pane fade active show" id="kuan-bab_1_pendahuluan-latar_belakang" role="tabpanel">
+                                        <h6>Latar Belakang</h6>
+                                        <p>
+                                            Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
+                                            a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
+                                            b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman)
+                                            Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane" id="kuan-bab_1_pendahuluan-rumusan_masalah" role="tabpanel">
+                                        <h6>Rumusan Masalah</h6>
+                                        <p>
+                                            Merupakan upaya untuk menyatakan secara tersurat pertanyaan-pertanyaan atau dalam bentuk kalimat pernyataan-pernyataan yang hendak dicarikan jawabannya. Penyampaian rumusan masalah harus relevan dengan judul, data, dan model yang akan diteliti.
+                                            Pertanyaan penelitian dalam penelitian kuantitatif  harus menunjukkan pengaruh/hubungan/perbedaan antar variabel yang hendak diteliti. Sementara untuk penelitian kualitatif, pada bagian ini penulis harus membuat suatu formulasi pertanyaan penelitian (grand tour question) dan jika memungkinkan juga pertanyaan-pertanyaan lainnya yang merupakan turunan (sub question). Pertanyaan-pertanyaan tersebut seharusnya jelas, spesifik, tepat sasaran, dan memungkinkan untuk dijawab oleh penulis. Fokus penelitian menunjukkan secara tegas permasalahan dalam skripsi yang dicari pemecahannya. Fokus penelitian bertujuan untuk menjabarkan rumusan masalah. Fokus penelitian juga memuat proses penyederhanaan masalah yang rumit dan kompleks yang dirumuskan menjadi masalah yang dapat diteliti (researchable problems). 
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane" id="kuan-bab_1_pendahuluan-rumusan_masalah" role="tabpanel">
+                                        <h6>Tujuan Penelitian</h6>
+                                        <p>
+                                            Tujuan penelitian harus menunjukkan pernyataan yang berisi tentang tujuan yang ingin dicapai melalui proses penelitian. Tujuan penelitian harus terkait dengan pertanyaan-pertanyaan yang telah dirumuskan dalam rumusan masalah atau fokus penelitian.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane" id="kuan-bab_1_pendahuluan-manfaat_penelitian" role="tabpanel">
+                                        <h6>Manfaat Penelitian</h6>
+                                        <p>
+                                            Manfaat penelitian berisi tentang sumbangan/kontribusi positif terkait dengan hasil penelitian. Manfaat penelitian terdiri dari manfaat teoritis maupun praktis. Untuk manfaat teoritis berisi keterkaitan hasil penelitian dengan pengembangan ilmu ekonomi/manajemen/akuntansi/syariah, seperti munculnya pandangan atau wawasan baru, atau perkembangan suatu teori, menguji teori, atau mengkritik teori. 
+                                            Manfaat praktis, lebih mengarah pada aplikasi hasil penelitian, seperti sumbangan nyata yang dapat digunakan sebagai dasar kebijakan atas suatu keputusan yang sudah maupun yang akan dilakukan.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane" id="kuan-bab_1_pendahuluan-batasan_penelitian" role="tabpanel">
+                                        <h6>Batasan Penelitian</h6>
+                                        <p>
+                                            Batasan penelitian dibuat sesuai dengan ruang lingkup penelitian yang akan dilakukan dengan mempertimbangkan aspek-aspek metodologis, kelayakan di lapangan dan keterbatasan yang ada pada penulis tanpa mengorbankan kebermaknaan arti, konsep atau topik yang diteliti. Keterbatasan penelitian menunjuk suatu keadaan yang tidak bisa dihindari dalam peneliti. Ada 2 (dua) hal yang menjadi keterbatasan penelitian, yaitu: pertama, keterbatasan ruang lingkup kajian, dan kedua, keterbatasan yang bersumber dari aspek teknis penelitian.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tab-pane" id="Profile-new2" role="tabpanel">
-                                <h6>Profile</h6>
-                                <p>
-                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone
-                                    skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="Contact-new2" role="tabpanel">
-                                <h6>Contact</h6>
-                                <p>
-                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft
-                                    beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica
-                                </p>
+                            <div class="tab-pane" id="kuan-selanjutnya" role="tabpanel">
+                                <h6>Selanjutnya</h6>
                             </div>
                         </div>
                     </div>
