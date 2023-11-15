@@ -68,8 +68,8 @@
                 <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
             @endif
             
-            <button type="submit" class="btn btn-primary px-3 mt-3a">
-                Kirim
+            <button type="submit" class="btn btn-primary px-3 mt-3">
+                Kirim Data
               </button>
         </form>
     </div>
