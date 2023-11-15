@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\Materi;
 
+use App\Models\Materi;
 use Livewire\Component;
+use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
 
 class Kuan extends Component
@@ -54,7 +56,7 @@ class Kuan extends Component
 
         // Reset the form fields
         $this->reset(['files', 'input_feedback']);
-        $this->emit('onSuccessSweetAlert', 'Berhasil Meng-Upload File !');
+        $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
     }
     public function render()
     {
