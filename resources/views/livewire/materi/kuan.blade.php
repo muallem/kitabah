@@ -64,8 +64,8 @@
                 <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
                 <input wire:model.lazy="feedback" type="text">
             @else
-                @if(isset($data_materi[$kode_materi]))
-                    @foreach ($data_materi[$kode_materi] as $item)
+                @if(isset($data_materi->$kode_materi))
+                    @foreach ($data_materi->$kode_materi as $item)
                         <a href="{{ asset("storage/app/public/attachments/$item->file") }}"
                             class="text-decoration-none text-info "
                             download="{{ $discussion->chat }}"
