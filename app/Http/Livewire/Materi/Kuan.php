@@ -4,8 +4,10 @@ namespace App\Http\Livewire\Materi;
 
 use App\Models\Materi;
 use Livewire\Component;
+use App\Helpers\AuthHelper;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
+use App\Models\MateriFeedback;
 
 class Kuan extends Component
 {
@@ -18,17 +20,27 @@ class Kuan extends Component
     public $tab1;
     public $tab2;
     public $data_materi = [];
+    public $data_feedback = [];
+    public $student_id;
 
     protected $listeners = [
         'setKodeMateri',
     ];
     public function mount()
     {
-        $user_id = 20;
-        $query = Materi::where('student_id', $user_id)->get();
+        if(!AuthHelper::isAdmin())
+        {
+            $this->student_id = session()->get('user_id');
+        }
+        $query = Materi::where('student_id', $student_id)->get();
         $materi = collect($query);
         $grouped = $materi->groupBy('kode_materi')->toArray();
         $this->data_materi = $grouped;
+
+        $query = MateriFeedback::where('student_id', $student_id)->get();
+        $materi = collect($query);
+        $grouped = $materi->groupBy('kode_materi')->toArray();
+        $this->data_feedback = $grouped;
         $this->tab1 = 'kuan-bab_1_pendahuluan';
         $this->tab2 = 'kuan-bab_1_pendahuluan-latar_belakang';
         $this->kode_materi = 'kuan-bab_1_pendahuluan-latar_belakang';

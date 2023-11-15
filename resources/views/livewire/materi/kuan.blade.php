@@ -63,6 +63,10 @@
             @if(\App\Helpers\AuthHelper::isAdmin())
                 <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
                 <input wire:model.lazy="feedback" type="text">
+
+                <button type="submit" class="btn btn-primary px-3 mt-3">
+                    Kirim Data
+                  </button>
             @else
                 @if(isset($data_materi[$kode_materi]))
                     <ul class="list-group list-group-custom list-group-flush">

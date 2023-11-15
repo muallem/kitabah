@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('materis', function (Blueprint $table) {
+        Schema::create('materi_feedbacks', function (Blueprint $table) {
             $table->id();
-            $table->text('file');
-            $table->text('file_name');
-            $table->text('admin_feedback')->nullable();
+            $table->text('feedback');
             $table->text('kode_materi');
             $table->bigInteger('student_id')->unsigned();
             $table->timestamps();
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('materis');
+        Schema::dropIfExists('materi_feedbacks');
     }
 };

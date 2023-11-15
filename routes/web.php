@@ -25,9 +25,7 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
     Route::group(['controller' => AdminController::class, 'prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/judul', 'judul')->name('judul');
-        Route::get('/kual', 'kual')->name('kual');
-        Route::get('/kuan', 'kuan')->name('kuan');
-        Route::get('/rnd', 'rnd')->name('rnd');
+        Route::get('/materi', 'materi')->name('materi');
     });
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

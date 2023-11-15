@@ -28,13 +28,11 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
-    public function kual()
+    public function materi(Request $request)
     {
-        return view('student.kual');
-    }
-    public function kuan()
-    {
-        return view('student.kuan');
+        $thesis = Judul::find($request->id);
+
+        return view('admin.materi', compact('thesis'));
     }
     public function rnd()
     {
