@@ -11,9 +11,14 @@ class Admin
     public function handle(Request $request, Closure $next)
     { 
         if (!AuthHelper::isAdmin()) {
-            return redirect()->route('login');
+            return redirect()->route('login.index');
         }
+        $response = $next($request);
 
-        return $next($request);
+        // Handle 404 errors
+        if ($response->status() == 404) {
+            return redirect()->route('login.index'); // Redirect to the login route for 404 errors
+        }
+        return $response;
     }
 }
