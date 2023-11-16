@@ -109,8 +109,6 @@
                         </div>
                     </div>
     
-                    {{var_dump($data_feedback)}}
-    
                     @if(\App\Helpers\AuthHelper::isAdmin())
 
                         @if($data_feedback[$kode_materi][0]['feedback'])
@@ -121,7 +119,7 @@
                             <hr>
                         @else
                             <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
-                            <input wire:model.lazy="feedback" type="text">
+                            <input wire:model.lazy="feedback" type="text" class="form-control">
                         @endif
                     @else
                         @if(isset($data_materi[$kode_materi]))
