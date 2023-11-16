@@ -29,7 +29,6 @@ class Kuan extends Component
     ];
     public function mount()
     {
-        $this->data_feedback = $grouped;
         $this->tab1 = 'kuan-bab_1_pendahuluan';
         $this->tab2 = 'kuan-bab_1_pendahuluan-latar_belakang';
         $this->kode_materi = 'kuan-bab_1_pendahuluan-latar_belakang';
