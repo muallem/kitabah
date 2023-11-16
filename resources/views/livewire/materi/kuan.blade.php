@@ -161,8 +161,7 @@
                     {{
                         (
                             (isset($data_materi[$kode_materi]) || 
-                            !isset($data_feedback[$kode_materi]) || 
-                            (isset($data_feedback[$kode_materi]) && $data_feedback[$kode_materi][0]["feedback"] !== Null))
+                            !isset($data_feedback[$kode_materi]) 
                         )
                          ? 'd-none' : '' ;
                     }}">
