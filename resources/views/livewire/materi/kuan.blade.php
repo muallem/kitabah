@@ -10,8 +10,9 @@
         <div class="card">
             
             <div class="card-body">
+                {{$data_feedback}}
     
-                <form class="chat-input px-3" wire:submit.prevent='store'>
+                {{-- <form class="chat-input px-3" wire:submit.prevent='store'>
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')">
                             <a class="nav-link {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >
@@ -162,7 +163,7 @@
                         Kirim Data
                     </button>
                     
-                </form>
+                </form> --}}
             </div>
         </div>
     </div>
