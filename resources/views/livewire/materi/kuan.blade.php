@@ -111,15 +111,17 @@
     
                     @if(\App\Helpers\AuthHelper::isAdmin())
 
-                        @if($data_feedback[$kode_materi][0]['feedback'])
-                            <h6>Feedback : </h6>
-                            <blockquote class="blockquote border border-primary p-3">
-                                <p>{{$data_feedback[$kode_materi][0]['feedback']}}</p>
-                            </blockquote>
-                            <hr>
-                        @else
-                            <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
-                            <input wire:model.lazy="feedback" type="text" class="form-control">
+                        @if(isset($data_feedback[$kode_materi]))
+                            @if($data_feedback[$kode_materi][0]['feedback'])
+                                <h6>Feedback : </h6>
+                                <blockquote class="blockquote border border-primary p-3">
+                                    <p>{{$data_feedback[$kode_materi][0]['feedback']}}</p>
+                                </blockquote>
+                                <hr>
+                            @else
+                                <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
+                                <input wire:model.lazy="feedback" type="text" class="form-control">
+                            @endif
                         @endif
                     @else
                         @if(isset($data_materi[$kode_materi]))
@@ -155,7 +157,13 @@
                         @endif
                     @endif
     
-                    <button type="submit" class="btn btn-primary px-3 mt-3 {{(isset($data_materi[$kode_materi]) || (isset($data_feedback[$kode_materi]) && $data_feedback[$kode_materi][0]['feedback'])) ? 'd-none' : '' ;}}">
+                    <button type="submit" class="btn btn-primary px-3 mt-3 
+                    {{
+                        (isset($data_materi[$kode_materi]) || 
+                        !isset($data_feedback[$kode_materi]) || 
+                        (isset($data_feedback[$kode_materi]) && $data_feedback[$kode_materi][0]["feedback"] !== Null))
+                         ? 'd-none' : '' ;
+                    }}">
                         Kirim Data
                     </button>
                     
