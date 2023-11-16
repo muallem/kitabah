@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Component;
 
 use Livewire\Component;
+use App\Helpers\AuthHelper;
 
 class SidebarMenu extends Component
 {
