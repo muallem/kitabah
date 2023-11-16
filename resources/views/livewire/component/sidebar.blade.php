@@ -1,6 +1,6 @@
 
 <!-- Sidbar menu -->
-<div class="w-100">
+<div>
     {{var_dump($thesis)}}
     <div class="user-account p-3 mb-3">
         <div class="d-flex mb-3 pb-3 border-bottom align-items-center">
