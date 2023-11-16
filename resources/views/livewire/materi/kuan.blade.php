@@ -193,3 +193,13 @@
         </div>
     </div>
 </div>
+
+@push('js')
+    <script>
+        document.addEventListener('livewire:load', function() {
+            setInterval(function () {
+                Livewire.emit('refreshMateri'); 
+            }, 10000); 
+        });
+    </script>
+@endpush
