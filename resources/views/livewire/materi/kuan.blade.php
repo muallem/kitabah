@@ -92,7 +92,7 @@
                 @endif
             @endif
 
-            <button type="submit" class="btn btn-primary px-3 mt-3 {{(!isset($data_materi[$kode_materi])) ? 'd-none' : '' ;}}">
+            <button type="submit" class="btn btn-primary px-3 mt-3 {{(isset($data_materi[$kode_materi])) ? 'd-none' : '' ;}}">
                 Kirim Data
               </button>
             
