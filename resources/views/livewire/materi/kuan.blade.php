@@ -10,7 +10,7 @@
         <div class="card">
             
             <div class="card-body">
-                {{$data_feedback['kuan-bab_1_pendahuluan-latar_belakang']}}
+                {{$data_feedback['kuan-bab_1_pendahuluan-latar_belakang'][0]}}
                 {{-- <form class="chat-input px-3" wire:submit.prevent='store'>
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')">
