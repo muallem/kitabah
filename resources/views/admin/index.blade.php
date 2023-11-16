@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('sidebar')
-    @livewire('component.sidebar')    
+
+    <div id="left-sidebar" class="sidebar">
+        @livewire('component.sidebar')    
+    </div>  
 @endsection
 
 @section('content')
