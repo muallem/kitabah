@@ -17,11 +17,14 @@
                             <a class="nav-link {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >
                                 Bab 1 Pendahuluan 
                                 @if(
-                                    (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null) ||
-                                    (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ||
-                                    (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ||
-                                    (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ||
-                                    (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) 
+                                    \App\Helpers\AuthHelper::isAdmin() &&
+                                    (
+                                        (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null) ||
+                                        (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ||
+                                        (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ||
+                                        (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ||
+                                        (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null)
+                                    )
                                 ) 
                                 <i class="fa fa-exclamation-circle"></i>
                                 @endif
@@ -34,31 +37,31 @@
                                 <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')">
                                     <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-latar_belakang' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab" >
                                         Latar Belakang 
-                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                        {!! (\App\Helpers\AuthHelper::isAdmin() && (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null)) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-rumusan_masalah')">
                                     <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-rumusan_masalah" aria-selected="false" role="tab" tabindex="-1" >
                                         Rumusan Masalah 
-                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                        {!! (\App\Helpers\AuthHelper::isAdmin() && (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null)) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-tujuan_penelitian')">
                                     <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-tujuan_penelitian" aria-selected="false" role="tab" tabindex="-1" >
                                         Tujuan Penelitian 
-                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                        {!! (\App\Helpers\AuthHelper::isAdmin() && (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null)) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-manfaat_penelitian')">
                                     <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-manfaat_penelitian" aria-selected="false" role="tab" tabindex="-1" >
                                         Manfaat Penelitian 
-                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                        {!! (\App\Helpers\AuthHelper::isAdmin() && (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null)) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-batasan_penelitian')">
                                     <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-batasan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-batasan_penelitian" aria-selected="false" role="tab" tabindex="-1" >
                                         Batasan Penelitian 
-                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                        {!! (\App\Helpers\AuthHelper::isAdmin() && (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null)) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
                                     </a>
                                 </li>
                             </ul>
