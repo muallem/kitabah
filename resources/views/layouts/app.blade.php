@@ -41,7 +41,6 @@
             <!-- Overlay For Sidebars -->
         
             <div id="wrapper">
-        
                 <!-- top navbar -->
                 <nav class="navbar navbar-fixed-top">
                     <div class="container-fluid">
