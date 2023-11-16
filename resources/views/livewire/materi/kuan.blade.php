@@ -13,17 +13,52 @@
     
                 <form class="chat-input px-3" wire:submit.prevent='store'>
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >Bab 1 Pendahuluan</a></li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-selanjutnya', '')"><a class="nav-link {{ $tab1 === 'kuan-selanjutnya' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-selanjutnya" aria-selected="false" role="tab" tabindex="-1" >Selanjutnya</a></li>
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')">
+                            <a class="nav-link {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >
+                                Bab 1 Pendahuluan 
+                                {!! 
+                                    (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null) ||
+                                    (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ||
+                                    (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ||
+                                    (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ||
+                                    (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) ||
+                                ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                            </a>
+                        </li>
                     </ul>
                     <div class="tab-content mt-3">
                         <div class="tab-pane {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" id="kuan-bab_1_pendahuluan" role="tabpanel">
                             <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
-                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-latar_belakang' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab" >Latar Belakang</a></li>
-                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-rumusan_masalah')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-rumusan_masalah" aria-selected="false" role="tab" tabindex="-1" >Rumusan Masalah</a></li>
-                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-tujuan_penelitian')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-tujuan_penelitian" aria-selected="false" role="tab" tabindex="-1" >Tujuan Penelitian</a></li>
-                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-manfaat_penelitian')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-manfaat_penelitian" aria-selected="false" role="tab" tabindex="-1" >Manfaat Penelitian</a></li>
-                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-batasan_penelitian')"><a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-batasan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-batasan_penelitian" aria-selected="false" role="tab" tabindex="-1" >Batasan Penelitian</a></li>
+                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')">
+                                    <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-latar_belakang' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-latar_belakang" aria-selected="true" role="tab" >
+                                        Latar Belakang 
+                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-rumusan_masalah')">
+                                    <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-rumusan_masalah" aria-selected="false" role="tab" tabindex="-1" >
+                                        Rumusan Masalah 
+                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-tujuan_penelitian')">
+                                    <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-tujuan_penelitian" aria-selected="false" role="tab" tabindex="-1" >
+                                        Tujuan Penelitian 
+                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-manfaat_penelitian')">
+                                    <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-manfaat_penelitian" aria-selected="false" role="tab" tabindex="-1" >
+                                        Manfaat Penelitian 
+                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-batasan_penelitian')">
+                                    <a class="nav-link {{ $tab2 === 'kuan-bab_1_pendahuluan-batasan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan-batasan_penelitian" aria-selected="false" role="tab" tabindex="-1" >
+                                        Batasan Penelitian 
+                                        {!! (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                    </a>
+                                </li>
                             </ul>
                             <div class="tab-content mt-3">
                                 <div class="tab-pane {{ $tab2 === 'kuan-bab_1_pendahuluan-latar_belakang' ? ' active show' : '' }}" id="kuan-bab_1_pendahuluan-latar_belakang" role="tabpanel">
@@ -73,12 +108,17 @@
                     {{var_dump($data_feedback)}}
     
                     @if(\App\Helpers\AuthHelper::isAdmin())
-                        <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
-                        <input wire:model.lazy="feedback" type="text">
-    
-                        <button type="submit" class="btn btn-primary px-3 mt-3">
-                            Kirim Data
-                        </button>
+
+                        @if($data_feedback[$kode_materi]['feedback'])
+                            <h6>Feedback : </h6>
+                            <blockquote class="blockquote border border-primary p-3">
+                                <p>{{$data_feedback[$kode_materi]['feedback']}}</p>
+                            </blockquote>
+                            <hr>
+                        @else
+                            <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
+                            <input wire:model.lazy="feedback" type="text">
+                        @endif
                     @else
                         @if(isset($data_materi[$kode_materi]))
                             <ul class="list-group list-group-custom list-group-flush">
@@ -97,6 +137,15 @@
                                     </li>
                                 @endforeach
                             </ul>
+                            @if($data_feedback[$kode_materi]['feedback'])
+                                <h6>Feedback : </h6>
+                                <blockquote class="blockquote border border-primary p-3">
+                                    <p>{{$data_feedback[$kode_materi]['feedback']}}</p>
+                                </blockquote>
+                                <hr>
+                            @else
+                                <div class="alert alert-warning" role="alert">Tunggu Feedback dari Dosen !</div>
+                            @endif
                         @else
                             <label for="formFileMultiple" class="form-label">Upload File</label>
                             <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
@@ -104,7 +153,7 @@
                         @endif
                     @endif
     
-                    <button type="submit" class="btn btn-primary px-3 mt-3 {{(isset($data_materi[$kode_materi])) ? 'd-none' : '' ;}}">
+                    <button type="submit" class="btn btn-primary px-3 mt-3 {{(isset($data_materi[$kode_materi]) || (isset($data_feedback[$kode_materi]) && $data_feedback[$kode_materi]['feedback'])) ? 'd-none' : '' ;}}">
                         Kirim Data
                     </button>
                     

@@ -77,6 +77,12 @@ class Kuan extends Component
                         $materi->student_id = session()->get('user_id');
                         $materi->save();
                     }
+
+                    $materi_feedback = new MateriFeedback();
+                    $materi_feedback->student_id = $materi->student_id;
+                    $materi_feedback->kode_materi = $materi->kode_materi;
+                    $materi_feedback->materi_id = $materi->id;
+                    $materi_feedback->save();
                 }
     
                 // Reset the form fields
@@ -84,6 +90,21 @@ class Kuan extends Component
                 $this->emit('refreshMateri');
                 // Emit success event
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
+            }
+            if($this->input_feedback)
+            {
+                $materi_feedback = MateriFeedback::where('kode_materi', $this->kode_materi)->where('student_id', $this->student_id)->first();
+                $materi_feedback->feedback = $this->input_feedback;
+                
+                if($materi_feedback->save())
+                {
+                    // Reset the form fields
+                    $this->reset(['input_feedback']);
+                    $this->emit('refreshMateri');
+                    // Emit success event
+                    $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
+                }
+
             }
         } catch (\Exception $e) {
             // Handle the exception, e.g., log the error
