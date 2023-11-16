@@ -58,6 +58,7 @@
         // Set up a timer to trigger Livewire refresh every 10 seconds
         setInterval(function () {
             @this.refreshMenu();
+            alert("oi menu")
         }, 10000);
     </script>
 @endpush
