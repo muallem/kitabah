@@ -110,7 +110,26 @@
                     </div>
     
                     @if(\App\Helpers\AuthHelper::isAdmin())
+                        @if(isset($data_materi[$kode_materi]))
+                            <ul class="list-group list-group-custom list-group-flush">
+                                @foreach ($data_materi[$kode_materi] as $item)
+                                @php
+                                    $file = $item['file'];
+                                @endphp
+                                    <li class="list-group-item">
+                                        <a href="{{ asset("storage/app/public/attachments/$file") }}"
+                                            class="text-decoration-none text-info "
+                                            download="{{ $item['file_name'] }}"
+                                        >
+                                        <i class="fa fa-book"></i>
+                                            {{ $item['file_name'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
 
+                        {{-- Input Feedback Admin --}}
                         @if(isset($data_feedback[$kode_materi]))
                             @if($data_feedback[$kode_materi][0]['feedback'])
                                 <h6>Feedback : </h6>
