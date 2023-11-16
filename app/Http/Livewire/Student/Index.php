@@ -10,7 +10,7 @@ class Index extends Component
     public $data_judul;
 
     protected $listeners = [
-        'refreshStudentIndex' => '$refresh',
+        'refreshData' => '$refresh',
     ];
 
     public function render()

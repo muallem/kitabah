@@ -198,7 +198,7 @@
     <script>
         document.addEventListener('livewire:load', function() {
             setInterval(function () {
-                Livewire.emit('refreshMateri'); 
+                Livewire.emit('refreshData'); 
             }, 10000); 
         });
     </script>

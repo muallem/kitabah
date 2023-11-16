@@ -25,7 +25,7 @@ class Kuan extends Component
 
     protected $listeners = [
         'setKodeMateri',
-        'refreshMateri' => '$refresh',
+        'refreshData' => '$refresh',
     ];
     public function mount()
     {
@@ -87,7 +87,7 @@ class Kuan extends Component
     
                 // Reset the form fields
                 $this->reset(['files']);
-                $this->emit('refreshMateri');
+                $this->emit('refreshData');
                 // Emit success event
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
             }
@@ -100,7 +100,7 @@ class Kuan extends Component
                 {
                     // Reset the form fields
                     $this->reset(['input_feedback']);
-                    $this->emit('refreshMateri');
+                    $this->emit('refreshData');
                     // Emit success event
                     $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
                 }

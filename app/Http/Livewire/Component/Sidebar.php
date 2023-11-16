@@ -11,6 +11,9 @@ class Sidebar extends Component
 {
     public $thesis;
 
+    protected $listeners = [
+        'refreshData' => '$refresh',
+    ];
     
     public function getSidebar()
     {
