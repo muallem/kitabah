@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('sidebar')
+@push('sidebar')
     <div id="left-sidebar" class="sidebar">
         @livewire('component.sidebar')    
     </div>
-@endsection
+@endpush
 
 @section('content')
     <div class="container-fluid">

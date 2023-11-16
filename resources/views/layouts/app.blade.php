@@ -76,7 +76,7 @@
                 </nav>
         
 
-                @yield('sidebar')
+                @stack('sidebar')
         
                 <div id="main-content">
                     @yield('content')

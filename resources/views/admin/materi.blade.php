@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('sidebar')
-
+Coba
     <div id="left-sidebar" class="sidebar">
         @livewire('component.sidebar')    
     </div>  
