@@ -41,6 +41,7 @@ class Sidebar extends Component
         }else{
             $this->thesis = Judul::where('student_id', session()->get('user_id'))->first();
         }
+        $this->emit('consoleLog', $this->thesis);
     }
     public function render()
     {

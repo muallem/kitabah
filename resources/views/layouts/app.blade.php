@@ -103,6 +103,9 @@
                     text: message,
                 });
             });
+            window.livewire.on('consoleLog', (message) => {
+                console.log(message)
+            });
 
             window.livewire.on('onFailSweetAlert', (message) => {
                 Swal.fire({
