@@ -159,9 +159,11 @@
     
                     <button type="submit" class="btn btn-primary px-3 mt-3 
                     {{
-                        (isset($data_materi[$kode_materi]) || 
-                        !isset($data_feedback[$kode_materi]) || 
-                        (isset($data_feedback[$kode_materi]) && $data_feedback[$kode_materi][0]["feedback"] !== Null))
+                        (
+                            (isset($data_materi[$kode_materi]) || 
+                            !isset($data_feedback[$kode_materi]) || 
+                            (isset($data_feedback[$kode_materi]) && $data_feedback[$kode_materi][0]["feedback"] !== Null))
+                        )
                          ? 'd-none' : '' ;
                     }}">
                         Kirim Data
