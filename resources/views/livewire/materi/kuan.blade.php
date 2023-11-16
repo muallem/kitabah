@@ -10,7 +10,7 @@
         <div class="card">
             
             <div class="card-body">
-                {{$data_feedback}}
+                {{var_dump($data_feedback)}}
     
                 {{-- <form class="chat-input px-3" wire:submit.prevent='store'>
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
