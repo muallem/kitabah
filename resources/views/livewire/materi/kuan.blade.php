@@ -16,13 +16,15 @@
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-bab_1_pendahuluan', 'kuan-bab_1_pendahuluan-latar_belakang')">
                             <a class="nav-link {{ $tab1 === 'kuan-bab_1_pendahuluan' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-bab_1_pendahuluan" aria-selected="true" role="tab" >
                                 Bab 1 Pendahuluan 
-                                {!! 
+                                @if(
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-latar_belakang']) && $data_feedback['kuan-bab_1_pendahuluan-latar_belakang']['feedback'] === Null) ||
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ||
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ||
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ||
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) ||
-                                ? '<i class="fa fa-exclamation-circle"></i>' : '' ; !!}
+                                ) 
+                                <i class="fa fa-exclamation-circle"></i>
+                                @endif
                             </a>
                         </li>
                     </ul>
