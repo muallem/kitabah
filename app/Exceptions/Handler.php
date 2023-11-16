@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Livewire\Exceptions\SessionExpiredException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -12,6 +13,10 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof NotFoundHttpException) {
             // Redirect to the login route for 404 errors
+            return redirect()->route('login.index');
+        }
+        if ($exception instanceof SessionExpiredException) {
+            // Redirect to the login route for session expiration
             return redirect()->route('login.index');
         }
 
