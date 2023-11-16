@@ -31,18 +31,18 @@
                             <li>
                                 <a href="#" class="has-arrow text-decoration-none text-dark" aria-expanded="false">
                                     <i class="fa fa-briefcase"></i>
-                                    <span>{{$item->user_login}}</span> 
-                                    {!! ($item->group) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}
+                                    <span>{{$item['user_login']}}</span> 
+                                    {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}
 
-                                    @if($item->materi_count > 0 )
+                                    @if($item['materi_count'] > 0 )
                                         <span class="badge rounded-pill bg-primary">
-                                            {{ $item->materi_count }}
+                                            {{ $item['materi_count'] }}
                                         </span>
                                     @endif
                                 </a>
                                 <ul class="list-unstyled mm-collapse">
-                                    <li><a href="{{route('admin.judul', ['thesis_id' => $item->id])}}">Judul {!! ($item->group) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
-                                    <li><a href="{{route('admin.materi', ['thesis_id' => $item->id])}}">Materi {!! ($item->materi_count > 0) ? "<span class='badge rounded-pill bg-primary'> $item->materi_count </span>" : "" ; !!}</a></li>
+                                    <li><a href="{{route('admin.judul', ['thesis_id' => $item['id']])}}">Judul {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
+                                    <li><a href="{{route('admin.materi', ['thesis_id' => $item['id']])}}">Materi {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'> $item->materi_count </span>" : "" ; !!}</a></li>
                                 </ul>
                             </li>
                         @endforeach
