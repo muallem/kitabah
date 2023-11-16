@@ -53,32 +53,36 @@ class Kuan extends Component
     }
     public function store()
     {
-        if ($this->files) {
-            // Handle the uploaded files
-            foreach ($this->files as $file) {
-                // Process each uploaded photo
-
-        if(!AuthHelper::isAdmin())
-        {
-            $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
-            $originalName = $file->getClientOriginalName();
-            $filePath = $file->storeAs('attachments', $fileName, 'public');
-
-
-            $materi = new Materi();
-            $materi->file_name = $originalName;
-            $materi->file = $fileName;
-            $materi->kode_materi = $this->kode_materi;
-            $materi->student_id = session()->get('user_id');
-            $materi->save();
-        }
+        try {
+            // Your existing code for handling file uploads
+            if ($this->files) {
+                if (!AuthHelper::isAdmin()) {
+                    foreach ($this->files as $file) {
+                        // Process each uploaded file
+                        $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
+                        $originalName = $file->getClientOriginalName();
+                        $filePath = $file->storeAs('attachments', $fileName, 'public');
+    
+                        $materi = new Materi();
+                        $materi->file_name = $originalName;
+                        $materi->file = $fileName;
+                        $materi->kode_materi = $this->kode_materi;
+                        $materi->student_id = session()->get('user_id');
+                        $materi->save();
+                    }
+                }
+    
+                // Reset the form fields
+                $this->reset(['files']);
                 
+                // Emit success event
+                $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
             }
+        } catch (\Exception $e) {
+            // Handle the exception, e.g., log the error
+            // Emit failure event
+            $this->emit('onFailSweetAlert', 'Gagal Mengirim Data !');
         }
-
-        // Reset the form fields
-        $this->reset(['files', 'input_feedback']);
-        $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
     }
     public function render()
     {
