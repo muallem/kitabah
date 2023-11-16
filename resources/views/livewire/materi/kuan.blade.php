@@ -139,7 +139,7 @@
                                 <hr>
                             @else
                                 <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
-                                <input wire:model.lazy="feedback" type="text" class="form-control">
+                                <input wire:model.lazy="input_feedback" type="text" class="form-control">
                             @endif
                         @endif
                     @else
