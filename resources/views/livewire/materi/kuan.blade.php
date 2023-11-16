@@ -21,7 +21,7 @@
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']) && $data_feedback['kuan-bab_1_pendahuluan-rumusan_masalah']['feedback'] === Null) ||
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-tujuan_penelitian']['feedback'] === Null) ||
                                     (isset($data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-manfaat_penelitian']['feedback'] === Null) ||
-                                    (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) ||
+                                    (isset($data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']) && $data_feedback['kuan-bab_1_pendahuluan-batasan_penelitian']['feedback'] === Null) 
                                 ) 
                                 <i class="fa fa-exclamation-circle"></i>
                                 @endif
