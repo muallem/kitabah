@@ -74,3 +74,13 @@
         @endif        
     </div>
 </div>
+@push('scripts')
+        <script>
+            document.addEventListener('livewire:load', function () {
+                // Set up a timer to trigger Livewire refresh every 10 seconds
+                setInterval(function () {
+                    @this.refresh();
+                }, 10000);
+            });
+        </script>
+    @endpush

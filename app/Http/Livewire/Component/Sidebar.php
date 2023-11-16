@@ -11,22 +11,9 @@ class Sidebar extends Component
 {
     public $thesis;
 
-    protected $listeners = [
-        'refreshData' => 'refreshSidebar',
-    ];
-
-    public function mount()
-    {
-        $this->getSidebar();
-    }
-
-    public function refreshSidebar()
-    {
-        $this->getSidebar();
-    }
-    
     public function getSidebar()
     {
+        $this->thesis = [];
         if(AuthHelper::isAdmin())
         {
             $thesis = Judul::select('juduls.id', 'juduls.group', 'wpjs_users.user_login', DB::raw('COUNT(materi_feedback.id) as materi_count'))
@@ -45,6 +32,7 @@ class Sidebar extends Component
     }
     public function render()
     {
+        $this->getSidebar();
         return view('livewire.component.sidebar');
     }
 }
