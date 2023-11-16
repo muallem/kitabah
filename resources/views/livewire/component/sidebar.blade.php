@@ -22,5 +22,5 @@
         @endif
     </ul>
 
-    @livewire('component.sidebar-menu')
+    {{-- @livewire('component.sidebar-menu') --}}
 </div>
