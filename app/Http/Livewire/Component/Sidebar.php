@@ -12,8 +12,18 @@ class Sidebar extends Component
     public $thesis;
 
     protected $listeners = [
-        'refreshData' => '$refresh',
+        'refreshData' => 'refreshSidebar',
     ];
+
+    public function mount()
+    {
+        $this->getSidebar();
+    }
+
+    public function refreshSidebar()
+    {
+        $this->getSidebar();
+    }
     
     public function getSidebar()
     {
