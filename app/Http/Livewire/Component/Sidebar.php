@@ -27,6 +27,8 @@ class Sidebar extends Component
             ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
             ->groupBy('juduls.id', 'juduls.group', 'wpjs_users.user_login')
             ->get();
+        }else{
+            $this->thesis = Judul::where('student_id', session()->get('user_id'))->first();
         }
     }
     public function render()

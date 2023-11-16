@@ -54,9 +54,20 @@
                 <nav class="sidebar-nav">
                     <ul class="metismenu list-unstyled">
                         <li><a href="{{route('student.index')}}"><i class="fa fa-pen"></i><span>Judul</span></a></li>
-                        <li><a href="{{route('student.kual')}}"><i class="fa fa-list-ul"></i><span>Kual</span></a></li>
-                        <li><a href="{{route('student.kuan')}}"><i class="fa fa-list-ul"></i><span>Kuan</span></a></li>
-                        <li><a href="{{route('student.rnd')}}"><i class="fa fa-list-ul"></i><span>RND</span></a></li>
+                        @switch($thesis->group)
+                            @case(\App\Models\Judul::TYPE_KUAN)
+                                <li><a href="{{route('student.kuan')}}"><i class="fa fa-list-ul"></i><span>Kuan</span></a></li>
+                                
+                                @break
+                            @case(\App\Models\Judul::TYPE_KUAL)
+                                <li><a href="{{route('student.kual')}}"><i class="fa fa-list-ul"></i><span>Kual</span></a></li>
+                                
+                                @break
+                            @case(\App\Models\Judul::TYPE_RND)
+                                <li><a href="{{route('student.rnd')}}"><i class="fa fa-list-ul"></i><span>RND</span></a></li>
+                                
+                                @break
+                        @endswitch
                     </ul>
                 </nav>
             </div>
