@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Component;
 
+use App\Models\Judul;
 use Livewire\Component;
 use App\Helpers\AuthHelper;
+use Illuminate\Support\Facades\DB;
 
 class SidebarMenu extends Component
 {
