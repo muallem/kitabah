@@ -60,6 +60,8 @@
                 </div>
             </div>
 
+            {{var_dump($data_feedback)}}
+
             @if(\App\Helpers\AuthHelper::isAdmin())
                 <label for="formFileMultiple" class="form-label">Kirim Feedback</label>
                 <input wire:model.lazy="feedback" type="text">
