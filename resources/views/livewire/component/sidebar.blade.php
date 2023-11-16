@@ -42,7 +42,7 @@
                                 </a>
                                 <ul class="list-unstyled mm-collapse">
                                     <li><a href="{{route('admin.judul', ['thesis_id' => $item['id']])}}">Judul {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
-                                    <li><a href="{{route('admin.materi', ['thesis_id' => $item['id']])}}">Materi {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'> $item->materi_count </span>" : "" ; !!}</a></li>
+                                    <li><a href="{{route('admin.materi', ['thesis_id' => $item['id']])}}">Materi {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'> $item['materi_count'] </span>" : "" ; !!}</a></li>
                                 </ul>
                             </li>
                         @endforeach
