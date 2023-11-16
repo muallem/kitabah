@@ -43,7 +43,6 @@ class Sidebar extends Component
     }
     public function render()
     {
-        $this->getSidebar();
         return view('livewire.component.sidebar');
     }
 }
