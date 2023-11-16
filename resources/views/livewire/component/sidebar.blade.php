@@ -1,6 +1,7 @@
 
 <!-- Sidbar menu -->
 <div id="left-sidebar" class="sidebar">
+    {{var_dump($thesis)}}
     <div class="user-account p-3 mb-3">
         <div class="d-flex mb-3 pb-3 border-bottom align-items-center">
             <div class="dropdown flex-grow-1">
